@@ -1,0 +1,15 @@
+# Local backups
+*.bak
+
+# Raw BGG pulls — index.html is the source of truth for the collection
+bgg_collection_*.csv
+
+# Tooling archives
+bgg-mcp.zip
+
+# OS / Office / OneDrive noise
+Thumbs.db
+.DS_Store
+~$*
+*-Conflict.*
+*_conflict*
