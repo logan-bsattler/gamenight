@@ -444,7 +444,7 @@ function matches(g){
 }
 function sorted(list){
   const c={
-    rating:(a,b)=>(b.geek||b.rating||0)-(a.geek||a.rating||0),
+    rating:(a,b)=>(b.rating||0)-(a.rating||0)||(b.geek||0)-(a.geek||0),
     mine:(a,b)=>(b.myRating||0)-(a.myRating||0),
     rank:(a,b)=>(a.rank||99999)-(b.rank||99999),
     name:(a,b)=>sortName(a.name).localeCompare(sortName(b.name)),
