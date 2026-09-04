@@ -204,6 +204,12 @@ header{
 .vbbar i{display:block;height:100%;border-radius:3px;background:var(--acc2)}
 .vbval{font-size:12px;text-align:right;color:var(--dim);font-variant-numeric:tabular-nums}
 .vfoot{font-size:11.5px;color:var(--dim);margin-top:9px;line-height:1.5}
+.playbox{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.pcount{flex:1 1 auto;font-size:13px;color:var(--dim);min-width:0}
+.pcount b{color:var(--txt);font-size:16px;font-variant-numeric:tabular-nums}
+.pbtn{padding:9px 14px;border-radius:10px;font-size:13.5px;font-weight:600;
+  background:var(--accsoft);border:1px solid var(--accln);color:var(--acc)}
+.pbtn.undo{background:var(--bg3);border-color:var(--line);color:var(--dim);font-weight:500}
 .sortsel{display:flex;gap:6px;flex-wrap:wrap}
 
 /* ---------- grid ---------- */
@@ -579,13 +585,30 @@ const timeStr=m=> !m ? "–" : m>=60 ? (m%60? (m/60).toFixed(1).replace(/\.0$/,"
 const timeRange=g=> (g.minT&&g.minT!==g.time) ? timeStr(g.minT)+"–"+timeStr(g.time) : timeStr(g.time);
 const plStr=g=> g.minP===g.maxP ? g.minP+"p" : g.minP+"–"+g.maxP+"p";
 
+/* ---------- plays ----------
+   BGG records 4 plays across the whole collection, so the shelf cannot answer
+   "what have we not played lately" -- and that is the one fact a game night
+   actually produces. Logged here, kept in this browser: no BGG credentials to
+   hold and nothing to sync, at the cost of not following you between devices.
+   The UI says so rather than letting anyone assume it reached BGG. */
+const PLAYS_KEY="gn-plays";
+let PLAYS=(()=>{try{return JSON.parse(localStorage.getItem(PLAYS_KEY))||{}}catch(e){return{}}})();
+const savePlays=()=>{try{localStorage.setItem(PLAYS_KEY,JSON.stringify(PLAYS))}catch(e){}};
+const localPlays=g=>PLAYS[g.id]||[];
+const playCount=g=>(g.plays||0)+localPlays(g).length;
+const today=()=>new Date().toLocaleDateString("en-CA");     // local YYYY-MM-DD
+const fmtDay=d=>new Date(d+"T00:00:00").toLocaleDateString(undefined,{day:"numeric",month:"short"});
+
 /* ---------- filter state ---------- */
 const S={q:"",players:0,twoOnly:false,time:0,weight:"",mech:"",sort:"rating",vid:false,award:false,
   vibe:{cozy:null,chatty:null,silly:null,cutthroat:null,tense:null,crunchy:null,swingy:null,storied:null},vplayers:0,vtime:0};
 
 const TIME_OPTS=[{v:30,l:"≤30 min"},{v:60,l:"≤1 hr"},{v:90,l:"≤1.5 hr"},{v:120,l:"≤2 hr"}];
 const W_OPTS=[{v:"light",l:"Light"},{v:"medium",l:"Medium"},{v:"heavy",l:"Heavy"}];
-const SORTS=[{v:"rating",l:"Top rated"},{v:"mine",l:"My rating"},{v:"rank",l:"BGG rank"},{v:"name",l:"A–Z"},{v:"time",l:"Shortest"},{v:"weight",l:"Lightest"}];
+const SORTS=[{v:"rating",l:"Top rated"},{v:"mine",l:"My rating"},{v:"rank",l:"BGG rank"},{v:"name",l:"A–Z"},{v:"time",l:"Shortest"},{v:"weight",l:"Lightest"},{v:"plays",l:"Least played"}];
+/* Least played only appears once a play has been logged. With none, 139 of 143
+   games tie at zero and the sort silently degrades into Top rated. */
+const sortOpts=()=>SORTS.filter(o=>o.v!=="plays"||Object.keys(PLAYS).length);
 const mechCount={}; GAMES.forEach(g=>(g.mech||[]).forEach(m=>mechCount[m]=(mechCount[m]||0)+1));
 const allMech=Object.keys(mechCount).filter(m=>mechCount[m]>=3).sort((a,b)=>mechCount[b]-mechCount[a]||a.localeCompare(b));
 
@@ -619,6 +642,7 @@ function sorted(list){
     name:(a,b)=>sortName(a.name).localeCompare(sortName(b.name)),
     time:(a,b)=>(a.time||0)-(b.time||0),
     weight:(a,b)=>(a.weight||0)-(b.weight||0),
+    plays:(a,b)=>playCount(a)-playCount(b)||(b.rating||0)-(a.rating||0),
   }[S.sort];
   return [...list].sort(c);
 }
@@ -670,7 +694,7 @@ function readHash(){
   S.time=inOpts("t",TIME_OPTS)?+p.get("t"):0;
   S.weight=W_OPTS.some(o=>o.v===p.get("w"))?p.get("w"):"";
   S.mech=allMech.includes(p.get("m"))?p.get("m"):"";
-  S.sort=SORTS.some(o=>o.v===p.get("s"))?p.get("s"):"rating";
+  S.sort=sortOpts().some(o=>o.v===p.get("s"))?p.get("s"):"rating";
   S.vid=p.get("vid")==="1";
   S.award=p.get("award")==="1";
   S.vplayers=whole("vp",1,8);
@@ -711,7 +735,7 @@ function renderDrawer(){
       ${W_OPTS.map(o=>`<button class="opt ${S.weight===o.v?'on':''}" data-w="${o.v}">${o.l}</button>`).join("")}
     </div></div>
     <div class="fgroup"><div class="flabel">Sort by</div><div class="opts sortsel">
-      ${SORTS.map(o=>`<button class="opt ${S.sort===o.v?'on':''}" data-s="${o.v}">${o.l}</button>`).join("")}
+      ${sortOpts().map(o=>`<button class="opt ${S.sort===o.v?'on':''}" data-s="${o.v}">${o.l}</button>`).join("")}
     </div></div>
     <div class="fgroup"><div class="flabel">Mechanic</div><div class="opts">
       ${allMech.map(m=>`<button class="opt ${S.mech===m?'on':''}" data-m="${esc(m)}">${esc(m)}</button>`).join("")}
@@ -822,6 +846,17 @@ function radar(g,size){
     <polygon points="${ring(R*0.5)}" fill="none" stroke="var(--line)" opacity=".55"/>
     <polygon points="${poly}" fill="var(--accfill)" stroke="var(--acc2)" stroke-width="1.6"/>
     ${labels}</svg>`;
+}
+
+/* Play log for the game sheet. Rendered on its own so logging a play can
+   redraw just this box, rather than reopening the sheet and losing the
+   reader's scroll position. */
+function playSection(g){
+  const local=localPlays(g), n=playCount(g), last=local[local.length-1];
+  return `<div class="pcount"><b>${n}</b> play${n===1?"":"s"}${
+      last?` · last ${fmtDay(last)}`:""}</div>
+    <button class="pbtn" data-play="${g.id}">We played this</button>
+    ${last===today()?`<button class="pbtn undo" data-unplay="${g.id}">Undo</button>`:""}`;
 }
 
 /* Vibe block for the game sheet: radar plus a per-axis readout, because the
@@ -944,8 +979,12 @@ function openGame(id){
       <div class="stat"><div class="k">Players</div><div class="v">${plStr(g)}</div><div class="s">${bp.length?"best at "+bp.join("/"):"&nbsp;"}</div></div>
       <div class="stat"><div class="k">Play time</div><div class="v">${timeRange(g)}</div><div class="s">&nbsp;</div></div>
       <div class="stat"><div class="k">Complexity</div><div class="v" style="color:${wColor(g.weight)}">${g.weight?g.weight.toFixed(2):"–"}</div><div class="s">${wLabel(g.weight)} · of 5</div></div>
-      <div class="stat"><div class="k">Rating</div><div class="v">${g.rating?g.rating.toFixed(1):"–"}</div><div class="s">${g.myRating?"you rated "+g.myRating:"BGG average"}${g.plays?" · "+g.plays+" play"+(g.plays>1?"s":""):""}</div></div>
+      <div class="stat"><div class="k">Rating</div><div class="v">${g.rating?g.rating.toFixed(1):"–"}</div><div class="s">${g.myRating?"you rated "+g.myRating:"BGG average"}${playCount(g)?" · "+playCount(g)+" play"+(playCount(g)>1?"s":""):""}</div></div>
     </div>
+
+    <div class="sect">Plays</div>
+    <div class="playbox" id="playbox">${playSection(g)}</div>
+    <div class="vfoot">Kept in this browser — not sent to BGG.</div>
 
     ${vibeSection(g)}
 
@@ -1074,6 +1113,18 @@ $("#sheetBody").addEventListener("click",e=>{
   const v=e.target.closest("#vid"); if(!v) return;
   v.innerHTML=`<iframe src="https://www.youtube.com/embed/${v.dataset.yt}?autoplay=1&rel=0&playsinline=1" allow="accelerometer;autoplay;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>`;
 });
+$("#sheetBody").addEventListener("click",e=>{
+  const b=e.target.closest("[data-play],[data-unplay]"); if(!b) return;
+  const add=b.hasAttribute("data-play"), g=GAMES.find(x=>x.id==(b.dataset.play||b.dataset.unplay));
+  if(!g) return;
+  const list=PLAYS[g.id]||[];
+  if(add) list.push(today()); else list.pop();
+  if(list.length) PLAYS[g.id]=list; else delete PLAYS[g.id];
+  savePlays();
+  $("#playbox").innerHTML=playSection(g);
+  renderDrawer(); render();      // the count and the Least played sort both move
+});
+
 window.addEventListener("popstate",()=>{ if($("#sheet").classList.contains("open")) closeSheet(); });
 document.addEventListener("keydown",e=>{
   if(e.key==="Escape"&&$("#sheet").classList.contains("open")) history.back();
