@@ -84,7 +84,7 @@ header{
 .brand .n{margin-left:auto;font-size:12px;color:var(--dim);font-variant-numeric:tabular-nums}
 .searchrow{display:flex;gap:8px;margin-bottom:9px}
 .search{
-  flex:1;display:flex;align-items:center;gap:7px;
+  flex:1;min-width:0;display:flex;align-items:center;gap:7px;
   background:var(--bg2);border:1px solid var(--line);border-radius:11px;padding:0 11px;height:38px;
 }
 .search input{flex:1;background:none;border:none;outline:none;color:var(--txt);font-size:15px;min-width:0}
@@ -149,8 +149,13 @@ header{
 .bestbar span{flex:1;text-align:center;font-size:10.5px;padding:3px 0;border-radius:5px;
   background:var(--bg3);color:var(--dim);border:1px solid transparent}
 .bestbar span.best{background:var(--accsoft);color:var(--acc2);border-color:var(--accln);font-weight:700}
-.mscore{position:absolute;left:8px;bottom:8px;font-size:11px;font-weight:700;padding:2px 6px;
-  border-radius:6px;background:var(--chipimg-bg);color:var(--acc2);border:1px solid var(--accln)}
+/* Bottom-left badge stack. Both the teach flag and the fit score want this
+   corner, so they queue rather than overlap: fit score nearest the corner. */
+.botleft{position:absolute;left:7px;bottom:7px;z-index:2;
+  display:flex;flex-direction:column;align-items:flex-start;gap:4px}
+.mscore{font-size:11px;font-weight:700;padding:2px 6px;
+  border-radius:6px;background:var(--chipimg-bg);color:var(--acc2);border:1px solid var(--accln);
+  backdrop-filter:blur(6px)}
 
 /* ---- vibe panel inside the game sheet ---- */
 .vibebox{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
@@ -222,7 +227,6 @@ main{padding:12px 12px 40px}
 .award .medal{font-size:15px;line-height:1}
 .award.dt{background:var(--neutbg);border-color:var(--neutln)}
 .vbadge{
-  position:absolute;left:7px;bottom:7px;z-index:2;
   font-size:10px;font-weight:800;letter-spacing:.02em;padding:3px 7px;border-radius:7px;
   background:var(--accsoft);color:var(--acc);border:1px solid var(--accln);
   backdrop-filter:blur(6px);
@@ -535,7 +539,7 @@ const S={q:"",players:0,twoOnly:false,time:0,weight:"",mech:"",sort:"rating",vid
 
 const TIME_OPTS=[{v:30,l:"≤30 min"},{v:60,l:"≤1 hr"},{v:90,l:"≤1.5 hr"},{v:120,l:"≤2 hr"}];
 const W_OPTS=[{v:"light",l:"Light"},{v:"medium",l:"Medium"},{v:"heavy",l:"Heavy"}];
-const SORTS=[{v:"rating",l:"Top rated"},{v:"mine",l:"My rating"},{v:"rank",l:"BGG rank"},{v:"name",l:"A–Z"},{v:"time",l:"Shortest"},{v:"weight",l:"Lightest"},{v:"plays",l:"Least played"}];
+const SORTS=[{v:"rating",l:"Top rated"},{v:"mine",l:"My rating"},{v:"rank",l:"BGG rank"},{v:"name",l:"A–Z"},{v:"time",l:"Shortest"},{v:"weight",l:"Lightest"}];
 const mechCount={}; GAMES.forEach(g=>(g.mech||[]).forEach(m=>mechCount[m]=(mechCount[m]||0)+1));
 const allMech=Object.keys(mechCount).filter(m=>mechCount[m]>=3).sort((a,b)=>mechCount[b]-mechCount[a]||a.localeCompare(b));
 
@@ -544,8 +548,10 @@ function matches(g){
   if(S.players && !(g.minP<=S.players && g.maxP>=S.players)) return false;
   if(S.twoOnly && g.maxP!==2) return false;
   if(S.time && g.time>S.time) return false;
-  if(S.weight==="light"  && !(g.weight<2.5)) return false;
-  if(S.weight==="medium" && !(g.weight>=2.5 && g.weight<3.5)) return false;
+  // Bands are wLabel's own boundaries, so a card never reads "Light-med" and
+  // then hides from the Light filter. Light = Light+Light-med, Heavy = Med-heavy+Heavy.
+  if(S.weight==="light"  && !(g.weight<2.75)) return false;
+  if(S.weight==="medium" && !(g.weight>=2.75 && g.weight<3.5)) return false;
   if(S.weight==="heavy"  && !(g.weight>=3.5)) return false;
   if(S.mech && !(g.mech||[]).includes(S.mech)) return false;
   if(S.vid && !g.video) return false;
@@ -560,7 +566,6 @@ function sorted(list){
     name:(a,b)=>sortName(a.name).localeCompare(sortName(b.name)),
     time:(a,b)=>(a.time||0)-(b.time||0),
     weight:(a,b)=>(a.weight||0)-(b.weight||0),
-    plays:(a,b)=>(a.plays||0)-(b.plays||0)||(b.rating||0)-(a.rating||0),
   }[S.sort];
   return [...list].sort(c);
 }
@@ -609,7 +614,12 @@ const vibeOf=g=>(typeof VIBES!=="undefined"?VIBES[String(g.id)]:null)||null;
    same thing to the slider and to the chart. */
 const axVal=(g,ax)=>{const v=vibeOf(g); return v&&v.pct&&ax in v.pct?v.pct[ax]:null;};
 
-function vibeActive(){return AXES.some(a=>S.vibe[a]!==null)||S.vplayers||S.vtime;}
+const axesSet=()=>AXES.some(a=>S.vibe[a]!==null);
+function vibeActive(){return axesSet()||S.vplayers||S.vtime;}
+/* Best fit first, but only once an axis is actually set -- with none, the
+   reader's chosen sort order stands. */
+const rankByFit=list=> !axesSet() ? list
+  : list.map(g=>[g,matchScore(g)]).sort((a,b)=>(b[1]??-1)-(a[1]??-1)).map(x=>x[0]);
 
 /* Hard filters run before scoring: player count, then time budget. */
 function vibeEligible(g){
@@ -717,7 +727,7 @@ function vibeSection(g){
       <div class="vradar">${radar(g,236)}</div>
       <div class="vbars">${rows}</div>
     </div>
-    <div class="vfoot">Each axis is this game's percentile across your 143 games — 80 means cosier
+    <div class="vfoot">Each axis is this game's percentile across your ${GAMES.length} games — 80 means cosier
       than 80% of the shelf. Hover a bar for the raw score.
       ${hand?`${hand} axis${hand>1?"es":""} hand-scored (✎).`:"All axes scored from BGG tags."}
       ${v.note?`<br>${v.note}`:""}</div>`;
@@ -750,22 +760,27 @@ function renderTonight(list){
   </div>`;
 }
 
-function render(){
-  renderQuick(); renderVibe();
-  let list=sorted(GAMES.filter(matches).filter(vibeEligible));
-  if(AXES.some(a=>S.vibe[a]!==null))
-    list=list.map(g=>[g,matchScore(g)]).sort((a,b)=>(b[1]??-1)-(a[1]??-1)).map(x=>x[0]);
+function render(){ renderQuick(); renderVibe(); renderList(); }
+
+/* The list half of a render. Split out because dragging a vibe slider must not
+   rebuild the panel holding that slider -- see the #vibe input handler. */
+function renderList(){
+  const list=rankByFit(sorted(GAMES.filter(matches).filter(vibeEligible)));
   renderTonight(list);
   $("#count").textContent = list.length===GAMES.length ? GAMES.length+" games" : list.length+" of "+GAMES.length;
   $("#empty").style.display = list.length ? "none" : "block";
-  $("#grid").innerHTML = list.map(g=>`
+  $("#grid").innerHTML = list.map(g=>{
+    const m=matchScore(g);   // bottom-left holds one badge: fit score outranks the teach flag
+    return `
     <button class="card" data-id="${g.id}">
       <div class="thumbwrap">
         ${g.rating?`<span class="rbadge" style="color:${g.rating>=8?'var(--acc)':g.rating>=7?'var(--acc2)':'var(--dim)'}">★ ${g.rating.toFixed(1)}</span>`:""}
         <span class="wbadge" style="color:${wColor(g.weight)}">${g.weight?g.weight.toFixed(1):"–"}</span>
-        ${g.video?`<span class="vbadge">▶ teach</span>`:""}
         ${g.awards?`<span class="abadge">${awardShort(g)}</span>`:""}
-        ${(()=>{const m=matchScore(g);return m===null?"":`<span class="mscore">${m}% fit</span>`;})()}
+        <div class="botleft">
+          ${g.video?`<span class="vbadge">▶ teach</span>`:""}
+          ${m===null?"":`<span class="mscore">${m}% fit</span>`}
+        </div>
         <img loading="lazy" src="${g.thumb||""}" alt="">
       </div>
       <div class="cardbody">
@@ -773,12 +788,14 @@ function render(){
         <div class="crow"><span><b>${plStr(g)}</b></span><span><b>${timeStr(g.time)}</b></span>${g.myRating?`<span style="margin-left:auto;color:var(--warm)"><b>♥ ${g.myRating}</b></span>`:""}</div>
         <div class="wbar"><i style="width:${Math.min(100,(g.weight/5)*100)}%;background:${wColor(g.weight)}"></i></div>
       </div>
-    </button>`).join("");
+    </button>`;
+  }).join("");
 }
 
 /* ---------- detail sheet ---------- */
 function openGame(id){
   const g=GAMES.find(x=>x.id==id); if(!g) return;
+  const bp=(vibeOf(g)||{}).bestP||[];          // the player-count poll lives in VIBES
   $("#sheetTitle").textContent=g.name;
   const ytSearch="https://www.youtube.com/results?search_query="+encodeURIComponent("how to play "+g.name+" board game");
   $("#sheetBody").innerHTML=`
@@ -788,14 +805,14 @@ function openGame(id){
         <h2>${g.name}</h2>
         <div class="yr">${g.year||""}${g.rank?" · BGG rank #"+g.rank:""}</div>
         <div class="tags">
-          ${(g.best&&g.best.length)?`<span class="tag best">Best at ${g.best.join(" / ")}</span>`:""}
+          ${bp.length?`<span class="tag best">Best at ${bp.join(" / ")}</span>`:""}
           <span class="tag">${wLabel(g.weight)}</span>
         </div>
       </div>
     </div>
 
     <div class="stats">
-      <div class="stat"><div class="k">Players</div><div class="v">${plStr(g)}</div><div class="s">${(g.best&&g.best.length)?"best at "+g.best.join("/"):"&nbsp;"}</div></div>
+      <div class="stat"><div class="k">Players</div><div class="v">${plStr(g)}</div><div class="s">${bp.length?"best at "+bp.join("/"):"&nbsp;"}</div></div>
       <div class="stat"><div class="k">Play time</div><div class="v">${timeRange(g)}</div><div class="s">&nbsp;</div></div>
       <div class="stat"><div class="k">Complexity</div><div class="v" style="color:${wColor(g.weight)}">${g.weight?g.weight.toFixed(2):"–"}</div><div class="s">${wLabel(g.weight)} · of 5</div></div>
       <div class="stat"><div class="k">Rating</div><div class="v">${g.rating?g.rating.toFixed(1):"–"}</div><div class="s">${g.myRating?"you rated "+g.myRating:"BGG average"}${g.plays?" · "+g.plays+" play"+(g.plays>1?"s":""):""}</div></div>
@@ -866,7 +883,14 @@ $("#vtoggle").addEventListener("click",()=>{
 });
 $("#vibe").addEventListener("input",e=>{
   const a=e.target.dataset.vslide; if(!a) return;
-  S.vibe[a]=+e.target.value; render();
+  S.vibe[a]=+e.target.value;
+  /* Sync this row by hand. Calling render() here would replace the range input
+     under the reader's finger, which ends the drag every 5 points. */
+  const row=e.target.closest(".vrow"), tog=row.querySelector(".vtog");
+  row.className="vrow on";
+  tog.textContent="✓"; tog.title="ignore this axis";
+  row.querySelector(".vval").textContent=S.vibe[a];
+  renderList();
 });
 $("#vibe").addEventListener("click",e=>{
   const b=e.target.closest("button"); if(!b) return;
@@ -881,8 +905,12 @@ $("#ftoggle").addEventListener("click",()=>{
   const d=$("#drawer"); d.classList.toggle("open"); $("#ftoggle").classList.toggle("on",d.classList.contains("open"));
 });
 $("#dice").addEventListener("click",()=>{
-  const list=GAMES.filter(matches); if(!list.length) return;
-  openGame(list[Math.floor(Math.random()*list.length)].id);
+  const list=rankByFit(GAMES.filter(matches).filter(vibeEligible)); if(!list.length) return;
+  /* rankByFit puts the best fits first, so with an axis set the roll stays among
+     them -- a uniform pick would hand you a 20% match straight after you said
+     what tonight feels like. */
+  const pool=axesSet()?list.slice(0,10):list;
+  openGame(pool[Math.floor(Math.random()*pool.length)].id);
 });
 $("#quick").addEventListener("click",e=>{
   const b=e.target.closest("button"); if(!b) return;
