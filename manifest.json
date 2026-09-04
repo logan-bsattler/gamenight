@@ -1,0 +1,15 @@
+{
+  "name": "Game Night",
+  "short_name": "Game Night",
+  "description": "A browsable shelf of board games: filter by players, time and complexity, or say what tonight feels like and get a match.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0e1116",
+  "theme_color": "#0e1116",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

@@ -7,6 +7,19 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <title>Game Night</title>
+<meta name="description" content="A browsable shelf of board games: filter by players, time and complexity, or say what tonight feels like and get a match.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="manifest.json">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://logan-bsattler.github.io/gamenight/">
+<meta property="og:title" content="Game Night">
+<meta property="og:description" content="A browsable shelf of board games: filter by players, time and complexity, or say what tonight feels like and get a match.">
+<meta property="og:image" content="https://logan-bsattler.github.io/gamenight/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700&display=swap">
 <style>
 :root{
   --bg:#0e1116; --bg2:#161b23; --card:#1b212b; --card2:#222a36; --bg3:rgba(255,255,255,.05);
@@ -24,6 +37,10 @@
   /* the fade under the cover art stays dark in both themes -- it sits on the
      artwork, not on the page, and keeps the badges legible over any image */
   --imgfade1:rgba(14,17,22,.92); --imgfade2:rgba(14,17,22,.25);
+  /* Headings only. Body stays on the system stack: it is already the right
+     voice for dense UI text and costs nothing to load. */
+  --disp:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  --cardsh:none;                 /* dark cards separate by value, not by shadow */
   --r:16px;
 }
 
@@ -44,6 +61,7 @@
     --goldbg2:rgba(161,98,7,.06); --goldln2:rgba(161,98,7,.18);
     --neutbg:rgba(100,116,139,.07); --neutln:rgba(100,116,139,.2); --barbg:rgba(100,116,139,.18);
     --w1:#0d9488; --w2:#0369a1; --w3:#7c3aed; --w4:#b45309; --w5:#e11d48;
+    --cardsh:0 1px 2px rgba(15,23,32,.05),0 5px 14px rgba(15,23,32,.05);
    }
 }
 :root[data-theme="light"]{ 
@@ -59,6 +77,7 @@
     --goldbg2:rgba(161,98,7,.06); --goldln2:rgba(161,98,7,.18);
     --neutbg:rgba(100,116,139,.07); --neutln:rgba(100,116,139,.2); --barbg:rgba(100,116,139,.18);
     --w1:#0d9488; --w2:#0369a1; --w3:#7c3aed; --w4:#b45309; --w5:#e11d48;
+    --cardsh:0 1px 2px rgba(15,23,32,.05),0 5px 14px rgba(15,23,32,.05);
    }
 
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
@@ -80,7 +99,7 @@ header{
   padding:calc(env(safe-area-inset-top) + 10px) 12px 0;
 }
 .brand{display:flex;align-items:baseline;gap:8px;margin-bottom:9px}
-.brand h1{margin:0;font-size:19px;letter-spacing:-.3px;font-weight:700}
+.brand h1{margin:0;font-size:19px;letter-spacing:-.3px;font-weight:700;font-family:var(--disp)}
 .brand .n{margin-left:auto;font-size:12px;color:var(--dim);font-variant-numeric:tabular-nums}
 .searchrow{display:flex;gap:8px;margin-bottom:9px}
 .search{
@@ -137,22 +156,37 @@ header{
   background:transparent;color:var(--dim);cursor:pointer;font-size:12px;line-height:1;padding:0}
 .vrow.on .vtog{background:var(--acc2);border-color:var(--acc2);color:var(--onacc2)}
 .tonight{border:1px solid var(--line);border-radius:14px;padding:14px;margin:0 0 16px;
-  background:var(--bg2);display:flex;gap:14px;align-items:flex-start;flex-wrap:wrap}
+  background:var(--bg2);display:flex;gap:14px;flex-wrap:wrap;
+  /* the radar is the tall item, so centre the text against it rather than
+     leaving a column of dead space under the player bar */
+  align-items:center;box-shadow:var(--cardsh)}
 .tonight .tmain{flex:1 1 210px;min-width:0}
 .tonight .teyebrow{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim)}
-.tonight h2{margin:4px 0 2px;font-size:19px;line-height:1.2}
+.tonight h2{margin:4px 0 2px;font-size:19px;line-height:1.2;font-family:var(--disp)}
 .tonight .tmeta{font-size:12.5px;color:var(--dim)}
 .tonight .tscore{font-size:26px;font-weight:700;color:var(--acc)}
 .tonight .lowconf{display:inline-block;margin-left:6px;font-size:10.5px;color:var(--warm);
   border:1px solid var(--warmln);border-radius:5px;padding:1px 5px;vertical-align:2px}
+/* The panel named one game and stopped, which made the pick feel arbitrary.
+   The runners-up show what it was choosing between. */
+.alsofit{flex:1 1 100%;display:flex;flex-wrap:wrap;gap:7px;align-items:center;
+  border-top:1px solid var(--line);margin-top:2px;padding-top:11px}
+.alabel{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--dimmer)}
+.alt{font-size:12.5px;padding:5px 10px;border-radius:8px;background:var(--bg3);
+  border:1px solid var(--line);color:var(--dim);max-width:100%;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.alt b{color:var(--acc2);font-weight:700}
+.tname{font:inherit;color:inherit;text-align:left;display:block}
 .bestbar{display:flex;gap:3px;margin-top:9px}
 .bestbar span{flex:1;text-align:center;font-size:10.5px;padding:3px 0;border-radius:5px;
   background:var(--bg3);color:var(--dim);border:1px solid transparent}
 .bestbar span.best{background:var(--accsoft);color:var(--acc2);border-color:var(--accln);font-weight:700}
-/* Bottom-left badge stack. Both the teach flag and the fit score want this
-   corner, so they queue rather than overlap: fit score nearest the corner. */
-.botleft{position:absolute;left:7px;bottom:7px;z-index:2;
-  display:flex;flex-direction:column;align-items:flex-start;gap:4px}
+/* The bottom of the thumbnail is one flex row, not three absolute corners:
+   teach flag and fit score stack on the left, the award sits right and gives
+   up width first when the card is too narrow for all three. */
+.botrow{position:absolute;left:7px;right:7px;bottom:7px;z-index:2;
+  display:flex;align-items:flex-end;justify-content:space-between;gap:6px}
+.botleft{display:flex;flex-direction:column;align-items:flex-start;gap:4px;flex:0 0 auto}
 .mscore{font-size:11px;font-weight:700;padding:2px 6px;
   border-radius:6px;background:var(--chipimg-bg);color:var(--acc2);border:1px solid var(--accln);
   backdrop-filter:blur(6px)}
@@ -181,13 +215,20 @@ main{padding:12px 12px 40px}
 .card{
   position:relative;background:var(--card);border:1px solid var(--line);
   border-radius:var(--r);overflow:hidden;text-align:left;display:flex;flex-direction:column;
-  transition:transform .12s ease;
+  transition:transform .12s ease;box-shadow:var(--cardsh);
 }
 .card:active{transform:scale(.975)}
 .thumbwrap{position:relative;aspect-ratio:1/1;background:var(--bg2);overflow:hidden}
-.thumbwrap img{width:100%;height:100%;object-fit:cover;display:block}
+/* The initial sits under the artwork, so a card has a shape while the CDN is
+   still answering and if it never does. z-index puts the fade back on top: the
+   image had to become positioned to cover the letter. */
+.thumbwrap::before{
+  content:attr(data-i);position:absolute;inset:0;display:grid;place-items:center;
+  font:800 40px/1 var(--disp);color:var(--dimmer);opacity:.38;
+}
+.thumbwrap img{width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:1}
 .thumbwrap::after{
-  content:"";position:absolute;inset:0;
+  content:"";position:absolute;inset:0;z-index:1;
   background:linear-gradient(to top,var(--imgfade1) 0%,var(--imgfade2) 42%,transparent 70%);
 }
 .wbadge{
@@ -205,7 +246,7 @@ main{padding:12px 12px 40px}
 }
 .cardbody{padding:8px 10px 10px;display:flex;flex-direction:column;gap:6px;flex:1}
 .cname{
-  font-size:13.5px;font-weight:700;line-height:1.25;letter-spacing:-.2px;
+  font-size:13.5px;font-weight:700;line-height:1.25;letter-spacing:-.2px;font-family:var(--disp);
   display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
 }
 .crow{display:flex;gap:9px;font-size:11.5px;color:var(--dim);font-variant-numeric:tabular-nums;margin-top:auto}
@@ -213,10 +254,10 @@ main{padding:12px 12px 40px}
 .wbar{height:3px;border-radius:2px;background:var(--line);overflow:hidden}
 .wbar i{display:block;height:100%;border-radius:2px}
 .abadge{
-  position:absolute;right:7px;bottom:7px;z-index:2;
   font-size:11px;font-weight:800;letter-spacing:.02em;padding:3px 7px;border-radius:7px;
   background:var(--goldbg);color:var(--gold);border:1px solid var(--goldln);
   backdrop-filter:blur(6px);
+  flex:0 1 auto;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
 }
 .awards{display:flex;flex-direction:column;gap:6px}
 .award{
@@ -249,14 +290,14 @@ main{padding:12px 12px 40px}
   padding:calc(env(safe-area-inset-top) + 10px) 12px 10px;
   background:var(--scrim);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);
 }
-.shead .t{font-size:16px;font-weight:700;flex:1;letter-spacing:-.2px;
+.shead .t{font-size:16px;font-weight:700;flex:1;letter-spacing:-.2px;font-family:var(--disp);
   display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
 .sbody{padding:14px 12px 60px}
 
 .hero{display:flex;gap:12px;margin-bottom:14px}
 .hero img{width:96px;height:96px;flex:none;border-radius:12px;object-fit:cover;background:var(--bg2)}
 .hero .meta{flex:1;min-width:0}
-.hero h2{margin:0 0 3px;font-size:19px;line-height:1.2;letter-spacing:-.4px}
+.hero h2{margin:0 0 3px;font-size:19px;line-height:1.2;letter-spacing:-.4px;font-family:var(--disp)}
 .hero .yr{font-size:12.5px;color:var(--dim);margin-bottom:8px}
 
 .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-bottom:14px}
@@ -751,6 +792,7 @@ function renderTonight(list){
   const box=$("#tonight");
   if(!vibeActive()||!list.length){box.innerHTML="";return;}
   const g=list[0], sc=matchScore(g), v=vibeOf(g);
+  const alts=list.slice(1,3).map(x=>[x,matchScore(x)]).filter(x=>x[1]!==null);
   const flagged=AXES.filter(a=>S.vibe[a]!==null&&LOW_CONF.includes(a));
   let bar="";
   if(v&&v.bestP&&v.bestP.length){
@@ -762,7 +804,7 @@ function renderTonight(list){
   box.innerHTML=`<div class="tonight">
     <div class="tmain">
       <div class="teyebrow">Best fit tonight</div>
-      <h2>${esc(g.name)}</h2>
+      <h2><button class="tname" data-id="${g.id}">${esc(g.name)}</button></h2>
       <div class="tmeta">${plStr(g)} · ${timeRange(g)} · ${wLabel(g.weight)}</div>
       ${bar}
     </div>
@@ -771,6 +813,9 @@ function renderTonight(list){
       <div class="teyebrow">match${flagged.length?`<span class="lowconf">${flagged.join(", ")} low-confidence</span>`:""}</div>
     </div>
     ${radar(g,186)}
+    ${alts.length?`<div class="alsofit"><span class="alabel">also fits</span>${
+      alts.map(([x,sx])=>`<button class="alt" data-id="${x.id}">${esc(x.name)} <b>${sx}%</b></button>`).join("")
+    }</div>`:""}
   </div>`;
 }
 
@@ -787,13 +832,15 @@ function renderList(){
     const m=matchScore(g);   // bottom-left holds one badge: fit score outranks the teach flag
     return `
     <button class="card" data-id="${g.id}">
-      <div class="thumbwrap">
+      <div class="thumbwrap" data-i="${esc(g.name[0])}">
         ${g.rating?`<span class="rbadge" style="color:${g.rating>=8?'var(--acc)':g.rating>=7?'var(--acc2)':'var(--dim)'}">★ ${g.rating.toFixed(1)}</span>`:""}
         <span class="wbadge" style="color:${wColor(g.weight)}">${g.weight?g.weight.toFixed(1):"–"}</span>
-        ${g.awards?`<span class="abadge">${esc(awardShort(g))}</span>`:""}
-        <div class="botleft">
-          ${g.video?`<span class="vbadge">▶ teach</span>`:""}
-          ${m===null?"":`<span class="mscore">${m}% fit</span>`}
+        <div class="botrow">
+          <div class="botleft">
+            ${g.video?`<span class="vbadge">▶ teach</span>`:""}
+            ${m===null?"":`<span class="mscore">${m}% fit</span>`}
+          </div>
+          ${g.awards?`<span class="abadge">${esc(awardShort(g))}</span>`:""}
         </div>
         <img loading="lazy" src="${esc(g.thumb||"")}" alt="">
       </div>
@@ -953,6 +1000,9 @@ $("#drawer").addEventListener("click",e=>{
 $("#grid").addEventListener("click",e=>{
   const c=e.target.closest(".card"); if(c) openGame(c.dataset.id);
 });
+$("#tonight").addEventListener("click",e=>{
+  const b=e.target.closest(".alt,.tname"); if(b) openGame(b.dataset.id);
+});
 $("#close").addEventListener("click",()=>history.back());
 $("#sheetBody").addEventListener("click",e=>{
   const v=e.target.closest("#vid"); if(!v) return;
@@ -966,6 +1016,9 @@ document.addEventListener("keydown",e=>{
 /* A reload with the sheet open leaves its history entry behind, which makes the
    first Back look broken. Drop it. */
 if(history.state&&history.state.sheet) history.replaceState(null,"");
+
+if("serviceWorker" in navigator)
+  addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));
 
 $("#foot").textContent=UPDATED;
 renderDrawer(); render();
