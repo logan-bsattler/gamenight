@@ -89,7 +89,13 @@ def score(g, fallback, seen=None):
     s = {}
 
     # ---- Thinky ----
-    v = wn * 70
+    # Base was wn * 70, i.e. (weight-1)/4 * 70, which assumes BGG weight runs
+    # the full 1-5. It does not, in any real collection: here the max is 4.16
+    # and exactly one game clears 4.0, so the top of the scale was dead and a
+    # median game (weight 2.06) based out at 19 -- reading as "barely thinky"
+    # on a 0-100 axis. Renormalised over the range that actually occurs, 1-4.
+    # Base constant only, per spec section 5; no signal weights were touched.
+    v = min(1.0, (w - 1) / 3.0) * 80
     v += 15 if rank(g, "strategygames") else 0
     v += 10 if rank(g, "abstracts") else 0
     v += capped(g, ["Worker Placement", "Engine Building", "Action Points", "Tech Trees",

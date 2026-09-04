@@ -5,7 +5,7 @@
   "intense": 18,
   "playful": 42,
   "social": 35,
-  "thinky": 56
+  "thinky": 75
  },
  "109252": {
   "compete": 41,
@@ -13,7 +13,7 @@
   "intense": 1,
   "playful": 93,
   "social": 59,
-  "thinky": 3
+  "thinky": 4
  },
  "11": {
   "compete": 28,
@@ -21,7 +21,7 @@
   "intense": 6,
   "playful": 61,
   "social": 100,
-  "thinky": 12
+  "thinky": 18
  },
  "110327": {
   "compete": 67,
@@ -29,7 +29,7 @@
   "intense": 28,
   "playful": 35,
   "social": 69,
-  "thinky": 45
+  "thinky": 59
  },
  "118": {
   "compete": 56,
@@ -37,7 +37,7 @@
   "intense": 11,
   "playful": 52,
   "social": 40,
-  "thinky": 42
+  "thinky": 54
  },
  "122522": {
   "compete": 95,
@@ -45,7 +45,7 @@
   "intense": 9,
   "playful": 75,
   "social": 52,
-  "thinky": 34
+  "thinky": 43
  },
  "13": {
   "compete": 66,
@@ -53,7 +53,7 @@
   "intense": 26,
   "playful": 37,
   "social": 95,
-  "thinky": 42
+  "thinky": 54
  },
  "133473": {
   "compete": 26,
@@ -61,7 +61,7 @@
   "intense": 0,
   "playful": 100,
   "social": 59,
-  "thinky": 3
+  "thinky": 4
  },
  "141423": {
   "compete": 10,
@@ -69,7 +69,7 @@
   "intense": 39,
   "playful": 49,
   "social": 38,
-  "thinky": 47
+  "thinky": 62
  },
  "143519": {
   "compete": 57,
@@ -77,7 +77,7 @@
   "intense": 23,
   "playful": 50,
   "social": 39,
-  "thinky": 41
+  "thinky": 54
  },
  "144325": {
   "compete": 54,
@@ -109,7 +109,7 @@
   "intense": 7,
   "playful": 69,
   "social": 54,
-  "thinky": 13
+  "thinky": 21
  },
  "15046": {
   "compete": 74,
@@ -117,7 +117,7 @@
   "intense": 41,
   "playful": 50,
   "social": 100,
-  "thinky": 7
+  "thinky": 14
  },
  "150930": {
   "compete": 28,
@@ -125,7 +125,7 @@
   "intense": 6,
   "playful": 76,
   "social": 65,
-  "thinky": 12
+  "thinky": 18
  },
  "156566": {
   "compete": 73,
@@ -133,7 +133,7 @@
   "intense": 14,
   "playful": 47,
   "social": 38,
-  "thinky": 54
+  "thinky": 69
  },
  "15987": {
   "compete": 10,
@@ -141,7 +141,7 @@
   "intense": 93,
   "playful": 19,
   "social": 41,
-  "thinky": 45
+  "thinky": 69
  },
  "161290": {
   "compete": 10,
@@ -149,7 +149,7 @@
   "intense": 40,
   "playful": 55,
   "social": 52,
-  "thinky": 19
+  "thinky": 30
  },
  "161965": {
   "compete": 31,
@@ -157,7 +157,7 @@
   "intense": 10,
   "playful": 54,
   "social": 51,
-  "thinky": 21
+  "thinky": 31
  },
  "161970": {
   "compete": 65,
@@ -165,7 +165,7 @@
   "intense": 41,
   "playful": 15,
   "social": 28,
-  "thinky": 76
+  "thinky": 100
  },
  "162082": {
   "compete": 59,
@@ -173,7 +173,7 @@
   "intense": 16,
   "playful": 45,
   "social": 36,
-  "thinky": 52
+  "thinky": 69
  },
  "163163": {
   "compete": 32,
@@ -181,7 +181,7 @@
   "intense": 26,
   "playful": 52,
   "social": 50,
-  "thinky": 23
+  "thinky": 35
  },
  "163967": {
   "compete": 51,
@@ -189,7 +189,7 @@
   "intense": 10,
   "playful": 54,
   "social": 41,
-  "thinky": 35
+  "thinky": 46
  },
  "164237": {
   "compete": 43,
@@ -197,7 +197,7 @@
   "intense": 14,
   "playful": 53,
   "social": 48,
-  "thinky": 42
+  "thinky": 57
  },
  "165986": {
   "compete": 56,
@@ -205,7 +205,7 @@
   "intense": 11,
   "playful": 53,
   "social": 51,
-  "thinky": 37
+  "thinky": 48
  },
  "171131": {
   "compete": 46,
@@ -213,7 +213,7 @@
   "intense": 60,
   "playful": 54,
   "social": 91,
-  "thinky": 0
+  "thinky": 7
  },
  "171879": {
   "compete": 44,
@@ -221,7 +221,7 @@
   "intense": 16,
   "playful": 44,
   "social": 36,
-  "thinky": 53
+  "thinky": 70
  },
  "172362": {
   "compete": 55,
@@ -229,7 +229,7 @@
   "intense": 9,
   "playful": 66,
   "social": 42,
-  "thinky": 32
+  "thinky": 42
  },
  "172818": {
   "compete": 43,
@@ -237,7 +237,7 @@
   "intense": 38,
   "playful": 49,
   "social": 100,
-  "thinky": 46
+  "thinky": 60
  },
  "172971": {
   "compete": 25,
@@ -253,7 +253,7 @@
   "intense": 13,
   "playful": 96,
   "social": 68,
-  "thinky": 6
+  "thinky": 9
  },
  "175324": {
   "compete": 31,
@@ -261,7 +261,7 @@
   "intense": 41,
   "playful": 38,
   "social": 61,
-  "thinky": 22
+  "thinky": 33
  },
  "176396": {
   "compete": 31,
@@ -269,7 +269,7 @@
   "intense": 11,
   "playful": 58,
   "social": 51,
-  "thinky": 26
+  "thinky": 37
  },
  "181345": {
   "compete": 25,
@@ -285,7 +285,7 @@
   "intense": 6,
   "playful": 71,
   "social": 55,
-  "thinky": 11
+  "thinky": 17
  },
  "182189": {
   "compete": 29,
@@ -293,7 +293,7 @@
   "intense": 18,
   "playful": 63,
   "social": 63,
-  "thinky": 16
+  "thinky": 24
  },
  "183394": {
   "compete": 44,
@@ -301,7 +301,7 @@
   "intense": 17,
   "playful": 44,
   "social": 46,
-  "thinky": 58
+  "thinky": 76
  },
  "185021": {
   "compete": 32,
@@ -309,7 +309,7 @@
   "intense": 22,
   "playful": 51,
   "social": 40,
-  "thinky": 24
+  "thinky": 36
  },
  "185589": {
   "compete": 59,
@@ -317,7 +317,7 @@
   "intense": 30,
   "playful": 46,
   "social": 37,
-  "thinky": 50
+  "thinky": 66
  },
  "188834": {
   "compete": 59,
@@ -333,7 +333,7 @@
   "intense": 8,
   "playful": 57,
   "social": 43,
-  "thinky": 16
+  "thinky": 25
  },
  "19": {
   "compete": 29,
@@ -341,7 +341,7 @@
   "intense": 7,
   "playful": 59,
   "social": 74,
-  "thinky": 14
+  "thinky": 22
  },
  "191862": {
   "compete": 45,
@@ -349,7 +349,7 @@
   "intense": 9,
   "playful": 56,
   "social": 52,
-  "thinky": 18
+  "thinky": 27
  },
  "192455": {
   "compete": 10,
@@ -357,7 +357,7 @@
   "intense": 53,
   "playful": 27,
   "social": 46,
-  "thinky": 60
+  "thinky": 85
  },
  "192623": {
   "compete": 10,
@@ -365,7 +365,7 @@
   "intense": 10,
   "playful": 55,
   "social": 72,
-  "thinky": 20
+  "thinky": 30
  },
  "192860": {
   "compete": 29,
@@ -373,7 +373,7 @@
   "intense": 7,
   "playful": 64,
   "social": 54,
-  "thinky": 15
+  "thinky": 22
  },
  "193037": {
   "compete": 10,
@@ -381,7 +381,7 @@
   "intense": 80,
   "playful": 38,
   "social": 100,
-  "thinky": 46
+  "thinky": 67
  },
  "194607": {
   "compete": 41,
@@ -389,7 +389,7 @@
   "intense": 11,
   "playful": 68,
   "social": 41,
-  "thinky": 37
+  "thinky": 49
  },
  "194655": {
   "compete": 29,
@@ -397,7 +397,7 @@
   "intense": 6,
   "playful": 75,
   "social": 50,
-  "thinky": 23
+  "thinky": 29
  },
  "199561": {
   "compete": 15,
@@ -405,7 +405,7 @@
   "intense": 8,
   "playful": 57,
   "social": 38,
-  "thinky": 31
+  "thinky": 40
  },
  "200454": {
   "compete": 40,
@@ -413,7 +413,7 @@
   "intense": 24,
   "playful": 56,
   "social": 42,
-  "thinky": 33
+  "thinky": 43
  },
  "200853": {
   "compete": 40,
@@ -421,7 +421,7 @@
   "intense": 9,
   "playful": 56,
   "social": 52,
-  "thinky": 33
+  "thinky": 43
  },
  "201248": {
   "compete": 29,
@@ -429,7 +429,7 @@
   "intense": 7,
   "playful": 74,
   "social": 54,
-  "thinky": 14
+  "thinky": 21
  },
  "201825": {
   "compete": 28,
@@ -437,7 +437,7 @@
   "intense": 13,
   "playful": 49,
   "social": 39,
-  "thinky": 47
+  "thinky": 61
  },
  "203204": {
   "compete": 49,
@@ -445,7 +445,7 @@
   "intense": 15,
   "playful": 46,
   "social": 57,
-  "thinky": 31
+  "thinky": 47
  },
  "204027": {
   "compete": 29,
@@ -453,7 +453,7 @@
   "intense": 8,
   "playful": 63,
   "social": 53,
-  "thinky": 21
+  "thinky": 29
  },
  "204583": {
   "compete": 41,
@@ -461,7 +461,7 @@
   "intense": 2,
   "playful": 82,
   "social": 58,
-  "thinky": 4
+  "thinky": 6
  },
  "204837": {
   "compete": 44,
@@ -469,7 +469,7 @@
   "intense": 15,
   "playful": 47,
   "social": 82,
-  "thinky": 45
+  "thinky": 60
  },
  "205398": {
   "compete": 55,
@@ -477,7 +477,7 @@
   "intense": 9,
   "playful": 56,
   "social": 62,
-  "thinky": 18
+  "thinky": 28
  },
  "205494": {
   "compete": 29,
@@ -485,7 +485,7 @@
   "intense": 7,
   "playful": 69,
   "social": 54,
-  "thinky": 15
+  "thinky": 22
  },
  "207208": {
   "compete": 60,
@@ -493,7 +493,7 @@
   "intense": 17,
   "playful": 43,
   "social": 35,
-  "thinky": 59
+  "thinky": 77
  },
  "216482": {
   "compete": 28,
@@ -501,7 +501,7 @@
   "intense": 5,
   "playful": 92,
   "social": 56,
-  "thinky": 0
+  "thinky": 5
  },
  "217085": {
   "compete": 30,
@@ -509,7 +509,7 @@
   "intense": 8,
   "playful": 62,
   "social": 53,
-  "thinky": 16
+  "thinky": 25
  },
  "217372": {
   "compete": 30,
@@ -517,7 +517,7 @@
   "intense": 18,
   "playful": 57,
   "social": 53,
-  "thinky": 16
+  "thinky": 25
  },
  "218603": {
   "compete": 46,
@@ -525,7 +525,7 @@
   "intense": 11,
   "playful": 53,
   "social": 50,
-  "thinky": 27
+  "thinky": 39
  },
  "221194": {
   "compete": 45,
@@ -533,7 +533,7 @@
   "intense": 33,
   "playful": 32,
   "social": 35,
-  "thinky": 61
+  "thinky": 80
  },
  "221230": {
   "compete": 57,
@@ -541,7 +541,7 @@
   "intense": 13,
   "playful": 50,
   "social": 39,
-  "thinky": 51
+  "thinky": 64
  },
  "222219": {
   "compete": 85,
@@ -549,7 +549,7 @@
   "intense": 34,
   "playful": 80,
   "social": 32,
-  "thinky": 24
+  "thinky": 33
  },
  "227758": {
   "compete": 28,
@@ -557,7 +557,7 @@
   "intense": 4,
   "playful": 73,
   "social": 66,
-  "thinky": 14
+  "thinky": 18
  },
  "228133": {
   "compete": 42,
@@ -565,7 +565,7 @@
   "intense": 13,
   "playful": 50,
   "social": 19,
-  "thinky": 41
+  "thinky": 54
  },
  "230191": {
   "compete": 54,
@@ -573,7 +573,7 @@
   "intense": 32,
   "playful": 59,
   "social": 64,
-  "thinky": 24
+  "thinky": 32
  },
  "232043": {
   "compete": 45,
@@ -581,7 +581,7 @@
   "intense": 9,
   "playful": 70,
   "social": 52,
-  "thinky": 19
+  "thinky": 28
  },
  "24508": {
   "compete": 56,
@@ -589,7 +589,7 @@
   "intense": 11,
   "playful": 58,
   "social": 26,
-  "thinky": 47
+  "thinky": 58
  },
  "24827": {
   "compete": 40,
@@ -597,7 +597,7 @@
   "intense": 9,
   "playful": 66,
   "social": 42,
-  "thinky": 33
+  "thinky": 43
  },
  "250963": {
   "compete": 28,
@@ -605,7 +605,7 @@
   "intense": 6,
   "playful": 61,
   "social": 55,
-  "thinky": 12
+  "thinky": 18
  },
  "252688": {
   "compete": 55,
@@ -613,7 +613,7 @@
   "intense": 29,
   "playful": 76,
   "social": 42,
-  "thinky": 18
+  "thinky": 27
  },
  "254088": {
   "compete": 28,
@@ -621,7 +621,7 @@
   "intense": 4,
   "playful": 78,
   "social": 66,
-  "thinky": 9
+  "thinky": 13
  },
  "254683": {
   "compete": 53,
@@ -629,7 +629,7 @@
   "intense": 0,
   "playful": 100,
   "social": 65,
-  "thinky": 1
+  "thinky": 7
  },
  "256382": {
   "compete": 57,
@@ -637,7 +637,7 @@
   "intense": 28,
   "playful": 35,
   "social": 59,
-  "thinky": 26
+  "thinky": 39
  },
  "265017": {
   "compete": 73,
@@ -645,7 +645,7 @@
   "intense": 14,
   "playful": 48,
   "social": 38,
-  "thinky": 43
+  "thinky": 57
  },
  "2651": {
   "compete": 61,
@@ -653,7 +653,7 @@
   "intense": 35,
   "playful": 24,
   "social": 43,
-  "thinky": 64
+  "thinky": 85
  },
  "267397": {
   "compete": 58,
@@ -661,7 +661,7 @@
   "intense": 25,
   "playful": 47,
   "social": 37,
-  "thinky": 44
+  "thinky": 60
  },
  "267979": {
   "compete": 10,
@@ -669,7 +669,7 @@
   "intense": 10,
   "playful": 54,
   "social": 26,
-  "thinky": 31
+  "thinky": 42
  },
  "272260": {
   "compete": 29,
@@ -677,7 +677,7 @@
   "intense": 8,
   "playful": 58,
   "social": 43,
-  "thinky": 15
+  "thinky": 23
  },
  "274841": {
   "compete": 30,
@@ -685,7 +685,7 @@
   "intense": 9,
   "playful": 56,
   "social": 52,
-  "thinky": 18
+  "thinky": 27
  },
  "275349": {
   "compete": 28,
@@ -693,7 +693,7 @@
   "intense": 4,
   "playful": 78,
   "social": 31,
-  "thinky": 19
+  "thinky": 23
  },
  "28023": {
   "compete": 53,
@@ -701,7 +701,7 @@
   "intense": 6,
   "playful": 66,
   "social": 65,
-  "thinky": 2
+  "thinky": 8
  },
  "281020": {
   "compete": 42,
@@ -709,7 +709,7 @@
   "intense": 4,
   "playful": 78,
   "social": 46,
-  "thinky": 9
+  "thinky": 13
  },
  "284083": {
   "compete": 10,
@@ -717,7 +717,7 @@
   "intense": 8,
   "playful": 67,
   "social": 73,
-  "thinky": 17
+  "thinky": 26
  },
  "285232": {
   "compete": 44,
@@ -725,7 +725,7 @@
   "intense": 7,
   "playful": 70,
   "social": 44,
-  "thinky": 13
+  "thinky": 20
  },
  "296576": {
   "compete": 10,
@@ -733,7 +733,7 @@
   "intense": 0,
   "playful": 95,
   "social": 78,
-  "thinky": 6
+  "thinky": 9
  },
  "301002": {
   "compete": 31,
@@ -741,7 +741,7 @@
   "intense": 10,
   "playful": 59,
   "social": 42,
-  "thinky": 25
+  "thinky": 35
  },
  "30241": {
   "compete": 45,
@@ -749,7 +749,7 @@
   "intense": 8,
   "playful": 57,
   "social": 53,
-  "thinky": 16
+  "thinky": 25
  },
  "305984": {
   "compete": 25,
@@ -757,7 +757,7 @@
   "intense": 1,
   "playful": 84,
   "social": 49,
-  "thinky": 1
+  "thinky": 2
  },
  "308028": {
   "compete": 31,
@@ -765,7 +765,7 @@
   "intense": 10,
   "playful": 60,
   "social": 42,
-  "thinky": 20
+  "thinky": 30
  },
  "316407": {
   "compete": 42,
@@ -773,7 +773,7 @@
   "intense": 4,
   "playful": 68,
   "social": 76,
-  "thinky": 14
+  "thinky": 18
  },
  "31730": {
   "compete": 59,
@@ -781,7 +781,7 @@
   "intense": 15,
   "playful": 46,
   "social": 47,
-  "thinky": 56
+  "thinky": 72
  },
  "328859": {
   "compete": 26,
@@ -789,7 +789,7 @@
   "intense": 1,
   "playful": 83,
   "social": 59,
-  "thinky": 2
+  "thinky": 4
  },
  "329484": {
   "compete": 29,
@@ -797,7 +797,7 @@
   "intense": 7,
   "playful": 64,
   "social": 54,
-  "thinky": 14
+  "thinky": 21
  },
  "333981": {
   "compete": 35,
@@ -805,7 +805,7 @@
   "intense": 17,
   "playful": 43,
   "social": 46,
-  "thinky": 34
+  "thinky": 51
  },
  "334644": {
   "compete": 32,
@@ -813,7 +813,7 @@
   "intense": 12,
   "playful": 51,
   "social": 20,
-  "thinky": 29
+  "thinky": 42
  },
  "336597": {
   "compete": 26,
@@ -821,7 +821,7 @@
   "intense": 2,
   "playful": 97,
   "social": 58,
-  "thinky": 3
+  "thinky": 5
  },
  "337098": {
   "compete": 48,
@@ -829,7 +829,7 @@
   "intense": 14,
   "playful": 48,
   "social": 38,
-  "thinky": 33
+  "thinky": 47
  },
  "341245": {
   "compete": 73,
@@ -837,7 +837,7 @@
   "intense": 13,
   "playful": 49,
   "social": 38,
-  "thinky": 42
+  "thinky": 56
  },
  "341358": {
   "compete": 26,
@@ -845,7 +845,7 @@
   "intense": 3,
   "playful": 81,
   "social": 13,
-  "thinky": 15
+  "thinky": 18
  },
  "350755": {
   "compete": 10,
@@ -853,7 +853,7 @@
   "intense": 22,
   "playful": 67,
   "social": 50,
-  "thinky": 23
+  "thinky": 36
  },
  "351526": {
   "compete": 30,
@@ -861,7 +861,7 @@
   "intense": 33,
   "playful": 27,
   "social": 35,
-  "thinky": 51
+  "thinky": 70
  },
  "351616": {
   "compete": 62,
@@ -869,7 +869,7 @@
   "intense": 12,
   "playful": 51,
   "social": 84,
-  "thinky": 34
+  "thinky": 47
  },
  "358805": {
   "compete": 10,
@@ -877,7 +877,7 @@
   "intense": 13,
   "playful": 100,
   "social": 48,
-  "thinky": 5
+  "thinky": 8
  },
  "361840": {
   "compete": 10,
@@ -885,7 +885,7 @@
   "intense": 35,
   "playful": 64,
   "social": 61,
-  "thinky": 20
+  "thinky": 31
  },
  "36218": {
   "compete": 67,
@@ -893,7 +893,7 @@
   "intense": 12,
   "playful": 62,
   "social": 40,
-  "thinky": 38
+  "thinky": 51
  },
  "363699": {
   "compete": 16,
@@ -901,7 +901,7 @@
   "intense": 10,
   "playful": 55,
   "social": 42,
-  "thinky": 20
+  "thinky": 30
  },
  "366752": {
   "compete": 30,
@@ -909,7 +909,7 @@
   "intense": 9,
   "playful": 60,
   "social": 62,
-  "thinky": 24
+  "thinky": 33
  },
  "366910": {
   "compete": 34,
@@ -917,7 +917,7 @@
   "intense": 15,
   "playful": 66,
   "social": 17,
-  "thinky": 31
+  "thinky": 47
  },
  "370399": {
   "compete": 32,
@@ -925,7 +925,7 @@
   "intense": 13,
   "playful": 54,
   "social": 39,
-  "thinky": 31
+  "thinky": 45
  },
  "373435": {
   "compete": 28,
@@ -933,7 +933,7 @@
   "intense": 6,
   "playful": 60,
   "social": 55,
-  "thinky": 12
+  "thinky": 19
  },
  "375573": {
   "compete": 31,
@@ -941,7 +941,7 @@
   "intense": 11,
   "playful": 53,
   "social": 40,
-  "thinky": 22
+  "thinky": 34
  },
  "377716": {
   "compete": 29,
@@ -949,7 +949,7 @@
   "intense": 7,
   "playful": 68,
   "social": 54,
-  "thinky": 15
+  "thinky": 22
  },
  "391766": {
   "compete": 10,
@@ -957,7 +957,7 @@
   "intense": 8,
   "playful": 63,
   "social": 44,
-  "thinky": 15
+  "thinky": 23
  },
  "392448": {
   "compete": 27,
@@ -965,7 +965,7 @@
   "intense": 4,
   "playful": 69,
   "social": 47,
-  "thinky": 8
+  "thinky": 11
  },
  "394334": {
   "compete": 42,
@@ -973,7 +973,7 @@
   "intense": 4,
   "playful": 68,
   "social": 56,
-  "thinky": 9
+  "thinky": 13
  },
  "396655": {
   "compete": 10,
@@ -981,7 +981,7 @@
   "intense": 1,
   "playful": 83,
   "social": 59,
-  "thinky": 2
+  "thinky": 3
  },
  "401185": {
   "compete": 58,
@@ -989,7 +989,7 @@
   "intense": 15,
   "playful": 47,
   "social": 17,
-  "thinky": 29
+  "thinky": 45
  },
  "40692": {
   "compete": 72,
@@ -997,7 +997,7 @@
   "intense": 22,
   "playful": 56,
   "social": 50,
-  "thinky": 39
+  "thinky": 51
  },
  "411003": {
   "compete": 56,
@@ -1005,7 +1005,7 @@
   "intense": 10,
   "playful": 54,
   "social": 21,
-  "thinky": 20
+  "thinky": 31
  },
  "41114": {
   "compete": 28,
@@ -1021,7 +1021,7 @@
   "intense": 34,
   "playful": 41,
   "social": 52,
-  "thinky": 18
+  "thinky": 27
  },
  "41916": {
   "compete": 26,
@@ -1037,7 +1037,7 @@
   "intense": 14,
   "playful": 68,
   "social": 46,
-  "thinky": 9
+  "thinky": 13
  },
  "420214": {
   "compete": 45,
@@ -1045,7 +1045,7 @@
   "intense": 8,
   "playful": 57,
   "social": 73,
-  "thinky": 16
+  "thinky": 25
  },
  "421852": {
   "compete": 45,
@@ -1053,7 +1053,7 @@
   "intense": 9,
   "playful": 56,
   "social": 22,
-  "thinky": 18
+  "thinky": 27
  },
  "424577": {
   "compete": 30,
@@ -1061,7 +1061,7 @@
   "intense": 9,
   "playful": 60,
   "social": 42,
-  "thinky": 24
+  "thinky": 34
  },
  "425428": {
   "compete": 52,
@@ -1069,7 +1069,7 @@
   "intense": 14,
   "playful": 68,
   "social": 56,
-  "thinky": 13
+  "thinky": 18
  },
  "4324": {
   "compete": 76,
@@ -1077,7 +1077,7 @@
   "intense": 51,
   "playful": 38,
   "social": 40,
-  "thinky": 22
+  "thinky": 34
  },
  "435367": {
   "compete": 58,
@@ -1085,7 +1085,7 @@
   "intense": 9,
   "playful": 88,
   "social": 100,
-  "thinky": 9
+  "thinky": 13
  },
  "440024": {
   "compete": 47,
@@ -1093,7 +1093,7 @@
   "intense": 12,
   "playful": 52,
   "social": 40,
-  "thinky": 28
+  "thinky": 40
  },
  "447298": {
   "compete": 58,
@@ -1101,7 +1101,7 @@
   "intense": 13,
   "playful": 49,
   "social": 19,
-  "thinky": 26
+  "thinky": 40
  },
  "6249": {
   "compete": 56,
@@ -1109,7 +1109,7 @@
   "intense": 10,
   "playful": 60,
   "social": 62,
-  "thinky": 34
+  "thinky": 44
  },
  "68425": {
   "compete": 43,
@@ -1117,7 +1117,7 @@
   "intense": 13,
   "playful": 49,
   "social": 39,
-  "thinky": 41
+  "thinky": 55
  },
  "9408": {
   "compete": 58,
@@ -1125,7 +1125,7 @@
   "intense": 13,
   "playful": 49,
   "social": 39,
-  "thinky": 47
+  "thinky": 61
  },
  "9616": {
   "compete": 71,
@@ -1133,7 +1133,7 @@
   "intense": 10,
   "playful": 54,
   "social": 26,
-  "thinky": 46
+  "thinky": 57
  },
  "98778": {
   "compete": 10,
@@ -1141,6 +1141,6 @@
   "intense": 6,
   "playful": 76,
   "social": 75,
-  "thinky": 12
+  "thinky": 18
  }
 }

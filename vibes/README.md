@@ -92,6 +92,34 @@ hand scores — there are none yet. Section 5 still applies: once
 direction should be corrected **by moving its base constant**, which is exactly
 what these two now have.
 
+## Thinky base, renormalised
+
+The spec's `(weight - 1) / 4 * 70` assumes BGG weight uses its full 1-5 range.
+No real collection does: here the heaviest game is 4.16 and exactly one clears
+4.0, so the top 40% of the scale was dead and a median game (weight 2.06) based
+out at 19 — reading as "barely thinky" on a 0-100 axis. The base now
+renormalises over the range that actually occurs:
+
+```python
+thinky: min(1, (w - 1) / 3) * 80
+```
+
+Base constant only; no signal weights moved. Median thinky 21 → 31, distinct
+values 56 → 65.
+
+**The residual is a limitation, not a miscalibration.** After the fix, medium
+and heavy games line up almost exactly against a hand pass (Viticulture 76 vs
+75, Small World 51 vs 50, Above and Below 60 vs 55). Everything still scoring
+low is light: Santorini 1.72, Splendor 1.77, Kingdomino 1.24, Sushi Go! 1.16.
+
+That is BGG weight doing what it actually measures — **rules complexity, not
+depth of thought**. Santorini teaches in two minutes and is a deep duel; chess
+would score light too. Raising the base further would close that gap by
+inflating the medium and heavy games that are now correct, and would make Sushi
+Go! read as thinky. If light-but-deep games need to score higher, that wants a
+new signal (the abstracts rank is the obvious candidate, currently only +10),
+not a bigger base.
+
 ## Validation is not done
 
 Section 5 is the part that decides whether any of this is trustworthy, and it
