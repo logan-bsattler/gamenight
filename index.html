@@ -211,6 +211,9 @@ header{
   background:var(--accsoft);border:1px solid var(--accln);color:var(--acc)}
 .pbtn.undo{background:var(--bg3);border-color:var(--line);color:var(--dim);font-weight:500}
 .sortsel{display:flex;gap:6px;flex-wrap:wrap}
+.preset{display:inline-flex;align-items:center;gap:8px}
+.pdel{opacity:.45;font-size:15px;line-height:1;margin:-2px -3px -2px 0;padding:0 3px}
+.pdel:hover{opacity:1;color:var(--hot)}
 
 /* ---------- grid ---------- */
 main{padding:12px 12px 40px}
@@ -647,6 +650,23 @@ function sorted(list){
   return [...list].sort(c);
 }
 
+/* ---------- presets ----------
+   A preset is just a saved hash, which means applying one goes through exactly
+   the same path as opening a shared link. The search box is left out: a query
+   is a transient lookup, not part of how the table is set up tonight. */
+const PRESET_KEY="gn-presets";
+let PRESETS=(()=>{try{return JSON.parse(localStorage.getItem(PRESET_KEY))||[]}catch(e){return[]}})();
+const savePresets=()=>{try{localStorage.setItem(PRESET_KEY,JSON.stringify(PRESETS))}catch(e){}};
+
+function addPreset(name){
+  name=(name||"").trim(); if(!name) return false;
+  const h=stateParams(false).toString();
+  if(!h) return false;                                  // nothing set: nothing to save
+  const at=PRESETS.findIndex(p=>p.n.toLowerCase()===name.toLowerCase());
+  if(at>=0) PRESETS[at].h=h; else PRESETS.push({n:name,h});
+  savePresets(); return true;
+}
+
 /* ---------- filter state in the URL ----------
    A set of filters is the interesting thing to share: "here's what fits
    tonight" should be a link, and a reload should not lose the evening's work.
@@ -658,9 +678,9 @@ function sorted(list){
    the ruder reading. Axes use their own names to keep a shared link legible. */
 let lastHash="", hashT=0;
 
-function writeHash(){
+function stateParams(withQuery){
   const p=new URLSearchParams();
-  if(S.q) p.set("q",S.q);
+  if(withQuery&&S.q) p.set("q",S.q);
   if(S.players) p.set("p",S.players);
   if(S.twoOnly) p.set("two","1");
   if(S.time) p.set("t",S.time);
@@ -672,7 +692,11 @@ function writeHash(){
   if(S.vplayers) p.set("vp",S.vplayers);
   if(S.vtime) p.set("vt",S.vtime);
   AXES.forEach(a=>{if(S.vibe[a]!==null) p.set(a,S.vibe[a]);});
-  lastHash=p.toString();
+  return p;
+}
+
+function writeHash(){
+  lastHash=stateParams(true).toString();
   /* replaceState, not push: Back belongs to the detail sheet, and nobody wants
      to reverse thirty filter taps one at a time. Keep whatever state the sheet
      put there. Throws on an opaque origin (a file:// or data: preview), which
@@ -787,7 +811,14 @@ function matchScore(g){
 }
 
 function renderVibe(){
-  let h=`<div class="fgroup"><div class="flabel">Tonight feels like…</div>`;
+  let h="";
+  if(PRESETS.length||vibeActive()){
+    h+=`<div class="fgroup"><div class="flabel">Presets</div><div class="opts">`;
+    PRESETS.forEach((p,i)=>h+=`<button class="opt preset" data-vpreset="${i}">${esc(p.n)}<span class="pdel" data-vdel="${i}" title="Delete this preset">×</span></button>`);
+    if(vibeActive()) h+=`<button class="opt" data-vsave="1">+ Save current</button>`;
+    h+=`</div></div>`;
+  }
+  h+=`<div class="fgroup"><div class="flabel">Tonight feels like…</div>`;
   AXES.forEach(a=>{
     const on=S.vibe[a]!==null, v=on?S.vibe[a]:50;
     h+=`<div class="vrow ${on?'on':'off'}">
@@ -1066,7 +1097,28 @@ $("#vibe").addEventListener("input",e=>{
   renderList();
 });
 $("#vibe").addEventListener("click",e=>{
+  const del=e.target.closest("[data-vdel]");
+  if(del){
+    const p=PRESETS[+del.dataset.vdel];
+    /* Deleting is the one irreversible thing in the panel -- plays have Undo,
+       filters have Reset -- so it asks. */
+    if(p&&confirm(`Delete the preset "${p.n}"?`)){ PRESETS.splice(+del.dataset.vdel,1); savePresets(); render(); }
+    return;
+  }
   const b=e.target.closest("button"); if(!b) return;
+  if(b.dataset.vpreset){
+    const p=PRESETS[+b.dataset.vpreset]; if(!p) return;
+    /* Route through the hash so a preset and a shared link apply identically.
+       Same-value assignment fires no hashchange, so re-tapping the active
+       preset needs doing by hand. */
+    if(location.hash.replace(/^#/,"")===p.h){ readHash(); revealActivePanels(); renderDrawer(); render(); }
+    else location.hash=p.h;
+    return;
+  }
+  if(b.dataset.vsave){
+    if(addPreset(prompt("Name this preset", "")||"")) render();
+    return;
+  }
   if(b.dataset.vax){const a=b.dataset.vax; S.vibe[a]= S.vibe[a]===null ? +$(`[data-vslide="${a}"]`).value : null;}
   else if(b.dataset.vp) S.vplayers = S.vplayers==+b.dataset.vp ? 0 : +b.dataset.vp;
   else if(b.dataset.vt) S.vtime = S.vtime==+b.dataset.vt ? 0 : +b.dataset.vt;
