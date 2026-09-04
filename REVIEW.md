@@ -205,6 +205,11 @@ hairline border. Suggestions, in order of payoff:
 
 ## Part 5 — Hygiene
 
+> **DONE.** `README.md` and `CLAUDE.md` added. Both were fact-checked against
+> the repo: file paths, line numbers, commit shas, storage keys and every
+> documented hash parameter, and the example link was run in a browser (the
+> first draft's example combined `two=1` with `p=4` and returned nothing).
+
 - No root `README.md`. `vibes/README.md` is excellent; the project itself
   needs a short one: what it is, the Pages URL, how to refresh the collection
   (the `/refresh-bgg-collection` skill), and the vibes build commands.
