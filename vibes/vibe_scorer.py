@@ -22,7 +22,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 CACHE = os.path.join(HERE, "bgg-cache.json")
 AUTO = os.path.join(HERE, "vibes-auto.json")
 
-AXES = ["cozy", "chatty", "silly", "cutthroat", "tense", "crunchy", "swingy", "storied"]
+AXES = ["cozy", "silly", "chatty", "swingy", "cutthroat", "crunchy", "tense", "storied"]
 
 # Spec shorthand -> real BGG tags. A shorthand mapping to () never fires.
 ALIASES = {

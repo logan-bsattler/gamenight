@@ -21,7 +21,7 @@ ROOT = os.path.dirname(HERE)
 CACHE = os.path.join(HERE, "bgg-cache.json")
 MANUAL = os.path.join(HERE, "vibes-manual.json")
 SHEET = os.path.join(HERE, "worksheet.csv")
-AXES = ["cozy", "chatty", "silly", "cutthroat", "tense", "crunchy", "swingy", "storied"]
+AXES = ["cozy", "silly", "chatty", "swingy", "cutthroat", "crunchy", "tense", "storied"]
 
 
 def owned_games():

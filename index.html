@@ -595,7 +595,12 @@ function renderDrawer(){
 
 /* ---------- render: grid ---------- */
 /* ---------- vibes: "what fits tonight" (spec section 6) ---------- */
-const AXES=["cozy","chatty","silly","cutthroat","tense","crunchy","swingy","storied"];
+/* Order is not cosmetic: on a radar, neighbouring axes form the polygon edges.
+   Correlated axes sit together and anticorrelated ones sit opposite, so the
+   shape reads as lobes rather than a random star. Light half first (cozy,
+   silly, chatty, swingy), heavy half second, so light games lean one way.
+   NB radar AREA is an artefact of this ordering -- read the spokes, not the fill. */
+const AXES=["cozy","silly","chatty","swingy","cutthroat","crunchy","tense","storied"];
 /* Axes the validation run flagged as not carried by the BGG tags. Populated by
    whoever runs vibes/validate_vibes.py; shown as a caveat, never auto-tuned. */
 const LOW_CONF=[];
