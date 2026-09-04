@@ -174,6 +174,13 @@ hairline border. Suggestions, in order of payoff:
 
 ## Part 4 — Features (each is its own commit; discuss scope with the owner)
 
+> **DONE** — items 1-5, one commit each: `b13ad83` (URL state), `13a054c`
+> (search), `82b500f` (plays), `b038209` (presets), and the compare radar.
+> Item 6 is still the owner's to do. Two things worth knowing: presets are
+> built on the hash from item 1, so recalling one and opening a shared link
+> are the same code path; and plays are localStorage, so they do not follow
+> you between devices -- the UI says so.
+
 1. **Filter state in the URL hash.** Reload loses everything. Serialise `S`
    (only non-default keys) into `location.hash` on every render; parse on
    load. Makes "here's what fits tonight" a shareable link.
