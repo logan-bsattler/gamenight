@@ -22,7 +22,11 @@ are as of commit `fe1a940`; grep for the quoted code if they've drifted.
 
 ## Part 1 — Bugs (all reproduced in the browser)
 
-Do these as **one commit**. Each is small and independent.
+> **DONE** — commit `998580a`. All eight fixed and verified in the browser.
+> One deviation: #2 was fixed by stacking the two badges in a `.botleft`
+> flex column rather than dropping the teach flag, which would have removed
+> it from all 124 video games whenever a vibe was set. #8 also took the
+> optional top-10 ranking, via a shared `rankByFit()` / `axesSet()`.
 
 ### 1. Vibe sliders are destroyed mid-drag
 `index.html:867` — the `#vibe` `input` handler calls `render()`, which calls
@@ -99,17 +103,18 @@ vibe axis is set, pick from the top 5 by `matchScore` instead of uniformly.
 
 ## Part 2 — Small unfinished-looking things
 
-Second commit. Still no rebuild needed.
+> **DONE** — commit `1a98abe`, except the two items marked below.
 
 - **`UPDATED` is never displayed** (line 350). Show it — e.g. as a `title` on
   the `#count` span, or a muted line under the grid. It answers "how fresh?".
-- **Thumbnails are soft on 2× phones.** 133 records use BGG's
-  `fit-in/246x300` URL; a 2-column card at 375px renders ~340 device px.
-  Rewriting `fit-in/246x300` → `fit-in/500x500` in the `thumb` URLs is safe
-  (same CDN path pattern). Do it with a one-off sed over lines 351–497 and
-  note it in the commit so the refresh skill knows to keep doing it — or
-  better, do the substitution at render time in the card template so data
-  refreshes don't undo it.
+- **Thumbnails are soft on 2× phones** — **NOT DONE, the suggested fix does
+  not work.** These URLs are signed (`…=/fit-in/246x300/…`) and the signature
+  covers the transform: `500x500` and `400x400` both return **400**, as do
+  the unsigned `__original` / `__imagepage` / `__medium` / `__large` preset
+  paths. Verified with curl. Sharper art needs a fresh BGG pull that stores
+  the API's larger `image` field alongside `thumbnail` — a data change for
+  the refresh step, not a presentation one. `vibes/bgg-cache.json` holds no
+  image URLs at all today.
 - **Keyboard/a11y for the sheet:** no `Escape` handler; focus stays on the
   grid behind the sheet. Add `keydown` Escape → `history.back()` when open,
   and `$("#close").focus()` at the end of `openGame`. Add `aria-pressed` to
@@ -118,9 +123,10 @@ Second commit. Still no rebuild needed.
   (8 `vtitle`s contain a bare `&`). Works today because the data is
   self-authored. Add a 3-line `esc()` helper and use it in `openGame` and the
   card template so the next BGG refresh can't break the page on a `<`.
-- **Theme toggle can't return to "follow OS"** once tapped (line ~848 always
-  sets `dataset.theme`). Optional: cycle auto → light → dark, clearing
-  `localStorage` on auto.
+- **Theme toggle can't return to "follow OS"** once tapped — **NOT DONE,
+  deliberately.** A three-state cycle behind one two-icon button is a design
+  decision (which icon means auto?), not a bug fix. Worth doing alongside
+  Part 3, where the header gets attention anyway.
 - **Stray history entry:** `openGame` pushes state (line 831); reloading with
   the sheet open leaves an entry that Back consumes invisibly. On load,
   `history.replaceState(null,"")`.
@@ -174,7 +180,10 @@ hairline border. Suggestions, in order of payoff:
    vibe panel state saved to localStorage.
 5. **Compare two games** on one radar. `radar(g,size)` returns an SVG string;
    overlaying a second polygon is straightforward now that the ring exists.
-6. **Finish vibe validation.** `vibes/vibes-manual.json` is `{}`, so
+6. **Finish vibe validation.** (`vibes/bgg-cache.json` also carries a `best`
+   field per game, identical to `VIBES[id].bestP` — worth knowing if the
+   player-count poll is ever needed outside the VIBES block.)
+    `vibes/vibes-manual.json` is `{}`, so
    `LOW_CONF` (line ~597) is empty and the low-confidence caveat never shows.
    This is the owner's job (hand-scoring), not code — but flag it.
 
