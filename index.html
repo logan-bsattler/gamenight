@@ -349,7 +349,7 @@ try{var t=localStorage.getItem("gn-theme");
   <div class="searchrow">
     <label class="search">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
-      <input id="q" type="search" placeholder="Search games…" autocomplete="off">
+      <input id="q" type="search" placeholder="Search games, mechanics, themes…" autocomplete="off">
     </label>
     <button class="iconbtn" id="ftoggle" aria-label="Filters">
       <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M3 6h18M6 12h12M10 18h4"/></svg>
@@ -589,8 +589,15 @@ const SORTS=[{v:"rating",l:"Top rated"},{v:"mine",l:"My rating"},{v:"rank",l:"BG
 const mechCount={}; GAMES.forEach(g=>(g.mech||[]).forEach(m=>mechCount[m]=(mechCount[m]||0)+1));
 const allMech=Object.keys(mechCount).filter(m=>mechCount[m]>=3).sort((a,b)=>mechCount[b]-mechCount[a]||a.localeCompare(b));
 
+/* Searchable text per game, built once: name plus its mechanics and themes,
+   so "deduction" or "legacy" finds the shelf rather than nothing. Designer and
+   description are deliberately out -- descriptions are long enough that most
+   queries would match most games. */
+const HAY=new Map(GAMES.map(g=>[g.id,
+  norm([g.name,...(g.mech||[]),...(g.cat||[])].join(" "))]));
+
 function matches(g){
-  if(S.q && !norm(g.name).includes(norm(S.q))) return false;
+  if(S.q && !HAY.get(g.id).includes(norm(S.q))) return false;
   if(S.players && !(g.minP<=S.players && g.maxP>=S.players)) return false;
   if(S.twoOnly && g.maxP!==2) return false;
   if(S.time && g.time>S.time) return false;
