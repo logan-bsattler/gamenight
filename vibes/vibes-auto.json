@@ -1,1146 +1,1432 @@
 {
  "104006": {
-  "compete": 60,
+  "chatty": 35,
   "cozy": 61,
-  "intense": 18,
-  "playful": 42,
-  "social": 35,
-  "thinky": 75
+  "crunchy": 75,
+  "cutthroat": 60,
+  "silly": 42,
+  "storied": 28,
+  "swingy": 30,
+  "tense": 18
  },
  "109252": {
-  "compete": 41,
+  "chatty": 59,
   "cozy": 75,
-  "intense": 1,
-  "playful": 93,
-  "social": 59,
-  "thinky": 4
+  "crunchy": 4,
+  "cutthroat": 41,
+  "silly": 93,
+  "storied": 16,
+  "swingy": 39,
+  "tense": 1
  },
  "11": {
-  "compete": 28,
+  "chatty": 100,
   "cozy": 71,
-  "intense": 6,
-  "playful": 61,
-  "social": 100,
-  "thinky": 18
+  "crunchy": 18,
+  "cutthroat": 28,
+  "silly": 61,
+  "storied": 19,
+  "swingy": 37,
+  "tense": 6
  },
  "110327": {
-  "compete": 67,
+  "chatty": 69,
   "cozy": 37,
-  "intense": 28,
-  "playful": 35,
-  "social": 69,
-  "thinky": 59
+  "crunchy": 59,
+  "cutthroat": 67,
+  "silly": 35,
+  "storied": 29,
+  "swingy": 33,
+  "tense": 28
  },
  "118": {
-  "compete": 56,
+  "chatty": 40,
   "cozy": 50,
-  "intense": 11,
-  "playful": 52,
-  "social": 40,
-  "thinky": 54
+  "crunchy": 54,
+  "cutthroat": 56,
+  "silly": 52,
+  "storied": 23,
+  "swingy": 34,
+  "tense": 11
  },
  "122522": {
-  "compete": 95,
+  "chatty": 52,
   "cozy": 40,
-  "intense": 9,
-  "playful": 75,
-  "social": 52,
-  "thinky": 43
+  "crunchy": 43,
+  "cutthroat": 95,
+  "silly": 75,
+  "storied": 32,
+  "swingy": 35,
+  "tense": 9
  },
  "13": {
-  "compete": 66,
+  "chatty": 95,
   "cozy": 30,
-  "intense": 26,
-  "playful": 37,
-  "social": 95,
-  "thinky": 54
+  "crunchy": 54,
+  "cutthroat": 66,
+  "silly": 37,
+  "storied": 23,
+  "swingy": 64,
+  "tense": 26
  },
  "133473": {
-  "compete": 26,
+  "chatty": 59,
   "cozy": 75,
-  "intense": 0,
-  "playful": 100,
-  "social": 59,
-  "thinky": 4
+  "crunchy": 4,
+  "cutthroat": 26,
+  "silly": 100,
+  "storied": 16,
+  "swingy": 39,
+  "tense": 0
  },
  "141423": {
-  "compete": 10,
+  "chatty": 38,
   "cozy": 53,
-  "intense": 39,
-  "playful": 49,
-  "social": 38,
-  "thinky": 62
+  "crunchy": 62,
+  "cutthroat": 10,
+  "silly": 49,
+  "storied": 70,
+  "swingy": 52,
+  "tense": 39
  },
  "143519": {
-  "compete": 57,
+  "chatty": 39,
   "cozy": 39,
-  "intense": 23,
-  "playful": 50,
-  "social": 39,
-  "thinky": 54
+  "crunchy": 54,
+  "cutthroat": 57,
+  "silly": 50,
+  "storied": 29,
+  "swingy": 53,
+  "tense": 23
  },
  "144325": {
-  "compete": 54,
+  "chatty": 75,
   "cozy": 43,
-  "intense": 21,
-  "playful": 65,
-  "social": 75,
-  "thinky": 0
+  "crunchy": 0,
+  "cutthroat": 54,
+  "silly": 65,
+  "storied": 24,
+  "swingy": 56,
+  "tense": 21
  },
  "146735": {
-  "compete": 55,
+  "chatty": 73,
   "cozy": 23,
-  "intense": 33,
-  "playful": 62,
-  "social": 73,
-  "thinky": 0
+  "crunchy": 0,
+  "cutthroat": 55,
+  "silly": 62,
+  "storied": 36,
+  "swingy": 55,
+  "tense": 33
  },
  "147370": {
-  "compete": 27,
+  "chatty": 47,
   "cozy": 57,
-  "intense": 0,
-  "playful": 100,
-  "social": 47,
-  "thinky": 0
+  "crunchy": 0,
+  "cutthroat": 27,
+  "silly": 100,
+  "storied": 17,
+  "swingy": 38,
+  "tense": 0
  },
  "148228": {
-  "compete": 29,
+  "chatty": 54,
   "cozy": 70,
-  "intense": 7,
-  "playful": 69,
-  "social": 54,
-  "thinky": 21
+  "crunchy": 21,
+  "cutthroat": 29,
+  "silly": 69,
+  "storied": 20,
+  "swingy": 36,
+  "tense": 7
  },
  "15046": {
-  "compete": 74,
+  "chatty": 100,
   "cozy": 38,
-  "intense": 41,
-  "playful": 50,
-  "social": 100,
-  "thinky": 14
+  "crunchy": 14,
+  "cutthroat": 74,
+  "silly": 50,
+  "storied": 34,
+  "swingy": 71,
+  "tense": 41
  },
  "150930": {
-  "compete": 28,
+  "chatty": 65,
   "cozy": 63,
-  "intense": 6,
-  "playful": 76,
-  "social": 65,
-  "thinky": 18
+  "crunchy": 18,
+  "cutthroat": 28,
+  "silly": 76,
+  "storied": 19,
+  "swingy": 37,
+  "tense": 6
  },
  "156566": {
-  "compete": 73,
+  "chatty": 38,
   "cozy": 48,
-  "intense": 14,
-  "playful": 47,
-  "social": 38,
-  "thinky": 69
+  "crunchy": 69,
+  "cutthroat": 73,
+  "silly": 47,
+  "storied": 30,
+  "swingy": 32,
+  "tense": 14
  },
  "15987": {
-  "compete": 10,
+  "chatty": 41,
   "cozy": 46,
-  "intense": 93,
-  "playful": 19,
-  "social": 41,
-  "thinky": 69
+  "crunchy": 69,
+  "cutthroat": 10,
+  "silly": 19,
+  "storied": 96,
+  "swingy": 57,
+  "tense": 93
  },
  "161290": {
-  "compete": 10,
+  "chatty": 52,
   "cozy": 77,
-  "intense": 40,
-  "playful": 55,
-  "social": 52,
-  "thinky": 30
+  "crunchy": 30,
+  "cutthroat": 10,
+  "silly": 55,
+  "storied": 52,
+  "swingy": 54,
+  "tense": 40
  },
  "161965": {
-  "compete": 31,
+  "chatty": 51,
   "cozy": 59,
-  "intense": 10,
-  "playful": 54,
-  "social": 51,
-  "thinky": 31
+  "crunchy": 31,
+  "cutthroat": 31,
+  "silly": 54,
+  "storied": 22,
+  "swingy": 34,
+  "tense": 10
  },
  "161970": {
-  "compete": 65,
+  "chatty": 28,
   "cozy": 54,
-  "intense": 41,
-  "playful": 15,
-  "social": 28,
-  "thinky": 100
+  "crunchy": 100,
+  "cutthroat": 65,
+  "silly": 15,
+  "storied": 38,
+  "swingy": 35,
+  "tense": 41
  },
  "162082": {
-  "compete": 59,
+  "chatty": 36,
   "cozy": 46,
-  "intense": 16,
-  "playful": 45,
-  "social": 36,
-  "thinky": 69
+  "crunchy": 69,
+  "cutthroat": 59,
+  "silly": 45,
+  "storied": 26,
+  "swingy": 31,
+  "tense": 16
  },
  "163163": {
-  "compete": 32,
+  "chatty": 50,
   "cozy": 50,
-  "intense": 26,
-  "playful": 52,
-  "social": 50,
-  "thinky": 35
+  "crunchy": 35,
+  "cutthroat": 32,
+  "silly": 52,
+  "storied": 48,
+  "swingy": 34,
+  "tense": 26
  },
  "163967": {
-  "compete": 51,
+  "chatty": 41,
   "cozy": 49,
-  "intense": 10,
-  "playful": 54,
-  "social": 41,
-  "thinky": 46
+  "crunchy": 46,
+  "cutthroat": 51,
+  "silly": 54,
+  "storied": 27,
+  "swingy": 64,
+  "tense": 10
  },
  "164237": {
-  "compete": 43,
+  "chatty": 48,
   "cozy": 56,
-  "intense": 14,
-  "playful": 53,
-  "social": 48,
-  "thinky": 57
+  "crunchy": 57,
+  "cutthroat": 43,
+  "silly": 53,
+  "storied": 25,
+  "swingy": 32,
+  "tense": 14
  },
  "165986": {
-  "compete": 56,
+  "chatty": 51,
   "cozy": 67,
-  "intense": 11,
-  "playful": 53,
-  "social": 51,
-  "thinky": 48
+  "crunchy": 48,
+  "cutthroat": 56,
+  "silly": 53,
+  "storied": 23,
+  "swingy": 34,
+  "tense": 11
  },
  "171131": {
-  "compete": 46,
+  "chatty": 91,
   "cozy": 26,
-  "intense": 60,
-  "playful": 54,
-  "social": 91,
-  "thinky": 7
+  "crunchy": 7,
+  "cutthroat": 46,
+  "silly": 54,
+  "storied": 68,
+  "swingy": 34,
+  "tense": 60
  },
  "171879": {
-  "compete": 44,
+  "chatty": 36,
   "cozy": 54,
-  "intense": 16,
-  "playful": 44,
-  "social": 36,
-  "thinky": 70
+  "crunchy": 70,
+  "cutthroat": 44,
+  "silly": 44,
+  "storied": 27,
+  "swingy": 31,
+  "tense": 16
  },
  "172362": {
-  "compete": 55,
+  "chatty": 42,
   "cozy": 52,
-  "intense": 9,
-  "playful": 66,
-  "social": 42,
-  "thinky": 42
+  "crunchy": 42,
+  "cutthroat": 55,
+  "silly": 66,
+  "storied": 21,
+  "swingy": 35,
+  "tense": 9
  },
  "172818": {
-  "compete": 43,
+  "chatty": 84,
   "cozy": 65,
-  "intense": 38,
-  "playful": 49,
-  "social": 100,
-  "thinky": 60
+  "crunchy": 60,
+  "cutthroat": 43,
+  "silly": 49,
+  "storied": 100,
+  "swingy": 52,
+  "tense": 38
  },
  "172971": {
-  "compete": 25,
+  "chatty": 80,
   "cozy": 68,
-  "intense": 0,
-  "playful": 100,
-  "social": 80,
-  "thinky": 0
+  "crunchy": 0,
+  "cutthroat": 25,
+  "silly": 100,
+  "storied": 15,
+  "swingy": 40,
+  "tense": 0
  },
  "175117": {
-  "compete": 42,
+  "chatty": 68,
   "cozy": 58,
-  "intense": 13,
-  "playful": 96,
-  "social": 68,
-  "thinky": 9
+  "crunchy": 9,
+  "cutthroat": 42,
+  "silly": 96,
+  "storied": 32,
+  "swingy": 83,
+  "tense": 13
  },
  "175324": {
-  "compete": 31,
+  "chatty": 41,
   "cozy": 51,
-  "intense": 41,
-  "playful": 38,
-  "social": 61,
-  "thinky": 33
+  "crunchy": 33,
+  "cutthroat": 31,
+  "silly": 38,
+  "storied": 98,
+  "swingy": 34,
+  "tense": 41
  },
  "176396": {
-  "compete": 31,
+  "chatty": 51,
   "cozy": 83,
-  "intense": 11,
-  "playful": 58,
-  "social": 51,
-  "thinky": 37
+  "crunchy": 37,
+  "cutthroat": 31,
+  "silly": 58,
+  "storied": 23,
+  "swingy": 34,
+  "tense": 11
  },
  "181345": {
-  "compete": 25,
+  "chatty": 60,
   "cozy": 53,
-  "intense": 0,
-  "playful": 100,
-  "social": 60,
-  "thinky": 0
+  "crunchy": 0,
+  "cutthroat": 25,
+  "silly": 100,
+  "storied": 15,
+  "swingy": 40,
+  "tense": 0
  },
  "181810": {
-  "compete": 28,
+  "chatty": 55,
   "cozy": 71,
-  "intense": 6,
-  "playful": 71,
-  "social": 55,
-  "thinky": 17
+  "crunchy": 17,
+  "cutthroat": 28,
+  "silly": 71,
+  "storied": 0,
+  "swingy": 12,
+  "tense": 6
  },
  "182189": {
-  "compete": 29,
+  "chatty": 63,
   "cozy": 69,
-  "intense": 18,
-  "playful": 63,
-  "social": 63,
-  "thinky": 24
+  "crunchy": 24,
+  "cutthroat": 29,
+  "silly": 63,
+  "storied": 36,
+  "swingy": 36,
+  "tense": 18
  },
  "183394": {
-  "compete": 44,
+  "chatty": 46,
   "cozy": 64,
-  "intense": 17,
-  "playful": 44,
-  "social": 46,
-  "thinky": 76
+  "crunchy": 76,
+  "cutthroat": 44,
+  "silly": 44,
+  "storied": 27,
+  "swingy": 30,
+  "tense": 17
  },
  "185021": {
-  "compete": 32,
+  "chatty": 40,
   "cozy": 56,
-  "intense": 22,
-  "playful": 51,
-  "social": 40,
-  "thinky": 36
+  "crunchy": 36,
+  "cutthroat": 32,
+  "silly": 51,
+  "storied": 24,
+  "swingy": 33,
+  "tense": 22
  },
  "185589": {
-  "compete": 59,
+  "chatty": 37,
   "cozy": 47,
-  "intense": 30,
-  "playful": 46,
-  "social": 37,
-  "thinky": 66
+  "crunchy": 66,
+  "cutthroat": 59,
+  "silly": 46,
+  "storied": 31,
+  "swingy": 76,
+  "tense": 30
  },
  "188834": {
-  "compete": 59,
+  "chatty": 100,
   "cozy": 30,
-  "intense": 31,
-  "playful": 100,
-  "social": 100,
-  "thinky": 0
+  "crunchy": 0,
+  "cutthroat": 59,
+  "silly": 100,
+  "storied": 20,
+  "swingy": 46,
+  "tense": 31
  },
  "189350": {
-  "compete": 30,
+  "chatty": 43,
   "cozy": 61,
-  "intense": 8,
-  "playful": 57,
-  "social": 43,
-  "thinky": 25
+  "crunchy": 25,
+  "cutthroat": 30,
+  "silly": 57,
+  "storied": 1,
+  "swingy": 10,
+  "tense": 8
  },
  "19": {
-  "compete": 29,
+  "chatty": 74,
   "cozy": 62,
-  "intense": 7,
-  "playful": 59,
-  "social": 74,
-  "thinky": 22
+  "crunchy": 22,
+  "cutthroat": 29,
+  "silly": 59,
+  "storied": 20,
+  "swingy": 36,
+  "tense": 7
  },
  "191862": {
-  "compete": 45,
+  "chatty": 52,
   "cozy": 60,
-  "intense": 9,
-  "playful": 56,
-  "social": 52,
-  "thinky": 27
+  "crunchy": 27,
+  "cutthroat": 45,
+  "silly": 56,
+  "storied": 21,
+  "swingy": 35,
+  "tense": 9
  },
  "192455": {
-  "compete": 10,
+  "chatty": 26,
   "cozy": 61,
-  "intense": 53,
-  "playful": 27,
-  "social": 46,
-  "thinky": 85
+  "crunchy": 85,
+  "cutthroat": 10,
+  "silly": 27,
+  "storied": 100,
+  "swingy": 44,
+  "tense": 53
  },
  "192623": {
-  "compete": 10,
+  "chatty": 72,
   "cozy": 67,
-  "intense": 10,
-  "playful": 55,
-  "social": 72,
-  "thinky": 30
+  "crunchy": 30,
+  "cutthroat": 10,
+  "silly": 55,
+  "storied": 27,
+  "swingy": 34,
+  "tense": 10
  },
  "192860": {
-  "compete": 29,
+  "chatty": 54,
   "cozy": 78,
-  "intense": 7,
-  "playful": 64,
-  "social": 54,
-  "thinky": 22
+  "crunchy": 22,
+  "cutthroat": 29,
+  "silly": 64,
+  "storied": 35,
+  "swingy": 36,
+  "tense": 7
  },
  "193037": {
-  "compete": 10,
+  "chatty": 100,
   "cozy": 48,
-  "intense": 80,
-  "playful": 38,
-  "social": 100,
-  "thinky": 67
+  "crunchy": 67,
+  "cutthroat": 10,
+  "silly": 38,
+  "storied": 100,
+  "swingy": 73,
+  "tense": 80
  },
  "194607": {
-  "compete": 41,
+  "chatty": 41,
   "cozy": 59,
-  "intense": 11,
-  "playful": 68,
-  "social": 41,
-  "thinky": 49
+  "crunchy": 49,
+  "cutthroat": 41,
+  "silly": 68,
+  "storied": 28,
+  "swingy": 59,
+  "tense": 11
  },
  "194655": {
-  "compete": 29,
+  "chatty": 50,
   "cozy": 55,
-  "intense": 6,
-  "playful": 75,
-  "social": 50,
-  "thinky": 29
+  "crunchy": 29,
+  "cutthroat": 29,
+  "silly": 75,
+  "storied": 0,
+  "swingy": 0,
+  "tense": 6
  },
  "199561": {
-  "compete": 15,
+  "chatty": 38,
   "cozy": 95,
-  "intense": 8,
-  "playful": 57,
-  "social": 38,
-  "thinky": 40
+  "crunchy": 40,
+  "cutthroat": 15,
+  "silly": 57,
+  "storied": 0,
+  "swingy": 15,
+  "tense": 8
  },
  "200454": {
-  "compete": 40,
+  "chatty": 42,
   "cozy": 60,
-  "intense": 24,
-  "playful": 56,
-  "social": 42,
-  "thinky": 43
+  "crunchy": 43,
+  "cutthroat": 40,
+  "silly": 56,
+  "storied": 52,
+  "swingy": 35,
+  "tense": 24
  },
  "200853": {
-  "compete": 40,
+  "chatty": 52,
   "cozy": 100,
-  "intense": 9,
-  "playful": 56,
-  "social": 52,
-  "thinky": 43
+  "crunchy": 43,
+  "cutthroat": 40,
+  "silly": 56,
+  "storied": 22,
+  "swingy": 35,
+  "tense": 9
  },
  "201248": {
-  "compete": 29,
+  "chatty": 54,
   "cozy": 70,
-  "intense": 7,
-  "playful": 74,
-  "social": 54,
-  "thinky": 21
+  "crunchy": 21,
+  "cutthroat": 29,
+  "silly": 74,
+  "storied": 20,
+  "swingy": 36,
+  "tense": 7
  },
  "201825": {
-  "compete": 28,
+  "chatty": 39,
   "cozy": 83,
-  "intense": 13,
-  "playful": 49,
-  "social": 39,
-  "thinky": 61
+  "crunchy": 61,
+  "cutthroat": 28,
+  "silly": 49,
+  "storied": 30,
+  "swingy": 32,
+  "tense": 13
  },
  "203204": {
-  "compete": 49,
+  "chatty": 57,
   "cozy": 37,
-  "intense": 15,
-  "playful": 46,
-  "social": 57,
-  "thinky": 47
+  "crunchy": 47,
+  "cutthroat": 49,
+  "silly": 46,
+  "storied": 31,
+  "swingy": 51,
+  "tense": 15
  },
  "204027": {
-  "compete": 29,
+  "chatty": 53,
   "cozy": 93,
-  "intense": 8,
-  "playful": 63,
-  "social": 53,
-  "thinky": 29
+  "crunchy": 29,
+  "cutthroat": 29,
+  "silly": 63,
+  "storied": 1,
+  "swingy": 11,
+  "tense": 8
  },
  "204583": {
-  "compete": 41,
+  "chatty": 58,
   "cozy": 82,
-  "intense": 2,
-  "playful": 82,
-  "social": 58,
-  "thinky": 6
+  "crunchy": 6,
+  "cutthroat": 41,
+  "silly": 82,
+  "storied": 0,
+  "swingy": 14,
+  "tense": 2
  },
  "204837": {
-  "compete": 44,
+  "chatty": 82,
   "cozy": 47,
-  "intense": 15,
-  "playful": 47,
-  "social": 82,
-  "thinky": 60
+  "crunchy": 60,
+  "cutthroat": 44,
+  "silly": 47,
+  "storied": 36,
+  "swingy": 32,
+  "tense": 15
  },
  "205398": {
-  "compete": 55,
+  "chatty": 62,
   "cozy": 48,
-  "intense": 9,
-  "playful": 56,
-  "social": 62,
-  "thinky": 28
+  "crunchy": 28,
+  "cutthroat": 55,
+  "silly": 56,
+  "storied": 22,
+  "swingy": 35,
+  "tense": 9
  },
  "205494": {
-  "compete": 29,
+  "chatty": 54,
   "cozy": 62,
-  "intense": 7,
-  "playful": 69,
-  "social": 54,
-  "thinky": 22
+  "crunchy": 22,
+  "cutthroat": 29,
+  "silly": 69,
+  "storied": 20,
+  "swingy": 66,
+  "tense": 7
  },
  "207208": {
-  "compete": 60,
+  "chatty": 35,
   "cozy": 45,
-  "intense": 17,
-  "playful": 43,
-  "social": 35,
-  "thinky": 77
+  "crunchy": 77,
+  "cutthroat": 60,
+  "silly": 43,
+  "storied": 27,
+  "swingy": 30,
+  "tense": 17
  },
  "216482": {
-  "compete": 28,
+  "chatty": 56,
   "cozy": 56,
-  "intense": 5,
-  "playful": 92,
-  "social": 56,
-  "thinky": 5
+  "crunchy": 5,
+  "cutthroat": 28,
+  "silly": 92,
+  "storied": 18,
+  "swingy": 87,
+  "tense": 5
  },
  "217085": {
-  "compete": 30,
+  "chatty": 53,
   "cozy": 69,
-  "intense": 8,
-  "playful": 62,
-  "social": 53,
-  "thinky": 25
+  "crunchy": 25,
+  "cutthroat": 30,
+  "silly": 62,
+  "storied": 36,
+  "swingy": 55,
+  "tense": 8
  },
  "217372": {
-  "compete": 30,
+  "chatty": 53,
   "cozy": 61,
-  "intense": 18,
-  "playful": 57,
-  "social": 53,
-  "thinky": 25
+  "crunchy": 25,
+  "cutthroat": 30,
+  "silly": 57,
+  "storied": 46,
+  "swingy": 35,
+  "tense": 18
  },
  "218603": {
-  "compete": 46,
+  "chatty": 50,
   "cozy": 50,
-  "intense": 11,
-  "playful": 53,
-  "social": 50,
-  "thinky": 39
+  "crunchy": 39,
+  "cutthroat": 46,
+  "silly": 53,
+  "storied": 3,
+  "swingy": 9,
+  "tense": 11
  },
  "221194": {
-  "compete": 45,
+  "chatty": 35,
   "cozy": 69,
-  "intense": 33,
-  "playful": 32,
-  "social": 35,
-  "thinky": 80
+  "crunchy": 80,
+  "cutthroat": 45,
+  "silly": 32,
+  "storied": 33,
+  "swingy": 50,
+  "tense": 33
  },
  "221230": {
-  "compete": 57,
+  "chatty": 39,
   "cozy": 65,
-  "intense": 13,
-  "playful": 50,
-  "social": 39,
-  "thinky": 64
+  "crunchy": 64,
+  "cutthroat": 57,
+  "silly": 50,
+  "storied": 29,
+  "swingy": 53,
+  "tense": 13
  },
  "222219": {
-  "compete": 85,
+  "chatty": 32,
   "cozy": 25,
-  "intense": 34,
-  "playful": 80,
-  "social": 32,
-  "thinky": 33
+  "crunchy": 33,
+  "cutthroat": 85,
+  "silly": 80,
+  "storied": 22,
+  "swingy": 100,
+  "tense": 34
  },
  "227758": {
-  "compete": 28,
+  "chatty": 66,
   "cozy": 56,
-  "intense": 4,
-  "playful": 73,
-  "social": 66,
-  "thinky": 18
+  "crunchy": 18,
+  "cutthroat": 28,
+  "silly": 73,
+  "storied": 18,
+  "swingy": 38,
+  "tense": 4
  },
  "228133": {
-  "compete": 42,
+  "chatty": 19,
   "cozy": 49,
-  "intense": 13,
-  "playful": 50,
-  "social": 19,
-  "thinky": 54
+  "crunchy": 54,
+  "cutthroat": 42,
+  "silly": 50,
+  "storied": 29,
+  "swingy": 33,
+  "tense": 13
  },
  "230191": {
-  "compete": 54,
+  "chatty": 64,
   "cozy": 62,
-  "intense": 32,
-  "playful": 59,
-  "social": 64,
-  "thinky": 32
+  "crunchy": 32,
+  "cutthroat": 54,
+  "silly": 59,
+  "storied": 70,
+  "swingy": 81,
+  "tense": 32
  },
  "232043": {
-  "compete": 45,
+  "chatty": 52,
   "cozy": 84,
-  "intense": 9,
-  "playful": 70,
-  "social": 52,
-  "thinky": 28
+  "crunchy": 28,
+  "cutthroat": 45,
+  "silly": 70,
+  "storied": 27,
+  "swingy": 35,
+  "tense": 9
  },
  "24508": {
-  "compete": 56,
+  "chatty": 26,
   "cozy": 67,
-  "intense": 11,
-  "playful": 58,
-  "social": 26,
-  "thinky": 58
+  "crunchy": 58,
+  "cutthroat": 56,
+  "silly": 58,
+  "storied": 0,
+  "swingy": 0,
+  "tense": 11
  },
  "24827": {
-  "compete": 40,
+  "chatty": 42,
   "cozy": 68,
-  "intense": 9,
-  "playful": 66,
-  "social": 42,
-  "thinky": 43
+  "crunchy": 43,
+  "cutthroat": 40,
+  "silly": 66,
+  "storied": 22,
+  "swingy": 35,
+  "tense": 9
  },
  "250963": {
-  "compete": 28,
+  "chatty": 55,
   "cozy": 55,
-  "intense": 6,
-  "playful": 61,
-  "social": 55,
-  "thinky": 18
+  "crunchy": 18,
+  "cutthroat": 28,
+  "silly": 61,
+  "storied": 19,
+  "swingy": 37,
+  "tense": 6
  },
  "252688": {
-  "compete": 55,
+  "chatty": 42,
   "cozy": 38,
-  "intense": 29,
-  "playful": 76,
-  "social": 42,
-  "thinky": 27
+  "crunchy": 27,
+  "cutthroat": 55,
+  "silly": 76,
+  "storied": 36,
+  "swingy": 35,
+  "tense": 29
  },
  "254088": {
-  "compete": 28,
+  "chatty": 66,
   "cozy": 56,
-  "intense": 4,
-  "playful": 78,
-  "social": 66,
-  "thinky": 13
+  "crunchy": 13,
+  "cutthroat": 28,
+  "silly": 78,
+  "storied": 0,
+  "swingy": 12,
+  "tense": 4
  },
  "254683": {
-  "compete": 53,
+  "chatty": 65,
   "cozy": 43,
-  "intense": 0,
-  "playful": 100,
-  "social": 65,
-  "thinky": 7
+  "crunchy": 7,
+  "cutthroat": 53,
+  "silly": 100,
+  "storied": 19,
+  "swingy": 82,
+  "tense": 0
  },
  "256382": {
-  "compete": 57,
+  "chatty": 59,
   "cozy": 29,
-  "intense": 28,
-  "playful": 35,
-  "social": 59,
-  "thinky": 39
+  "crunchy": 39,
+  "cutthroat": 57,
+  "silly": 35,
+  "storied": 49,
+  "swingy": 33,
+  "tense": 28
  },
  "265017": {
-  "compete": 73,
+  "chatty": 38,
   "cozy": 48,
-  "intense": 14,
-  "playful": 48,
-  "social": 38,
-  "thinky": 57
+  "crunchy": 57,
+  "cutthroat": 73,
+  "silly": 48,
+  "storied": 25,
+  "swingy": 32,
+  "tense": 14
  },
  "2651": {
-  "compete": 61,
+  "chatty": 43,
   "cozy": 43,
-  "intense": 35,
-  "playful": 24,
-  "social": 43,
-  "thinky": 85
+  "crunchy": 85,
+  "cutthroat": 61,
+  "silly": 24,
+  "storied": 29,
+  "swingy": 29,
+  "tense": 35
  },
  "267397": {
-  "compete": 58,
+  "chatty": 37,
   "cozy": 37,
-  "intense": 25,
-  "playful": 47,
-  "social": 37,
-  "thinky": 60
+  "crunchy": 60,
+  "cutthroat": 58,
+  "silly": 47,
+  "storied": 30,
+  "swingy": 52,
+  "tense": 25
  },
  "267979": {
-  "compete": 10,
+  "chatty": 26,
   "cozy": 76,
-  "intense": 10,
-  "playful": 54,
-  "social": 26,
-  "thinky": 42
+  "crunchy": 42,
+  "cutthroat": 10,
+  "silly": 54,
+  "storied": 7,
+  "swingy": 19,
+  "tense": 10
  },
  "272260": {
-  "compete": 29,
+  "chatty": 43,
   "cozy": 61,
-  "intense": 8,
-  "playful": 58,
-  "social": 43,
-  "thinky": 23
+  "crunchy": 23,
+  "cutthroat": 29,
+  "silly": 58,
+  "storied": 26,
+  "swingy": 36,
+  "tense": 8
  },
  "274841": {
-  "compete": 30,
+  "chatty": 52,
   "cozy": 84,
-  "intense": 9,
-  "playful": 56,
-  "social": 52,
-  "thinky": 27
+  "crunchy": 27,
+  "cutthroat": 30,
+  "silly": 56,
+  "storied": 1,
+  "swingy": 10,
+  "tense": 9
  },
  "275349": {
-  "compete": 28,
+  "chatty": 31,
   "cozy": 72,
-  "intense": 4,
-  "playful": 78,
-  "social": 31,
-  "thinky": 23
+  "crunchy": 23,
+  "cutthroat": 28,
+  "silly": 78,
+  "storied": 0,
+  "swingy": 0,
+  "tense": 4
  },
  "28023": {
-  "compete": 53,
+  "chatty": 65,
   "cozy": 35,
-  "intense": 6,
-  "playful": 66,
-  "social": 65,
-  "thinky": 8
+  "crunchy": 8,
+  "cutthroat": 53,
+  "silly": 66,
+  "storied": 19,
+  "swingy": 82,
+  "tense": 6
  },
  "281020": {
-  "compete": 42,
+  "chatty": 46,
   "cozy": 64,
-  "intense": 4,
-  "playful": 78,
-  "social": 46,
-  "thinky": 13
+  "crunchy": 13,
+  "cutthroat": 42,
+  "silly": 78,
+  "storied": 18,
+  "swingy": 38,
+  "tense": 4
  },
  "284083": {
-  "compete": 10,
+  "chatty": 73,
   "cozy": 68,
-  "intense": 8,
-  "playful": 67,
-  "social": 73,
-  "thinky": 26
+  "crunchy": 26,
+  "cutthroat": 10,
+  "silly": 67,
+  "storied": 41,
+  "swingy": 35,
+  "tense": 8
  },
  "285232": {
-  "compete": 44,
+  "chatty": 44,
   "cozy": 54,
-  "intense": 7,
-  "playful": 70,
-  "social": 44,
-  "thinky": 20
+  "crunchy": 20,
+  "cutthroat": 44,
+  "silly": 70,
+  "storied": 20,
+  "swingy": 36,
+  "tense": 7
  },
  "296576": {
-  "compete": 10,
+  "chatty": 78,
   "cozy": 73,
-  "intense": 0,
-  "playful": 95,
-  "social": 78,
-  "thinky": 9
+  "crunchy": 9,
+  "cutthroat": 10,
+  "silly": 95,
+  "storied": 17,
+  "swingy": 38,
+  "tense": 0
  },
  "301002": {
-  "compete": 31,
+  "chatty": 42,
   "cozy": 76,
-  "intense": 10,
-  "playful": 59,
-  "social": 42,
-  "thinky": 35
+  "crunchy": 35,
+  "cutthroat": 31,
+  "silly": 59,
+  "storied": 27,
+  "swingy": 34,
+  "tense": 10
  },
  "30241": {
-  "compete": 45,
+  "chatty": 53,
   "cozy": 61,
-  "intense": 8,
-  "playful": 57,
-  "social": 53,
-  "thinky": 25
+  "crunchy": 25,
+  "cutthroat": 45,
+  "silly": 57,
+  "storied": 21,
+  "swingy": 35,
+  "tense": 8
  },
  "305984": {
-  "compete": 25,
+  "chatty": 49,
   "cozy": 59,
-  "intense": 1,
-  "playful": 84,
-  "social": 49,
-  "thinky": 2
+  "crunchy": 2,
+  "cutthroat": 25,
+  "silly": 84,
+  "storied": 15,
+  "swingy": 40,
+  "tense": 1
  },
  "308028": {
-  "compete": 31,
+  "chatty": 42,
   "cozy": 60,
-  "intense": 10,
-  "playful": 60,
-  "social": 42,
-  "thinky": 30
+  "crunchy": 30,
+  "cutthroat": 31,
+  "silly": 60,
+  "storied": 27,
+  "swingy": 44,
+  "tense": 10
  },
  "316407": {
-  "compete": 42,
+  "chatty": 76,
   "cozy": 72,
-  "intense": 4,
-  "playful": 68,
-  "social": 76,
-  "thinky": 18
+  "crunchy": 18,
+  "cutthroat": 42,
+  "silly": 68,
+  "storied": 18,
+  "swingy": 38,
+  "tense": 4
  },
  "31730": {
-  "compete": 59,
+  "chatty": 47,
   "cozy": 47,
-  "intense": 15,
-  "playful": 46,
-  "social": 47,
-  "thinky": 72
+  "crunchy": 72,
+  "cutthroat": 59,
+  "silly": 46,
+  "storied": 26,
+  "swingy": 31,
+  "tense": 15
  },
  "328859": {
-  "compete": 26,
+  "chatty": 59,
   "cozy": 67,
-  "intense": 1,
-  "playful": 83,
-  "social": 59,
-  "thinky": 4
+  "crunchy": 4,
+  "cutthroat": 26,
+  "silly": 83,
+  "storied": 16,
+  "swingy": 39,
+  "tense": 1
  },
  "329484": {
-  "compete": 29,
+  "chatty": 54,
   "cozy": 78,
-  "intense": 7,
-  "playful": 64,
-  "social": 54,
-  "thinky": 21
+  "crunchy": 21,
+  "cutthroat": 29,
+  "silly": 64,
+  "storied": 0,
+  "swingy": 11,
+  "tense": 7
  },
  "333981": {
-  "compete": 35,
+  "chatty": 46,
   "cozy": 46,
-  "intense": 17,
-  "playful": 43,
-  "social": 46,
-  "thinky": 51
+  "crunchy": 51,
+  "cutthroat": 35,
+  "silly": 43,
+  "storied": 27,
+  "swingy": 50,
+  "tense": 17
  },
  "334644": {
-  "compete": 32,
+  "chatty": 20,
   "cozy": 50,
-  "intense": 12,
-  "playful": 51,
-  "social": 20,
-  "thinky": 42
+  "crunchy": 42,
+  "cutthroat": 32,
+  "silly": 51,
+  "storied": 29,
+  "swingy": 33,
+  "tense": 12
  },
  "336597": {
-  "compete": 26,
+  "chatty": 58,
   "cozy": 66,
-  "intense": 2,
-  "playful": 97,
-  "social": 58,
-  "thinky": 5
+  "crunchy": 5,
+  "cutthroat": 26,
+  "silly": 97,
+  "storied": 16,
+  "swingy": 64,
+  "tense": 2
  },
  "337098": {
-  "compete": 48,
+  "chatty": 38,
   "cozy": 48,
-  "intense": 14,
-  "playful": 48,
-  "social": 38,
-  "thinky": 47
+  "crunchy": 47,
+  "cutthroat": 48,
+  "silly": 48,
+  "storied": 30,
+  "swingy": 52,
+  "tense": 14
  },
  "341245": {
-  "compete": 73,
+  "chatty": 38,
   "cozy": 48,
-  "intense": 13,
-  "playful": 49,
-  "social": 38,
-  "thinky": 56
+  "crunchy": 56,
+  "cutthroat": 73,
+  "silly": 49,
+  "storied": 5,
+  "swingy": 7,
+  "tense": 13
  },
  "341358": {
-  "compete": 26,
+  "chatty": 13,
   "cozy": 66,
-  "intense": 3,
-  "playful": 81,
-  "social": 13,
-  "thinky": 18
+  "crunchy": 18,
+  "cutthroat": 26,
+  "silly": 81,
+  "storied": 0,
+  "swingy": 0,
+  "tense": 3
  },
  "350755": {
-  "compete": 10,
+  "chatty": 50,
   "cozy": 63,
-  "intense": 22,
-  "playful": 67,
-  "social": 50,
-  "thinky": 36
+  "crunchy": 36,
+  "cutthroat": 10,
+  "silly": 67,
+  "storied": 38,
+  "swingy": 98,
+  "tense": 22
  },
  "351526": {
-  "compete": 30,
+  "chatty": 35,
   "cozy": 71,
-  "intense": 33,
-  "playful": 27,
-  "social": 35,
-  "thinky": 70
+  "crunchy": 70,
+  "cutthroat": 30,
+  "silly": 27,
+  "storied": 43,
+  "swingy": 30,
+  "tense": 33
  },
  "351616": {
-  "compete": 62,
+  "chatty": 84,
   "cozy": 50,
-  "intense": 12,
-  "playful": 51,
-  "social": 84,
-  "thinky": 47
+  "crunchy": 47,
+  "cutthroat": 62,
+  "silly": 51,
+  "storied": 24,
+  "swingy": 63,
+  "tense": 12
  },
  "358805": {
-  "compete": 10,
+  "chatty": 48,
   "cozy": 66,
-  "intense": 13,
-  "playful": 100,
-  "social": 48,
-  "thinky": 8
+  "crunchy": 8,
+  "cutthroat": 10,
+  "silly": 100,
+  "storied": 17,
+  "swingy": 39,
+  "tense": 13
  },
  "361840": {
-  "compete": 10,
+  "chatty": 61,
   "cozy": 69,
-  "intense": 35,
-  "playful": 64,
-  "social": 61,
-  "thinky": 31
+  "crunchy": 31,
+  "cutthroat": 10,
+  "silly": 64,
+  "storied": 22,
+  "swingy": 34,
+  "tense": 35
  },
  "36218": {
-  "compete": 67,
+  "chatty": 40,
   "cozy": 38,
-  "intense": 12,
-  "playful": 62,
-  "social": 40,
-  "thinky": 51
+  "crunchy": 51,
+  "cutthroat": 67,
+  "silly": 62,
+  "storied": 23,
+  "swingy": 33,
+  "tense": 12
  },
  "363699": {
-  "compete": 16,
+  "chatty": 42,
   "cozy": 70,
-  "intense": 10,
-  "playful": 55,
-  "social": 42,
-  "thinky": 30
+  "crunchy": 30,
+  "cutthroat": 16,
+  "silly": 55,
+  "storied": 37,
+  "swingy": 34,
+  "tense": 10
  },
  "366752": {
-  "compete": 30,
+  "chatty": 62,
   "cozy": 60,
-  "intense": 9,
-  "playful": 60,
-  "social": 62,
-  "thinky": 33
+  "crunchy": 33,
+  "cutthroat": 30,
+  "silly": 60,
+  "storied": 22,
+  "swingy": 35,
+  "tense": 9
  },
  "366910": {
-  "compete": 34,
+  "chatty": 17,
   "cozy": 55,
-  "intense": 15,
-  "playful": 66,
-  "social": 17,
-  "thinky": 47
+  "crunchy": 47,
+  "cutthroat": 34,
+  "silly": 66,
+  "storied": 31,
+  "swingy": 31,
+  "tense": 15
  },
  "370399": {
-  "compete": 32,
+  "chatty": 39,
   "cozy": 67,
-  "intense": 13,
-  "playful": 54,
-  "social": 39,
-  "thinky": 45
+  "crunchy": 45,
+  "cutthroat": 32,
+  "silly": 54,
+  "storied": 29,
+  "swingy": 32,
+  "tense": 13
  },
  "373435": {
-  "compete": 28,
+  "chatty": 55,
   "cozy": 55,
-  "intense": 6,
-  "playful": 60,
-  "social": 55,
-  "thinky": 19
+  "crunchy": 19,
+  "cutthroat": 28,
+  "silly": 60,
+  "storied": 19,
+  "swingy": 36,
+  "tense": 6
  },
  "375573": {
-  "compete": 31,
+  "chatty": 40,
   "cozy": 50,
-  "intense": 11,
-  "playful": 53,
-  "social": 40,
-  "thinky": 34
+  "crunchy": 34,
+  "cutthroat": 31,
+  "silly": 53,
+  "storied": 23,
+  "swingy": 64,
+  "tense": 11
  },
  "377716": {
-  "compete": 29,
+  "chatty": 54,
   "cozy": 62,
-  "intense": 7,
-  "playful": 68,
-  "social": 54,
-  "thinky": 22
+  "crunchy": 22,
+  "cutthroat": 29,
+  "silly": 68,
+  "storied": 20,
+  "swingy": 36,
+  "tense": 7
  },
  "391766": {
-  "compete": 10,
+  "chatty": 44,
   "cozy": 79,
-  "intense": 8,
-  "playful": 63,
-  "social": 44,
-  "thinky": 23
+  "crunchy": 23,
+  "cutthroat": 10,
+  "silly": 63,
+  "storied": 25,
+  "swingy": 81,
+  "tense": 8
  },
  "392448": {
-  "compete": 27,
+  "chatty": 47,
   "cozy": 75,
-  "intense": 4,
-  "playful": 69,
-  "social": 47,
-  "thinky": 11
+  "crunchy": 11,
+  "cutthroat": 27,
+  "silly": 69,
+  "storied": 18,
+  "swingy": 38,
+  "tense": 4
  },
  "394334": {
-  "compete": 42,
+  "chatty": 56,
   "cozy": 56,
-  "intense": 4,
-  "playful": 68,
-  "social": 56,
-  "thinky": 13
+  "crunchy": 13,
+  "cutthroat": 42,
+  "silly": 68,
+  "storied": 18,
+  "swingy": 38,
+  "tense": 4
  },
  "396655": {
-  "compete": 10,
+  "chatty": 59,
   "cozy": 74,
-  "intense": 1,
-  "playful": 83,
-  "social": 59,
-  "thinky": 3
+  "crunchy": 3,
+  "cutthroat": 10,
+  "silly": 83,
+  "storied": 16,
+  "swingy": 39,
+  "tense": 1
  },
  "401185": {
-  "compete": 58,
+  "chatty": 17,
   "cozy": 35,
-  "intense": 15,
-  "playful": 47,
-  "social": 17,
-  "thinky": 45
+  "crunchy": 45,
+  "cutthroat": 58,
+  "silly": 47,
+  "storied": 30,
+  "swingy": 32,
+  "tense": 15
  },
  "40692": {
-  "compete": 72,
+  "chatty": 50,
   "cozy": 40,
-  "intense": 22,
-  "playful": 56,
-  "social": 50,
-  "thinky": 51
+  "crunchy": 51,
+  "cutthroat": 72,
+  "silly": 56,
+  "storied": 28,
+  "swingy": 53,
+  "tense": 22
  },
  "411003": {
-  "compete": 56,
+  "chatty": 21,
   "cozy": 31,
-  "intense": 10,
-  "playful": 54,
-  "social": 21,
-  "thinky": 31
+  "crunchy": 31,
+  "cutthroat": 56,
+  "silly": 54,
+  "storied": 37,
+  "swingy": 34,
+  "tense": 10
  },
  "41114": {
-  "compete": 28,
+  "chatty": 100,
   "cozy": 56,
-  "intense": 10,
-  "playful": 92,
-  "social": 100,
-  "thinky": 0
+  "crunchy": 0,
+  "cutthroat": 28,
+  "silly": 92,
+  "storied": 24,
+  "swingy": 37,
+  "tense": 10
  },
  "415079": {
-  "compete": 10,
+  "chatty": 52,
   "cozy": 78,
-  "intense": 34,
-  "playful": 41,
-  "social": 52,
-  "thinky": 27
+  "crunchy": 27,
+  "cutthroat": 10,
+  "silly": 41,
+  "storied": 46,
+  "swingy": 35,
+  "tense": 34
  },
  "41916": {
-  "compete": 26,
+  "chatty": 58,
   "cozy": 58,
-  "intense": 0,
-  "playful": 100,
-  "social": 58,
-  "thinky": 0
+  "crunchy": 0,
+  "cutthroat": 26,
+  "silly": 100,
+  "storied": 21,
+  "swingy": 84,
+  "tense": 0
  },
  "419793": {
-  "compete": 28,
+  "chatty": 46,
   "cozy": 80,
-  "intense": 14,
-  "playful": 68,
-  "social": 46,
-  "thinky": 13
+  "crunchy": 13,
+  "cutthroat": 28,
+  "silly": 68,
+  "storied": 8,
+  "swingy": 12,
+  "tense": 14
  },
  "420214": {
-  "compete": 45,
+  "chatty": 73,
   "cozy": 85,
-  "intense": 8,
-  "playful": 57,
-  "social": 73,
-  "thinky": 25
+  "crunchy": 25,
+  "cutthroat": 45,
+  "silly": 57,
+  "storied": 21,
+  "swingy": 35,
+  "tense": 8
  },
  "421852": {
-  "compete": 45,
+  "chatty": 22,
   "cozy": 52,
-  "intense": 9,
-  "playful": 56,
-  "social": 22,
-  "thinky": 27
+  "crunchy": 27,
+  "cutthroat": 45,
+  "silly": 56,
+  "storied": 21,
+  "swingy": 35,
+  "tense": 9
  },
  "424577": {
-  "compete": 30,
+  "chatty": 42,
   "cozy": 84,
-  "intense": 9,
-  "playful": 60,
-  "social": 42,
-  "thinky": 34
+  "crunchy": 34,
+  "cutthroat": 30,
+  "silly": 60,
+  "storied": 22,
+  "swingy": 35,
+  "tense": 9
  },
  "425428": {
-  "compete": 52,
+  "chatty": 56,
   "cozy": 36,
-  "intense": 14,
-  "playful": 68,
-  "social": 56,
-  "thinky": 18
+  "crunchy": 18,
+  "cutthroat": 52,
+  "silly": 68,
+  "storied": 33,
+  "swingy": 58,
+  "tense": 14
  },
  "4324": {
-  "compete": 76,
+  "chatty": 40,
   "cozy": 40,
-  "intense": 51,
-  "playful": 38,
-  "social": 40,
-  "thinky": 34
+  "crunchy": 34,
+  "cutthroat": 76,
+  "silly": 38,
+  "storied": 73,
+  "swingy": 54,
+  "tense": 51
  },
  "435367": {
-  "compete": 58,
+  "chatty": 100,
   "cozy": 31,
-  "intense": 9,
-  "playful": 88,
-  "social": 100,
-  "thinky": 13
+  "crunchy": 13,
+  "cutthroat": 58,
+  "silly": 88,
+  "storied": 28,
+  "swingy": 48,
+  "tense": 9
  },
  "440024": {
-  "compete": 47,
+  "chatty": 40,
   "cozy": 58,
-  "intense": 12,
-  "playful": 52,
-  "social": 40,
-  "thinky": 40
+  "crunchy": 40,
+  "cutthroat": 47,
+  "silly": 52,
+  "storied": 3,
+  "swingy": 8,
+  "tense": 12
  },
  "447298": {
-  "compete": 58,
+  "chatty": 19,
   "cozy": 29,
-  "intense": 13,
-  "playful": 49,
-  "social": 19,
-  "thinky": 40
+  "crunchy": 40,
+  "cutthroat": 58,
+  "silly": 49,
+  "storied": 39,
+  "swingy": 32,
+  "tense": 13
  },
  "6249": {
-  "compete": 56,
+  "chatty": 62,
   "cozy": 76,
-  "intense": 10,
-  "playful": 60,
-  "social": 62,
-  "thinky": 44
+  "crunchy": 44,
+  "cutthroat": 56,
+  "silly": 60,
+  "storied": 22,
+  "swingy": 34,
+  "tense": 10
  },
  "68425": {
-  "compete": 43,
+  "chatty": 39,
   "cozy": 57,
-  "intense": 13,
-  "playful": 49,
-  "social": 39,
-  "thinky": 55
+  "crunchy": 55,
+  "cutthroat": 43,
+  "silly": 49,
+  "storied": 29,
+  "swingy": 32,
+  "tense": 13
  },
  "9408": {
-  "compete": 58,
+  "chatty": 39,
   "cozy": 57,
-  "intense": 13,
-  "playful": 49,
-  "social": 39,
-  "thinky": 61
+  "crunchy": 61,
+  "cutthroat": 58,
+  "silly": 49,
+  "storied": 24,
+  "swingy": 32,
+  "tense": 13
  },
  "9616": {
-  "compete": 71,
+  "chatty": 26,
   "cozy": 59,
-  "intense": 10,
-  "playful": 54,
-  "social": 26,
-  "thinky": 57
+  "crunchy": 57,
+  "cutthroat": 71,
+  "silly": 54,
+  "storied": 0,
+  "swingy": 19,
+  "tense": 10
  },
  "98778": {
-  "compete": 10,
+  "chatty": 75,
   "cozy": 78,
-  "intense": 6,
-  "playful": 76,
-  "social": 75,
-  "thinky": 18
+  "crunchy": 18,
+  "cutthroat": 10,
+  "silly": 76,
+  "storied": 19,
+  "swingy": 37,
+  "tense": 6
  }
 }

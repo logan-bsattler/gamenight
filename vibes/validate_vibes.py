@@ -17,7 +17,7 @@ overfits to the hand-scored subset instead of generalising to the rest.
 import json, os, statistics, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-AXES = ["cozy", "social", "playful", "compete", "intense", "thinky"]
+AXES = ["cozy", "chatty", "silly", "cutthroat", "tense", "crunchy", "swingy", "storied"]
 TARGET = 15
 
 auto = json.load(open(os.path.join(HERE, "vibes-auto.json"), encoding="utf-8"))

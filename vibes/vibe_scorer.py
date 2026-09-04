@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Score every owned game on six vibe axes from BGG data.
+"""Score every owned game on eight vibe axes from BGG data.
 
 Reads  vibes/bgg-cache.json   (raw BGG fields, refreshed via the bgg-mcp server)
 Writes vibes/vibes-auto.json  (raw 0-100 scores, regenerable, safe to delete)
@@ -22,7 +22,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 CACHE = os.path.join(HERE, "bgg-cache.json")
 AUTO = os.path.join(HERE, "vibes-auto.json")
 
-AXES = ["cozy", "social", "playful", "compete", "intense", "thinky"]
+AXES = ["cozy", "chatty", "silly", "cutthroat", "tense", "crunchy", "swingy", "storied"]
 
 # Spec shorthand -> real BGG tags. A shorthand mapping to () never fires.
 ALIASES = {
@@ -88,11 +88,11 @@ def score(g, fallback, seen=None):
     minAge = g.get("minAge") or 99
     s = {}
 
-    # ---- Thinky ----
+    # ---- Crunchy (mental effort while playing) ----
     # Base was wn * 70, i.e. (weight-1)/4 * 70, which assumes BGG weight runs
     # the full 1-5. It does not, in any real collection: here the max is 4.16
     # and exactly one game clears 4.0, so the top of the scale was dead and a
-    # median game (weight 2.06) based out at 19 -- reading as "barely thinky"
+    # median game (weight 2.06) based out at 19 -- reading as "barely crunchy"
     # on a 0-100 axis. Renormalised over the range that actually occurs, 1-4.
     # Base constant only, per spec section 5; no signal weights were touched.
     v = min(1.0, (w - 1) / 3.0) * 80
@@ -104,9 +104,9 @@ def score(g, fallback, seen=None):
     v -= 25 if rank(g, "partygames") else 0
     v -= 30 if rank(g, "childrensgames") else 0
     v -= 10 if has(g, "Roll / Spin and Move", seen) else 0
-    s["thinky"] = v
+    s["crunchy"] = v
 
-    # ---- Cozy ----
+    # ---- Cozy (calm, warm, low-stakes) ----
     v = 60 - wn * 30
     v += 15 if has(g, "Cooperative Game", seen) else 0
     v += 10 if has(g, "Solo / Solitaire Game", seen) else 0
@@ -121,8 +121,8 @@ def score(g, fallback, seen=None):
     v -= 10 * sum(1 for n in ["Horror", "Fighting", "Wargame"] if has(g, n, seen))
     s["cozy"] = v
 
-    # ---- Social ----
-    # Base (not in the spec, added afterwards). Social and compete were the only
+    # ---- Chatty (how much the game is people) ----
+    # Base (not in the spec, added afterwards). Chatty and cutthroat were the only
     # axes without one, so they were pure additive bonus lists: 42% and 38% of the
     # collection scored exactly 0 and percentiles could not separate the ties.
     # A base has to come from a CONTINUOUS variable to break them -- player count
@@ -134,7 +134,12 @@ def score(g, fallback, seen=None):
     v += 30 if (sd or hr) else 0
     v += 25 if has(g, "Negotiation", seen) else 0
     v += 20 if has(g, "Trading", seen) else 0
-    v += capped(g, ["Voting", "Acting", "Storytelling", "Team-Based Game",
+    # "Storytelling" used to sit in this group and was the single worst signal in
+    # the model: it put Above and Below -- a quiet 2-4p euro with a storybook -- at
+    # chatty 100, alongside Secret Hitler. A storybook is narrative, not table talk.
+    # It now scores on `storied` instead. This is a signal change to an existing
+    # axis, not just a base tweak, and the only one made so far.
+    v += capped(g, ["Voting", "Acting", "Team-Based Game",
                     "Communication Limits"], 20, 40, seen)
     v += 20 if rank(g, "partygames") else 0
     v += 10 if rank(g, "familygames") else 0
@@ -143,9 +148,9 @@ def score(g, fallback, seen=None):
     v -= 15 if rank(g, "abstracts") else 0
     # NOTE: spec's "+5 language dependence: no necessary text" is unimplemented --
     # the bgg-mcp server does not expose the language_dependence poll.
-    s["social"] = v
+    s["chatty"] = v
 
-    # ---- Playful ----
+    # ---- Silly (light, unserious) ----
     v = 70 - wn * 55
     v += 20 * sum(1 for n in ["Party Game", "Humor", "Children's Game"] if has(g, n, seen))
     v += capped(g, ["Dexterity", "Flicking", "Stacking and Balancing",
@@ -155,14 +160,14 @@ def score(g, fallback, seen=None):
     v += 5 if minAge <= 8 else 0
     v -= 20 if rank(g, "wargames") else 0
     v -= 15 if maxT >= 120 else 0
-    s["playful"] = v
+    s["silly"] = v
 
-    # ---- Compete ----
+    # ---- Cutthroat (direct, zero-sum pressure) ----
     # Hard rule: a co-op is not competitive, whatever else it carries.
     if has(g, "Cooperative Game", seen):
-        s["compete"] = 10
+        s["cutthroat"] = 10
     else:
-        # Base, same reasoning as social. Heavier games give players more ways to
+        # Base, same reasoning as chatty. Heavier games give players more ways to
         # act against each other, so competitive pressure rises with weight.
         v = 25 + wn * 20
         v += 30 if has(g, "Player Elimination", seen) else 0
@@ -173,9 +178,9 @@ def score(g, fallback, seen=None):
         v += 20 if rank(g, "wargames") else 0
         v += 10 if rank(g, "strategygames") else 0
         v -= 15 if has(g, "Solo / Solitaire Game", seen) else 0
-        s["compete"] = v
+        s["cutthroat"] = v
 
-    # ---- Intense ----
+    # ---- Tense (pressure, stakes, adrenaline) ----
     v = wn * 35
     v += 25 if has(g, "Real-Time", seen) else 0
     v += 20 if has(g, "Traitor Game", seen) else 0
@@ -187,7 +192,39 @@ def score(g, fallback, seen=None):
     v += 10 if maxT >= 180 else 0
     v -= 20 if rank(g, "childrensgames") else 0
     v -= 15 * sum(1 for n in ["Party Game", "Children's Game"] if has(g, n, seen))
-    s["intense"] = v
+    s["tense"] = v
+
+    # ---- Swingy (how much dice decide it rather than decisions) ----
+    # Not in the original spec. Fully orthogonal to the other axes: a game can be
+    # crunchy AND swingy (Dinosaur Island) or silly and deterministic (Santorini).
+    # Base falls with weight -- heavier designs give you more levers to blunt luck.
+    v = 40 - wn * 20
+    v += 25 if has(g, "Push Your Luck", seen) else 0
+    v += 25 if has(g, "Roll / Spin and Move", seen) else 0
+    v += 20 if has(g, "Dice Rolling", seen) else 0
+    v += capped(g, ["Random Production", "Events", "Re-rolling and Locking",
+                    "Die Icon Resolution"], 10, 25, seen)
+    v += 10 if has(g, "Player Elimination", seen) else 0
+    v -= 25 if has(g, "Abstract Strategy", seen) else 0
+    v -= 15 if rank(g, "abstracts") else 0
+    s["swingy"] = v
+
+    # ---- Storied (story and theme immersion) ----
+    # Also new. Gives the Storytelling tag a correct home: it was inflating chatty
+    # (Above and Below scored chatty 100 on the strength of a storybook).
+    v = 15 + wn * 25
+    v += 30 if has(g, "Storytelling", seen) else 0
+    v += 25 if has(g, "Narrative Choice / Paragraph", seen) else 0
+    v += 25 if rank(g, "thematic") else 0
+    v += 20 if has(g, "Role Playing", seen) else 0
+    v += capped(g, ["Scenario / Mission / Campaign Game", "Legacy Game",
+                    "Exploration"], 15, 30, seen)
+    v += 10 * min(2, sum(1 for n in ["Adventure", "Horror", "Novel-based",
+                                     "Movies / TV / Radio theme"] if has(g, n, seen)))
+    v += 5 * min(2, sum(1 for n in ["Fantasy", "Science Fiction"] if has(g, n, seen)))
+    v -= 30 if rank(g, "abstracts") else 0
+    v -= 20 if has(g, "Abstract Strategy", seen) else 0
+    s["storied"] = v
 
     return {k: int(round(max(0, min(100, val)))) for k, val in s.items()}
 

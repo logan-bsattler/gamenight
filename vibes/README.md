@@ -1,6 +1,6 @@
 # Vibe scorer
 
-Six axes — cozy, social, playful, compete, intense, thinky — scored 0–100 for
+Eight axes — cozy, chatty, silly, cutthroat, tense, crunchy, swingy, storied — scored 0–100 for
 every owned game from BGG data, hand-correctable, and used for a "what fits
 tonight" match score. Implements `vibe-scorer-spec.md`.
 
@@ -21,7 +21,7 @@ python vibes/validate_vibes.py         # spec section 5, needs hand scores first
 | `vibes-auto.json` | `vibe_scorer.py` | yes, regenerable |
 | `vibes-manual.json` | **you, by hand** | **no** — nothing else can recreate it |
 
-Manual wins per axis. Correcting `compete` alone leaves the other five on their
+Manual wins per axis. Correcting `cutthroat` alone leaves the other seven on their
 auto values, and each axis carries `src: "manual" | "auto"` so the UI can mark
 hand-verified games (the radar tints those spoke labels).
 
@@ -39,7 +39,7 @@ the scoring model reads.
 
 **`language_dependence` is not implemented.** The bgg-mcp server does not
 expose the poll, BGG's XML API now returns `Unauthorized` without credentials,
-and `api.geekdo.com` does not carry it either. Social loses a ±5 nudge and the
+and `api.geekdo.com` does not carry it either. Chatty loses a ±5 nudge and the
 "easy to jump in" filter is not built. Everything else in section 1 is present.
 
 **Eleven spec signals do not match real BGG tags.** `vibe_scorer.py` maps the
@@ -50,39 +50,39 @@ have no BGG equivalent anywhere in the collection and never fire: Engine
 Building, Gardening, Word Game, Trivia, Stacking and Balancing, King of the
 Hill, Acting. `--report` lists them every run so they stay visible.
 
-**"Direct conflict-y attack mechanics"** in Compete is not a BGG tag. It is
+**"Direct conflict-y attack mechanics"** in Cutthroat is not a BGG tag. It is
 defined in `ALIASES["DirectConflict"]` as BGG's explicitly conflict-oriented
 tags. That is the one place the model encodes a judgement call rather than the
 spec — adjust the list rather than the weights.
 
-## Base terms on social and compete (deviation from the spec)
+## Base terms on chatty and cutthroat (deviation from the spec)
 
-As specified, social and compete were the only axes with **no base term** —
+As specified, chatty and cutthroat were the only axes with **no base term** —
 pure additive bonus lists over tags most games do not carry. 60 games (42%)
-scored exactly 0 on social and 54 (38%) on compete, across only 11 distinct
+scored exactly 0 on chatty and 54 (38%) on cutthroat, across only 11 distinct
 values each. Percentiles cannot separate ties, so section 3's spread-the-radar
 trick failed on exactly those two axes and the match score treated 60 games as
-identical on social.
+identical on chatty.
 
 Both now get a base, keeping every other signal untouched:
 
 ```python
-social:  50 - wn * 30      # lighter games talk more
-compete: 25 + wn * 20      # heavier games give more ways to act against people
+chatty:    50 - wn * 30      # lighter games talk more
+cutthroat: 25 + wn * 20      # heavier games give more ways to act against people
 ```
 
 `wn` is normalised weight, `(averageweight - 1) / 4`, the same input the other
 four bases use. The choice of *weight* is the load-bearing part: a base only
 breaks ties if it comes from a continuous variable. Player count is the more
-intuitive signal for social, but it takes about five distinct values across the
+intuitive signal for chatty, but it takes about five distinct values across the
 collection, so it relocates the pile-up instead of removing it.
 
 | axis | tied at 0 before | after | distinct before | after |
 |---|---|---|---|---|
-| social | 60 (42%) | 0 | 11 | 55 |
-| compete | 54 (38%) | 0 | 11 | 45 |
+| chatty | 60 (42%) | 0 | 11 | 55 |
+| cutthroat | 54 (38%) | 0 | 11 | 45 |
 
-The one tie left is 16 games sharing `compete = 10`. Those are exactly the 16
+The one tie left is 16 games sharing `cutthroat = 10`. Those are exactly the 16
 co-ops, pinned by the spec's own hard rule that a co-op scores ≤ 10 whatever
 else it carries. That is the rule working, not a defect.
 
@@ -92,19 +92,19 @@ hand scores — there are none yet. Section 5 still applies: once
 direction should be corrected **by moving its base constant**, which is exactly
 what these two now have.
 
-## Thinky base, renormalised
+## Crunchy base, renormalised
 
 The spec's `(weight - 1) / 4 * 70` assumes BGG weight uses its full 1-5 range.
 No real collection does: here the heaviest game is 4.16 and exactly one clears
 4.0, so the top 40% of the scale was dead and a median game (weight 2.06) based
-out at 19 — reading as "barely thinky" on a 0-100 axis. The base now
+out at 19 — reading as "barely crunchy" on a 0-100 axis. The base now
 renormalises over the range that actually occurs:
 
 ```python
-thinky: min(1, (w - 1) / 3) * 80
+crunchy: min(1, (w - 1) / 3) * 80
 ```
 
-Base constant only; no signal weights moved. Median thinky 21 → 31, distinct
+Base constant only; no signal weights moved. Median crunchy 21 → 31, distinct
 values 56 → 65.
 
 **The residual is a limitation, not a miscalibration.** After the fix, medium
@@ -116,9 +116,25 @@ That is BGG weight doing what it actually measures — **rules complexity, not
 depth of thought**. Santorini teaches in two minutes and is a deep duel; chess
 would score light too. Raising the base further would close that gap by
 inflating the medium and heavy games that are now correct, and would make Sushi
-Go! read as thinky. If light-but-deep games need to score higher, that wants a
+Go! read as crunchy. If light-but-deep games need to score higher, that wants a
 new signal (the abstracts rank is the obvious candidate, currently only +10),
 not a bigger base.
+
+## Renamed axes, and two new ones
+
+The axis labels were renamed (cozy kept; social→chatty, playful→silly,
+compete→cutthroat, intense→tense, thinky→crunchy) and two axes added:
+
+- **swingy** — how much dice decide it rather than decisions. Orthogonal to
+  everything else; a game can be crunchy and swingy at once.
+- **storied** — story and theme immersion.
+
+Adding `storied` came with the one **signal** change made to an existing axis
+so far: `Storytelling` was removed from chatty's capped group. It was the worst
+signal in the model, putting Above and Below — a quiet 2–4p euro with a
+storybook — at chatty 100, level with Secret Hitler. Above and Below now reads
+chatty 84, storied 100, and the top of chatty is Bohnanza, Secret Hitler and
+The Resistance, which is right.
 
 ## Validation is not done
 

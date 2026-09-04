@@ -16,7 +16,7 @@ Games flagged low_confidence in the llm pass are excluded by default.
 import json, os, statistics, argparse
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-AXES = ["cozy", "social", "playful", "compete", "intense", "thinky"]
+AXES = ["cozy", "chatty", "silly", "cutthroat", "tense", "crunchy", "swingy", "storied"]
 
 ap = argparse.ArgumentParser()
 ap.add_argument("--include-low-confidence", action="store_true")

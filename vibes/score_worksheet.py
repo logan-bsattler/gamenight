@@ -7,7 +7,7 @@
 
 This script never opens vibes-auto.json. That is the entire point: section 5
 only means something if the hand scores are set down before the auto scores are
-seen. Fill the six columns with 0-100 (blank = skip that axis; partial rows are
+seen. Fill the eight columns with 0-100 (blank = skip that axis; partial rows are
 fine, manual overrides merge per axis), then --ingest and run validate_vibes.py.
 
 The context columns are deliberately thin -- name, players, time, weight, a few
@@ -21,7 +21,7 @@ ROOT = os.path.dirname(HERE)
 CACHE = os.path.join(HERE, "bgg-cache.json")
 MANUAL = os.path.join(HERE, "vibes-manual.json")
 SHEET = os.path.join(HERE, "worksheet.csv")
-AXES = ["cozy", "social", "playful", "compete", "intense", "thinky"]
+AXES = ["cozy", "chatty", "silly", "cutthroat", "tense", "crunchy", "swingy", "storied"]
 
 
 def owned_games():
@@ -50,7 +50,7 @@ def write_sheet(only_rated):
                         "; ".join((c.get("mech") or [])[:4]),
                         g.get("myRating", "")] + [""] * 6 + [""])
     print(f"wrote {os.path.relpath(SHEET, ROOT)} with {len(games)} games")
-    print("fill the six axis columns 0-100, then: python score_worksheet.py --ingest")
+    print("fill the eight axis columns 0-100, then: python score_worksheet.py --ingest")
 
 
 def ingest():
