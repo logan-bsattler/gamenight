@@ -1,0 +1,4212 @@
+{
+ "104006": {
+  "best": [
+   "4"
+  ],
+  "cat": [
+   "Economic",
+   "Farming",
+   "Medieval"
+  ],
+  "id": 104006,
+  "maxP": 4,
+  "maxT": 90,
+  "mech": [
+   "Area Majority / Influence",
+   "Contracts",
+   "Set Collection",
+   "Turn Order: Claim Action",
+   "Worker Placement",
+   "Worker Placement, Different Worker Types"
+  ],
+  "minAge": 12,
+  "minP": 2,
+  "minT": 60,
+  "name": "Village",
+  "ranks": {
+   "boardgame": 250,
+   "strategygames": 189
+  },
+  "weight": 3.06
+ },
+ "109252": {
+  "best": [],
+  "cat": [
+   "Animals",
+   "Card Game",
+   "Humor"
+  ],
+  "id": 109252,
+  "maxP": 6,
+  "maxT": 60,
+  "mech": [
+   "Campaign / Battle Card Driven",
+   "Hand Management",
+   "Set Collection"
+  ],
+  "minAge": 8,
+  "minP": 2,
+  "minT": 20,
+  "name": "Creature Clash! Card Game",
+  "ranks": {
+   "boardgame": 28136
+  },
+  "weight": 1.15
+ },
+ "11": {
+  "best": [
+   "4",
+   "5"
+  ],
+  "cat": [
+   "Card Game",
+   "Farming",
+   "Negotiation"
+  ],
+  "id": 11,
+  "maxP": 7,
+  "maxT": 45,
+  "mech": [
+   "Hand Management",
+   "Multi-Use Cards",
+   "Negotiation",
+   "Resource Queue",
+   "Set Collection",
+   "Trading"
+  ],
+  "minAge": 12,
+  "minP": 3,
+  "minT": 45,
+  "name": "Bohnanza",
+  "ranks": {
+   "boardgame": 544,
+   "familygames": 149
+  },
+  "weight": 1.67
+ },
+ "110327": {
+  "best": [
+   "3",
+   "4"
+  ],
+  "cat": [
+   "City Building",
+   "Fantasy"
+  ],
+  "id": 110327,
+  "maxP": 5,
+  "maxT": 120,
+  "mech": [
+   "Contracts",
+   "Hidden Roles",
+   "Increase Value of Unchosen Resources",
+   "Ownership",
+   "Set Collection",
+   "Take That",
+   "Turn Order: Claim Action",
+   "Worker Placement"
+  ],
+  "minAge": 12,
+  "minP": 2,
+  "minT": 60,
+  "name": "Lords of Waterdeep",
+  "ranks": {
+   "boardgame": 107,
+   "strategygames": 104
+  },
+  "weight": 2.45
+ },
+ "118": {
+  "best": [
+   "4",
+   "5"
+  ],
+  "cat": [
+   "Card Game",
+   "Economic"
+  ],
+  "id": 118,
+  "maxP": 5,
+  "maxT": 45,
+  "mech": [
+   "Auction / Bidding",
+   "Auction: English",
+   "Auction: Once Around",
+   "Auction: Sealed Bid",
+   "Auction: Turn Order Until Pass",
+   "Commodity Speculation",
+   "Hand Management",
+   "Victory Points as a Resource"
+  ],
+  "minAge": 10,
+  "minP": 3,
+  "minT": 45,
+  "name": "Modern Art",
+  "ranks": {
+   "boardgame": 223,
+   "strategygames": 167
+  },
+  "weight": 2.28
+ },
+ "122522": {
+  "best": [
+   "3"
+  ],
+  "cat": [
+   "Card Game",
+   "Fantasy",
+   "Humor",
+   "Pirates",
+   "Science Fiction",
+   "Zombies"
+  ],
+  "id": 122522,
+  "maxP": 4,
+  "maxT": 45,
+  "mech": [
+   "Area Majority / Influence",
+   "Card Play Conflict Resolution",
+   "Deck Construction",
+   "Hand Management",
+   "Kill Steal",
+   "Open Drafting",
+   "Take That",
+   "Variable Player Powers",
+   "Variable Set-up"
+  ],
+  "minAge": 12,
+  "minP": 2,
+  "minT": 45,
+  "name": "Smash Up",
+  "ranks": {
+   "boardgame": 1326,
+   "familygames": 489,
+   "strategygames": 954
+  },
+  "weight": 2.06
+ },
+ "13": {
+  "best": [
+   "4"
+  ],
+  "cat": [
+   "Economic",
+   "Negotiation"
+  ],
+  "id": 13,
+  "maxP": 4,
+  "maxT": 120,
+  "mech": [
+   "Chaining",
+   "Dice Rolling",
+   "Hand Management",
+   "Hexagon Grid",
+   "Hidden Victory Points",
+   "Income",
+   "Market",
+   "Modular Board",
+   "Negotiation",
+   "Network and Route Building",
+   "Race",
+   "Random Production",
+   "Take That",
+   "Trading",
+   "Variable Set-up"
+  ],
+  "minAge": 10,
+  "minP": 3,
+  "minT": 60,
+  "name": "Catan",
+  "ranks": {
+   "boardgame": 624,
+   "familygames": 207,
+   "strategygames": 591
+  },
+  "weight": 2.28
+ },
+ "133473": {
+  "best": [
+   "4"
+  ],
+  "cat": [
+   "Card Game",
+   "Party Game"
+  ],
+  "id": 133473,
+  "maxP": 5,
+  "maxT": 15,
+  "mech": [
+   "Closed Drafting",
+   "End Game Bonuses",
+   "Hand Management",
+   "Score-and-Reset Game",
+   "Set Collection",
+   "Simultaneous Action Selection"
+  ],
+  "minAge": 8,
+  "minP": 2,
+  "minT": 15,
+  "name": "Sushi Go!",
+  "ranks": {
+   "boardgame": 664,
+   "familygames": 199
+  },
+  "weight": 1.16
+ },
+ "141423": {
+  "best": [
+   "3"
+  ],
+  "cat": [
+   "Exploration",
+   "Fantasy",
+   "Fighting",
+   "Nautical",
+   "Pirates"
+  ],
+  "id": 141423,
+  "maxP": 5,
+  "maxT": 75,
+  "mech": [
+   "Action Points",
+   "Cooperative Game",
+   "Dice Rolling",
+   "Grid Movement",
+   "Map Addition",
+   "Modular Board",
+   "Pick-up and Deliver",
+   "Variable Player Powers"
+  ],
+  "minAge": 13,
+  "minP": 2,
+  "minT": 60,
+  "name": "Dead Men Tell No Tales",
+  "ranks": {
+   "boardgame": 1380,
+   "strategygames": 824,
+   "thematic": 310
+  },
+  "weight": 2.56
+ },
+ "143519": {
+  "best": [
+   "4"
+  ],
+  "cat": [
+   "Dice",
+   "Fighting",
+   "Science Fiction",
+   "Space Exploration"
+  ],
+  "id": 143519,
+  "maxP": 4,
+  "maxT": 60,
+  "mech": [
+   "Area Majority / Influence",
+   "Dice Rolling",
+   "Grid Movement",
+   "Modular Board",
+   "Square Grid"
+  ],
+  "minAge": 13,
+  "minP": 2,
+  "minT": 60,
+  "name": "Quantum",
+  "ranks": {
+   "boardgame": 786,
+   "strategygames": 518
+  },
+  "weight": 2.48
+ },
+ "144325": {
+  "best": [
+   "3",
+   "4"
+  ],
+  "cat": [
+   "Ancient",
+   "Card Game",
+   "Fantasy",
+   "Humor",
+   "Mythology"
+  ],
+  "id": 144325,
+  "maxP": 6,
+  "maxT": 120,
+  "mech": [
+   "Dice Rolling",
+   "Hand Management",
+   "Open Drafting",
+   "Take That",
+   "Variable Player Powers"
+  ],
+  "minAge": 10,
+  "minP": 3,
+  "minT": 60,
+  "name": "Munchkin Legends",
+  "ranks": {
+   "boardgame": 5462,
+   "partygames": 448
+  },
+  "weight": 1.7
+ },
+ "146735": {
+  "best": [
+   "3",
+   "4",
+   "5"
+  ],
+  "cat": [
+   "Card Game",
+   "Fantasy",
+   "Fighting",
+   "Humor",
+   "Movies / TV / Radio theme"
+  ],
+  "id": 146735,
+  "maxP": 6,
+  "maxT": 120,
+  "mech": [
+   "Dice Rolling",
+   "Hand Management",
+   "Take That",
+   "Variable Player Powers"
+  ],
+  "minAge": 10,
+  "minP": 3,
+  "minT": 60,
+  "name": "Munchkin Adventure Time",
+  "ranks": {
+   "boardgame": 4740,
+   "partygames": 439
+  },
+  "weight": 1.92
+ },
+ "147370": {
+  "best": [
+   "3",
+   "4"
+  ],
+  "cat": [
+   "Children's Game",
+   "Maze"
+  ],
+  "id": 147370,
+  "maxP": 5,
+  "maxT": 15,
+  "mech": [
+   "Action Queue",
+   "Grid Movement",
+   "Programmed Movement",
+   "Slide / Push"
+  ],
+  "minAge": 4,
+  "minP": 2,
+  "minT": 15,
+  "name": "Robot Turtles",
+  "ranks": {
+   "boardgame": 7804,
+   "childrensgames": 257
+  },
+  "weight": 1.34
+ },
+ "148228": {
+  "best": [
+   "3"
+  ],
+  "cat": [
+   "Card Game",
+   "Economic",
+   "Renaissance"
+  ],
+  "id": 148228,
+  "maxP": 4,
+  "maxT": 30,
+  "mech": [
+   "Contracts",
+   "Open Drafting",
+   "Race",
+   "Set Collection"
+  ],
+  "minAge": 10,
+  "minP": 2,
+  "minT": 30,
+  "name": "Splendor",
+  "ranks": {
+   "boardgame": 243,
+   "familygames": 54
+  },
+  "weight": 1.77
+ },
+ "15046": {
+  "best": [
+   "3"
+  ],
+  "cat": [
+   "Economic",
+   "Movies / TV / Radio theme",
+   "Negotiation",
+   "Science Fiction"
+  ],
+  "id": 15046,
+  "maxP": 8,
+  "maxT": 120,
+  "mech": [
+   "Auction / Bidding",
+   "Player Elimination",
+   "Roll / Spin and Move",
+   "Set Collection",
+   "Trading"
+  ],
+  "minAge": 8,
+  "minP": 2,
+  "minT": 60,
+  "name": "Monopoly: Star Wars Saga Edition",
+  "ranks": {
+   "boardgame": 30567,
+   "familygames": 3555
+  },
+  "weight": 1.71
+ },
+ "150930": {
+  "best": [
+   "4"
+  ],
+  "cat": [
+   "City Building",
+   "Real-time"
+  ],
+  "id": 150930,
+  "maxP": 6,
+  "maxT": 30,
+  "mech": [
+   "Tile Placement"
+  ],
+  "minAge": 8,
+  "minP": 1,
+  "minT": 20,
+  "name": "Mad City",
+  "ranks": {
+   "boardgame": 11825,
+   "familygames": 2618
+  },
+  "weight": 1.67
+ },
+ "156566": {
+  "best": [
+   "4",
+   "5"
+  ],
+  "cat": [
+   "Fantasy"
+  ],
+  "id": 156566,
+  "maxP": 5,
+  "maxT": 90,
+  "mech": [
+   "Action Queue",
+   "Area Majority / Influence",
+   "Auction: Sealed Bid",
+   "Highest-Lowest Scoring",
+   "Pick-up and Deliver",
+   "Point to Point Movement",
+   "Programmed Movement",
+   "Simultaneous Action Selection"
+  ],
+  "minAge": 14,
+  "minP": 3,
+  "minT": 90,
+  "name": "Lords of Xidit",
+  "ranks": {
+   "boardgame": 1038,
+   "strategygames": 644
+  },
+  "weight": 2.64
+ },
+ "15987": {
+  "best": [
+   "4"
+  ],
+  "cat": [
+   "Adventure",
+   "Fighting",
+   "Horror",
+   "Novel-based"
+  ],
+  "id": 15987,
+  "maxP": 8,
+  "maxT": 240,
+  "mech": [
+   "Cooperative Game",
+   "Dice Rolling",
+   "Events",
+   "Finale Ending",
+   "Hand Management",
+   "Lose a Turn",
+   "Point to Point Movement",
+   "Role Playing",
+   "Solo / Solitaire Game",
+   "Stat Check Resolution",
+   "Variable Player Powers"
+  ],
+  "minAge": 14,
+  "minP": 1,
+  "minT": 120,
+  "name": "Arkham Horror",
+  "ranks": {
+   "boardgame": 489,
+   "thematic": 164
+  },
+  "weight": 3.59
+ },
+ "161290": {
+  "best": [
+   "2",
+   "4",
+   "5"
+  ],
+  "cat": [
+   "Action / Dexterity",
+   "Comic Book / Strip",
+   "Dice",
+   "Science Fiction"
+  ],
+  "id": 161290,
+  "maxP": 7,
+  "maxT": 120,
+  "mech": [
+   "Cooperative Game",
+   "Dice Rolling",
+   "Pick-up and Deliver",
+   "Solo / Solitaire Game"
+  ],
+  "minAge": 14,
+  "minP": 1,
+  "minT": 60,
+  "name": "Space Movers 2201",
+  "ranks": {
+   "boardgame": 14525,
+   "thematic": 1536
+  },
+  "weight": 2.11
+ },
+ "161965": {
+  "best": [],
+  "cat": [
+   "Economic"
+  ],
+  "id": 161965,
+  "maxP": 4,
+  "maxT": 90,
+  "mech": [
+   "Delayed Purchase",
+   "End Game Bonuses",
+   "Set Collection",
+   "Simultaneous Action Selection",
+   "Turn Order: Stat-Based"
+  ],
+  "minAge": 10,
+  "minP": 2,
+  "minT": 60,
+  "name": "Johari",
+  "ranks": {
+   "boardgame": 7444,
+   "familygames": 2056
+  },
+  "weight": 2.18
+ },
+ "161970": {
+  "best": [
+   "4"
+  ],
+  "cat": [
+   "Deduction",
+   "Fantasy",
+   "Puzzle"
+  ],
+  "id": 161970,
+  "maxP": 4,
+  "maxT": 120,
+  "mech": [
+   "Action Drafting",
+   "Constrained Bidding",
+   "Deduction",
+   "End Game Bonuses",
+   "Events",
+   "Hand Management",
+   "Open Drafting",
+   "Turn Order: Progressive",
+   "Worker Placement"
+  ],
+  "minAge": 12,
+  "minP": 2,
+  "minT": 120,
+  "name": "Alchemists",
+  "ranks": {
+   "boardgame": 179,
+   "strategygames": 146
+  },
+  "weight": 3.92
+ },
+ "162082": {
+  "best": [
+   "3"
+  ],
+  "cat": [
+   "Civilization",
+   "Mythology"
+  ],
+  "id": 162082,
+  "maxP": 4,
+  "maxT": 90,
+  "mech": [
+   "Action Queue",
+   "Area Majority / Influence",
+   "End Game Bonuses",
+   "Grid Movement",
+   "Hand Management",
+   "Hexagon Grid",
+   "Modular Board",
+   "Multi-Use Cards",
+   "Network and Route Building",
+   "Victory Points as a Resource"
+  ],
+  "minAge": 14,
+  "minP": 2,
+  "minT": 60,
+  "name": "Deus",
+  "ranks": {
+   "boardgame": 619,
+   "strategygames": 406
+  },
+  "weight": 2.82
+ },
+ "163163": {
+  "best": [
+   "4",
+   "5",
+   "6",
+   "11"
+  ],
+  "cat": [
+   "Racing",
+   "Sports"
+  ],
+  "id": 163163,
+  "maxP": 11,
+  "maxT": 90,
+  "mech": [
+   "Hand Management"
+  ],
+  "minAge": 14,
+  "minP": 2,
+  "minT": 90,
+  "name": "Grand Prix",
+  "ranks": {
+   "boardgame": 4953,
+   "thematic": 832
+  },
+  "weight": 2.3
+ },
+ "163967": {
+  "best": [
+   "3"
+  ],
+  "cat": [
+   "Dice",
+   "Print & Play",
+   "Science Fiction",
+   "Space Exploration"
+  ],
+  "id": 163967,
+  "maxP": 5,
+  "maxT": 45,
+  "mech": [
+   "Action Retrieval",
+   "Contracts",
+   "Dice Rolling",
+   "End Game Bonuses",
+   "Follow",
+   "Open Drafting",
+   "Re-rolling and Locking",
+   "Solo / Solitaire Game",
+   "Take That",
+   "Variable Phase Order",
+   "Variable Player Powers"
+  ],
+  "minAge": 14,
+  "minP": 1,
+  "minT": 30,
+  "name": "Tiny Epic Galaxies",
+  "ranks": {
+   "boardgame": 402,
+   "strategygames": 335
+  },
+  "weight": 2.15
+ },
+ "164237": {
+  "best": [
+   "4"
+  ],
+  "cat": [
+   "Ancient",
+   "Mythology",
+   "Nautical"
+  ],
+  "id": 164237,
+  "maxP": 5,
+  "maxT": 45,
+  "mech": [
+   "Open Drafting",
+   "Point to Point Movement"
+  ],
+  "minAge": 8,
+  "minP": 3,
+  "minT": 45,
+  "name": "Neptun",
+  "ranks": {
+   "boardgame": 7079,
+   "familygames": 1979,
+   "strategygames": 2309
+  },
+  "weight": 2.57
+ },
+ "165986": {
+  "best": [
+   "4",
+   "5"
+  ],
+  "cat": [],
+  "id": 165986,
+  "maxP": 5,
+  "maxT": 60,
+  "mech": [
+   "Area Majority / Influence",
+   "Open Drafting",
+   "Set Collection"
+  ],
+  "minAge": 10,
+  "minP": 2,
+  "minT": 60,
+  "name": "Royals",
+  "ranks": {
+   "boardgame": 1539,
+   "familygames": 417,
+   "strategygames": 835
+  },
+  "weight": 2.24
+ },
+ "171131": {
+  "best": [
+   "8"
+  ],
+  "cat": [
+   "Deduction",
+   "Fighting",
+   "Modern Warfare",
+   "Nautical",
+   "Real-time"
+  ],
+  "id": 171131,
+  "maxP": 8,
+  "maxT": 60,
+  "mech": [
+   "Deduction",
+   "Grid Movement",
+   "Hidden Movement",
+   "Line Drawing",
+   "Real-Time",
+   "Role Playing",
+   "Secret Unit Deployment",
+   "Simulation",
+   "Team-Based Game"
+  ],
+  "minAge": 14,
+  "minP": 2,
+  "minT": 45,
+  "name": "Captain Sonar",
+  "ranks": {
+   "boardgame": 248,
+   "partygames": 12,
+   "thematic": 74
+  },
+  "weight": 2.2
+ },
+ "171879": {
+  "best": [
+   "4"
+  ],
+  "cat": [
+   "Economic",
+   "Industry / Manufacturing"
+  ],
+  "id": 171879,
+  "maxP": 4,
+  "maxT": 75,
+  "mech": [
+   "Rondel",
+   "Set Collection",
+   "Turn Order: Time Track",
+   "Worker Placement"
+  ],
+  "minAge": 10,
+  "minP": 2,
+  "minT": 75,
+  "name": "Kraftwagen",
+  "ranks": {
+   "boardgame": 1542,
+   "strategygames": 810
+  },
+  "weight": 2.86
+ },
+ "172362": {
+  "best": [
+   "2",
+   "3"
+  ],
+  "cat": [
+   "Bluffing",
+   "Card Game",
+   "Deduction"
+  ],
+  "id": 172362,
+  "maxP": 4,
+  "maxT": 30,
+  "mech": [
+   "Area Majority / Influence",
+   "Secret Unit Deployment"
+  ],
+  "minAge": 12,
+  "minP": 2,
+  "minT": 30,
+  "name": "Kenjin",
+  "ranks": {
+   "boardgame": 7909,
+   "strategygames": 2444
+  },
+  "weight": 2.0
+ },
+ "172818": {
+  "best": [
+   "3"
+  ],
+  "cat": [
+   "Adventure",
+   "City Building",
+   "Economic",
+   "Exploration",
+   "Fantasy",
+   "Farming",
+   "Negotiation"
+  ],
+  "id": 172818,
+  "maxP": 4,
+  "maxT": 90,
+  "mech": [
+   "Action Points",
+   "Dice Rolling",
+   "Narrative Choice / Paragraph",
+   "Set Collection",
+   "Storytelling",
+   "Trading",
+   "Turn Order: Progressive"
+  ],
+  "minAge": 13,
+  "minP": 2,
+  "minT": 90,
+  "name": "Above and Below",
+  "ranks": {
+   "boardgame": 434,
+   "strategygames": 341,
+   "thematic": 134
+  },
+  "weight": 2.51
+ },
+ "172971": {
+  "best": [
+   "5",
+   "6"
+  ],
+  "cat": [
+   "Bluffing",
+   "Party Game"
+  ],
+  "id": 172971,
+  "maxP": 6,
+  "maxT": 15,
+  "mech": [
+   "Set Collection",
+   "Simultaneous Action Selection"
+  ],
+  "minAge": 6,
+  "minP": 3,
+  "minT": 15,
+  "name": "Crossing",
+  "ranks": {
+   "boardgame": 3463,
+   "partygames": 207
+  },
+  "weight": 1.05
+ },
+ "175117": {
+  "best": [
+   "5",
+   "6"
+  ],
+  "cat": [
+   "Adventure",
+   "Aviation / Flight",
+   "Card Game",
+   "Fantasy"
+  ],
+  "id": 175117,
+  "maxP": 6,
+  "maxT": 30,
+  "mech": [
+   "Betting and Bluffing",
+   "Dice Rolling",
+   "Hidden Victory Points",
+   "Push Your Luck"
+  ],
+  "minAge": 8,
+  "minP": 2,
+  "minT": 30,
+  "name": "Celestia",
+  "ranks": {
+   "boardgame": 993,
+   "familygames": 299
+  },
+  "weight": 1.32
+ },
+ "175324": {
+  "best": [
+   "2"
+  ],
+  "cat": [
+   "Bluffing",
+   "Card Game",
+   "Deduction"
+  ],
+  "id": 175324,
+  "maxP": 2,
+  "maxT": 120,
+  "mech": [
+   "Communication Limits",
+   "Hand Management",
+   "Role Playing",
+   "Semi-Cooperative Game",
+   "Simulation",
+   "Simultaneous Action Selection",
+   "Storytelling"
+  ],
+  "minAge": 17,
+  "minP": 2,
+  "minT": 60,
+  "name": "Fog of Love",
+  "ranks": {
+   "boardgame": 1835,
+   "thematic": 476
+  },
+  "weight": 2.25
+ },
+ "176396": {
+  "best": [
+   "4"
+  ],
+  "cat": [
+   "City Building",
+   "Environmental"
+  ],
+  "id": 176396,
+  "maxP": 4,
+  "maxT": 60,
+  "mech": [
+   "End Game Bonuses",
+   "Open Drafting",
+   "Pattern Building",
+   "Set Collection",
+   "Square Grid",
+   "Tile Placement",
+   "Worker Placement",
+   "Worker Placement, Different Worker Types"
+  ],
+  "minAge": 8,
+  "minP": 2,
+  "minT": 30,
+  "name": "Quadropolis",
+  "ranks": {
+   "boardgame": 593,
+   "familygames": 136
+  },
+  "weight": 2.21
+ },
+ "181345": {
+  "best": [
+   "2",
+   "3",
+   "4"
+  ],
+  "cat": [
+   "Action / Dexterity",
+   "Children's Game",
+   "Real-time"
+  ],
+  "id": 181345,
+  "maxP": 4,
+  "maxT": 15,
+  "mech": [
+   "Pattern Building",
+   "Race",
+   "Real-Time"
+  ],
+  "minAge": 8,
+  "minP": 2,
+  "minT": 15,
+  "name": "Dr. Eureka",
+  "ranks": {
+   "boardgame": 2410,
+   "childrensgames": 62,
+   "familygames": 806
+  },
+  "weight": 1.06
+ },
+ "181810": {
+  "best": [
+   "3"
+  ],
+  "cat": [
+   "Abstract Strategy",
+   "Card Game"
+  ],
+  "id": 181810,
+  "maxP": 5,
+  "maxT": 30,
+  "mech": [
+   "Layering",
+   "Set Collection",
+   "Tile Placement"
+  ],
+  "minAge": 14,
+  "minP": 2,
+  "minT": 30,
+  "name": "Kodama: The Tree Spirits",
+  "ranks": {
+   "boardgame": 1900,
+   "familygames": 621
+  },
+  "weight": 1.64
+ },
+ "182189": {
+  "best": [
+   "4"
+  ],
+  "cat": [
+   "Adventure",
+   "Card Game",
+   "Fantasy"
+  ],
+  "id": 182189,
+  "maxP": 6,
+  "maxT": 40,
+  "mech": [
+   "Closed Drafting",
+   "Hand Management",
+   "Open Drafting",
+   "Simultaneous Action Selection"
+  ],
+  "minAge": 8,
+  "minP": 2,
+  "minT": 40,
+  "name": "Treasure Hunter",
+  "ranks": {
+   "boardgame": 2195,
+   "familygames": 700
+  },
+  "weight": 1.89
+ },
+ "183394": {
+  "best": [
+   "3",
+   "4"
+  ],
+  "cat": [
+   "Economic",
+   "Farming"
+  ],
+  "id": 183394,
+  "maxP": 6,
+  "maxT": 90,
+  "mech": [
+   "Contracts",
+   "Hand Management",
+   "Race",
+   "Solo / Solitaire Game",
+   "Turn Order: Auction",
+   "Victory Points as a Resource",
+   "Worker Placement",
+   "Worker Placement, Different Worker Types"
+  ],
+  "minAge": 13,
+  "minP": 1,
+  "minT": 45,
+  "name": "Viticulture Essential Edition",
+  "ranks": {
+   "boardgame": 43,
+   "strategygames": 47
+  },
+  "weight": 2.9
+ },
+ "185021": {
+  "best": [
+   "3"
+  ],
+  "cat": [
+   "Fighting",
+   "Nautical",
+   "Renaissance"
+  ],
+  "id": 185021,
+  "maxP": 4,
+  "maxT": 60,
+  "mech": [
+   "Open Drafting",
+   "Pick-up and Deliver",
+   "Set Collection"
+  ],
+  "minAge": 12,
+  "minP": 3,
+  "minT": 60,
+  "name": "Liguria",
+  "ranks": {
+   "boardgame": 7287
+  },
+  "weight": 2.36
+ },
+ "185589": {
+  "best": [
+   "3",
+   "4"
+  ],
+  "cat": [
+   "Fantasy",
+   "Nautical",
+   "Pirates"
+  ],
+  "id": 185589,
+  "maxP": 4,
+  "maxT": 120,
+  "mech": [
+   "Area Majority / Influence",
+   "Area Movement",
+   "Dice Rolling",
+   "End Game Bonuses",
+   "Increase Value of Unchosen Resources",
+   "Modular Board",
+   "Ownership",
+   "Pick-up and Deliver",
+   "Push Your Luck",
+   "Worker Placement"
+  ],
+  "minAge": 13,
+  "minP": 2,
+  "minT": 60,
+  "name": "Islebound",
+  "ranks": {
+   "boardgame": 1348,
+   "strategygames": 772
+  },
+  "weight": 2.74
+ },
+ "188834": {
+  "best": [
+   "8",
+   "10"
+  ],
+  "cat": [
+   "Bluffing",
+   "Card Game",
+   "Deduction",
+   "Humor",
+   "Party Game",
+   "Political",
+   "Print & Play",
+   "Spies / Secret Agents"
+  ],
+  "id": 188834,
+  "maxP": 10,
+  "maxT": 45,
+  "mech": [
+   "Hidden Roles",
+   "Player Elimination",
+   "Team-Based Game",
+   "Traitor Game",
+   "Voting"
+  ],
+  "minAge": 13,
+  "minP": 5,
+  "minT": 45,
+  "name": "Secret Hitler",
+  "ranks": {
+   "boardgame": 269,
+   "partygames": 23
+  },
+  "weight": 1.73
+ },
+ "189350": {
+  "best": [
+   "3"
+  ],
+  "cat": [
+   "Abstract Strategy",
+   "Card Game",
+   "Educational"
+  ],
+  "id": 189350,
+  "maxP": 4,
+  "maxT": 60,
+  "mech": [
+   "Set Collection"
+  ],
+  "minAge": 12,
+  "minP": 1,
+  "minT": 30,
+  "name": "Starving Artists",
+  "ranks": {
+   "boardgame": 5588
+  },
+  "weight": 1.94
+ },
+ "19": {
+  "best": [
+   "4"
+  ],
+  "cat": [
+   "American West",
+   "Bluffing",
+   "City Building"
+  ],
+  "id": 19,
+  "maxP": 4,
+  "maxT": 45,
+  "mech": [
+   "Tile Placement",
+   "Voting"
+  ],
+  "minAge": 9,
+  "minP": 2,
+  "minT": 30,
+  "name": "Wacky Wacky West",
+  "ranks": {
+   "boardgame": 4312,
+   "familygames": 1408
+  },
+  "weight": 1.82
+ },
+ "191862": {
+  "best": [
+   "4"
+  ],
+  "cat": [
+   "Ancient",
+   "Transportation"
+  ],
+  "id": 191862,
+  "maxP": 4,
+  "maxT": 40,
+  "mech": [
+   "Area Majority / Influence",
+   "End Game Bonuses",
+   "Line of Sight",
+   "Modular Board",
+   "Set Collection"
+  ],
+  "minAge": 10,
+  "minP": 2,
+  "minT": 40,
+  "name": "Imhotep",
+  "ranks": {
+   "boardgame": 631,
+   "familygames": 162
+  },
+  "weight": 2.02
+ },
+ "192455": {
+  "best": [
+   "1"
+  ],
+  "cat": [
+   "Adventure",
+   "Exploration",
+   "Science Fiction",
+   "Space Exploration"
+  ],
+  "id": 192455,
+  "maxP": 4,
+  "maxT": 90,
+  "mech": [
+   "Cooperative Game",
+   "Dice Rolling",
+   "Legacy Game",
+   "Modular Board",
+   "Scenario / Mission / Campaign Game",
+   "Solo / Solitaire Game",
+   "Storytelling",
+   "Variable Player Powers",
+   "Worker Placement"
+  ],
+  "minAge": 10,
+  "minP": 1,
+  "minT": 60,
+  "name": "First Martians: Adventures on the Red Planet",
+  "ranks": {
+   "boardgame": 3482,
+   "thematic": 808
+  },
+  "weight": 4.16
+ },
+ "192623": {
+  "best": [
+   "5",
+   "6"
+  ],
+  "cat": [
+   "Deduction",
+   "Science Fiction",
+   "Spies / Secret Agents"
+  ],
+  "id": 192623,
+  "maxP": 6,
+  "maxT": 90,
+  "mech": [
+   "Area Movement",
+   "Cooperative Game",
+   "Deduction",
+   "Modular Board",
+   "Pick-up and Deliver",
+   "Team-Based Game",
+   "Variable Player Powers",
+   "Variable Set-up"
+  ],
+  "minAge": 14,
+  "minP": 3,
+  "minT": 35,
+  "name": "Emergence: A Game of Teamwork and Deception",
+  "ranks": {
+   "boardgame": 16281
+  },
+  "weight": 2.12
+ },
+ "192860": {
+  "best": [
+   "4"
+  ],
+  "cat": [
+   "Animals",
+   "Exploration",
+   "Nautical"
+  ],
+  "id": 192860,
+  "maxP": 5,
+  "maxT": 45,
+  "mech": [
+   "Open Drafting",
+   "Set Collection",
+   "Simultaneous Action Selection"
+  ],
+  "minAge": 8,
+  "minP": 2,
+  "minT": 30,
+  "name": "Oceanos",
+  "ranks": {
+   "boardgame": 2035,
+   "familygames": 631
+  },
+  "weight": 1.83
+ },
+ "193037": {
+  "best": [
+   "4"
+  ],
+  "cat": [
+   "Bluffing",
+   "Deduction",
+   "Horror",
+   "Mature / Adult",
+   "Science Fiction",
+   "Zombies"
+  ],
+  "id": 193037,
+  "maxP": 5,
+  "maxT": 120,
+  "mech": [
+   "Action Points",
+   "Cooperative Game",
+   "Dice Rolling",
+   "Hand Management",
+   "Narrative Choice / Paragraph",
+   "Push Your Luck",
+   "Semi-Cooperative Game",
+   "Storytelling",
+   "Trading",
+   "Traitor Game",
+   "Variable Player Powers",
+   "Voting"
+  ],
+  "minAge": 14,
+  "minP": 2,
+  "minT": 60,
+  "name": "Dead of Winter: The Long Night",
+  "ranks": {
+   "boardgame": 432,
+   "thematic": 107
+  },
+  "weight": 3.33
+ },
+ "194607": {
+  "best": [
+   "2"
+  ],
+  "cat": [
+   "Card Game",
+   "Fantasy"
+  ],
+  "id": 194607,
+  "maxP": 4,
+  "maxT": 45,
+  "mech": [
+   "Deck, Bag, and Pool Building",
+   "End Game Bonuses",
+   "Hand Management",
+   "Layering",
+   "Open Drafting",
+   "Push Your Luck",
+   "Tags"
+  ],
+  "minAge": 14,
+  "minP": 2,
+  "minT": 45,
+  "name": "Mystic Vale",
+  "ranks": {
+   "boardgame": 604,
+   "strategygames": 419
+  },
+  "weight": 2.26
+ },
+ "194655": {
+  "best": [
+   "2"
+  ],
+  "cat": [
+   "Abstract Strategy",
+   "Ancient",
+   "Mythology"
+  ],
+  "id": 194655,
+  "maxP": 4,
+  "maxT": 20,
+  "mech": [
+   "Grid Movement",
+   "Map Reduction",
+   "Race",
+   "Square Grid",
+   "Team-Based Game",
+   "Three Dimensional Movement",
+   "Variable Player Powers"
+  ],
+  "minAge": 8,
+  "minP": 2,
+  "minT": 20,
+  "name": "Santorini",
+  "ranks": {
+   "abstracts": 17,
+   "boardgame": 316
+  },
+  "weight": 1.72
+ },
+ "199561": {
+  "best": [
+   "2"
+  ],
+  "cat": [
+   "Abstract Strategy",
+   "Dice",
+   "Puzzle"
+  ],
+  "id": 199561,
+  "maxP": 4,
+  "maxT": 45,
+  "mech": [
+   "Contracts",
+   "Dice Rolling",
+   "End Game Bonuses",
+   "Grid Coverage",
+   "Open Drafting",
+   "Pattern Building",
+   "Set Collection",
+   "Solo / Solitaire Game",
+   "Turn Order: Progressive",
+   "Variable Set-up"
+  ],
+  "minAge": 14,
+  "minP": 1,
+  "minT": 30,
+  "name": "Sagrada",
+  "ranks": {
+   "abstracts": 11,
+   "boardgame": 228,
+   "familygames": 41
+  },
+  "weight": 1.92
+ },
+ "200454": {
+  "best": [
+   "3"
+  ],
+  "cat": [
+   "Educational",
+   "Science Fiction",
+   "Space Exploration"
+  ],
+  "id": 200454,
+  "maxP": 4,
+  "maxT": 45,
+  "mech": [
+   "Hand Management",
+   "Point to Point Movement",
+   "Set Collection"
+  ],
+  "minAge": 10,
+  "minP": 1,
+  "minT": 45,
+  "name": "Planetarium",
+  "ranks": {
+   "boardgame": 3078,
+   "strategygames": 1460,
+   "thematic": 623
+  },
+  "weight": 2.05
+ },
+ "200853": {
+  "best": [
+   "3"
+  ],
+  "cat": [
+   "Animals",
+   "Environmental",
+   "Puzzle",
+   "Territory Building"
+  ],
+  "id": 200853,
+  "maxP": 5,
+  "maxT": 50,
+  "mech": [
+   "Grid Movement",
+   "Open Drafting",
+   "Pattern Building",
+   "Solo / Solitaire Game",
+   "Square Grid",
+   "Tile Placement"
+  ],
+  "minAge": 10,
+  "minP": 1,
+  "minT": 30,
+  "name": "Habitats",
+  "ranks": {
+   "boardgame": 1202,
+   "familygames": 300,
+   "strategygames": 685
+  },
+  "weight": 2.04
+ },
+ "201248": {
+  "best": [
+   "2"
+  ],
+  "cat": [
+   "Animals",
+   "Card Game",
+   "Educational",
+   "Environmental",
+   "Prehistoric"
+  ],
+  "id": 201248,
+  "maxP": 5,
+  "maxT": 30,
+  "mech": [
+   "Hand Management",
+   "Simulation"
+  ],
+  "minAge": 8,
+  "minP": 2,
+  "minT": 30,
+  "name": "Evolution: The Beginning",
+  "ranks": {
+   "boardgame": 3122,
+   "familygames": 1037
+  },
+  "weight": 1.8
+ },
+ "201825": {
+  "best": [
+   "3"
+  ],
+  "cat": [
+   "Card Game",
+   "Fantasy"
+  ],
+  "id": 201825,
+  "maxP": 4,
+  "maxT": 45,
+  "mech": [
+   "Hand Management",
+   "Open Drafting",
+   "Set Collection",
+   "Solo / Solitaire Game",
+   "Tile Placement",
+   "Variable Player Powers",
+   "Worker Placement"
+  ],
+  "minAge": 10,
+  "minP": 1,
+  "minT": 45,
+  "name": "Ex Libris",
+  "ranks": {
+   "boardgame": 981,
+   "strategygames": 633
+  },
+  "weight": 2.53
+ },
+ "203204": {
+  "best": [
+   "2",
+   "3",
+   "4"
+  ],
+  "cat": [
+   "Fantasy",
+   "Miniatures",
+   "Wargame"
+  ],
+  "id": 203204,
+  "maxP": 4,
+  "maxT": 60,
+  "mech": [
+   "Dice Rolling",
+   "Grid Movement",
+   "Hand Management",
+   "Modular Board",
+   "Team-Based Game"
+  ],
+  "minAge": 10,
+  "minP": 2,
+  "minT": 60,
+  "name": "Magic: The Gathering – Arena of the Planeswalkers: Shadows over Innistrad",
+  "ranks": {
+   "boardgame": 5714
+  },
+  "weight": 2.75
+ },
+ "204027": {
+  "best": [
+   "3"
+  ],
+  "cat": [
+   "Abstract Strategy",
+   "Farming",
+   "Puzzle"
+  ],
+  "id": 204027,
+  "maxP": 4,
+  "maxT": 60,
+  "mech": [
+   "Grid Coverage",
+   "Open Drafting",
+   "Pattern Building",
+   "Tile Placement"
+  ],
+  "minAge": 8,
+  "minP": 1,
+  "minT": 60,
+  "name": "Cottage Garden",
+  "ranks": {
+   "boardgame": 1249,
+   "familygames": 385
+  },
+  "weight": 1.89
+ },
+ "204583": {
+  "best": [
+   "2",
+   "4"
+  ],
+  "cat": [
+   "Abstract Strategy",
+   "Medieval",
+   "Puzzle",
+   "Territory Building"
+  ],
+  "id": 204583,
+  "maxP": 4,
+  "maxT": 25,
+  "mech": [
+   "Enclosure",
+   "Matching",
+   "Open Drafting",
+   "Tile Placement",
+   "Turn Order: Claim Action"
+  ],
+  "minAge": 8,
+  "minP": 2,
+  "minT": 15,
+  "name": "Kingdomino",
+  "ranks": {
+   "boardgame": 333,
+   "familygames": 79
+  },
+  "weight": 1.24
+ },
+ "204837": {
+  "best": [
+   "5",
+   "5+"
+  ],
+  "cat": [
+   "Bluffing",
+   "Movies / TV / Radio theme",
+   "Negotiation"
+  ],
+  "id": 204837,
+  "maxP": 5,
+  "maxT": 60,
+  "mech": [
+   "Alliances",
+   "Hand Management",
+   "Negotiation",
+   "Prisoner's Dilemma",
+   "Team-Based Game",
+   "Variable Player Powers"
+  ],
+  "minAge": 18,
+  "minP": 3,
+  "minT": 30,
+  "name": "Game of Thrones: The Iron Throne",
+  "ranks": {
+   "boardgame": 4028,
+   "strategygames": 1740
+  },
+  "weight": 2.7
+ },
+ "205398": {
+  "best": [
+   "5",
+   "6"
+  ],
+  "cat": [
+   "Bluffing",
+   "Card Game",
+   "City Building",
+   "Medieval"
+  ],
+  "id": 205398,
+  "maxP": 8,
+  "maxT": 60,
+  "mech": [
+   "Action Drafting",
+   "Closed Drafting",
+   "Income",
+   "Lose a Turn",
+   "Set Collection",
+   "Take That",
+   "Turn Order: Role Order",
+   "Variable Player Powers",
+   "Variable Set-up"
+  ],
+  "minAge": 10,
+  "minP": 2,
+  "minT": 30,
+  "name": "Citadels",
+  "ranks": {
+   "boardgame": 573,
+   "familygames": 148
+  },
+  "weight": 2.04
+ },
+ "205494": {
+  "best": [
+   "3",
+   "4"
+  ],
+  "cat": [
+   "Card Game",
+   "City Building",
+   "Dice"
+  ],
+  "id": 205494,
+  "maxP": 5,
+  "maxT": 30,
+  "mech": [
+   "Dice Rolling",
+   "Open Drafting",
+   "Random Production"
+  ],
+  "minAge": 10,
+  "minP": 2,
+  "minT": 30,
+  "name": "Machi Koro: Bright Lights, Big City",
+  "ranks": {
+   "boardgame": 2789,
+   "familygames": 939
+  },
+  "weight": 1.83
+ },
+ "207208": {
+  "best": [
+   "4"
+  ],
+  "cat": [
+   "City Building"
+  ],
+  "id": 207208,
+  "maxP": 4,
+  "maxT": 90,
+  "mech": [
+   "Auction / Bidding",
+   "Worker Placement"
+  ],
+  "minAge": 12,
+  "minP": 3,
+  "minT": 90,
+  "name": "Armageddon",
+  "ranks": {
+   "boardgame": 5772,
+   "strategygames": 2124
+  },
+  "weight": 2.96
+ },
+ "216482": {
+  "best": [
+   "4",
+   "5"
+  ],
+  "cat": [
+   "Dice"
+  ],
+  "id": 216482,
+  "maxP": 6,
+  "maxT": 25,
+  "mech": [
+   "Push Your Luck",
+   "Roll / Spin and Move"
+  ],
+  "minAge": 8,
+  "minP": 3,
+  "minT": 25,
+  "name": "High Tide",
+  "ranks": {
+   "boardgame": 11078
+  },
+  "weight": 1.56
+ },
+ "217085": {
+  "best": [
+   "3"
+  ],
+  "cat": [
+   "Card Game",
+   "Dice",
+   "Exploration"
+  ],
+  "id": 217085,
+  "maxP": 4,
+  "maxT": 60,
+  "mech": [
+   "Dice Rolling",
+   "Kill Steal",
+   "Set Collection",
+   "Tile Placement"
+  ],
+  "minAge": 8,
+  "minP": 2,
+  "minT": 30,
+  "name": "Unearth",
+  "ranks": {
+   "boardgame": 1709,
+   "familygames": 570
+  },
+  "weight": 1.94
+ },
+ "217372": {
+  "best": [
+   "2",
+   "4"
+  ],
+  "cat": [
+   "Adventure",
+   "Exploration",
+   "Racing"
+  ],
+  "id": 217372,
+  "maxP": 4,
+  "maxT": 60,
+  "mech": [
+   "Deck, Bag, and Pool Building",
+   "Delayed Purchase",
+   "Grid Movement",
+   "Hand Management",
+   "Hexagon Grid",
+   "Modular Board",
+   "Multi-Use Cards",
+   "Once-Per-Game Abilities",
+   "Open Drafting",
+   "Race",
+   "Resource to Move",
+   "Variable Set-up",
+   "Zone of Control"
+  ],
+  "minAge": 10,
+  "minP": 2,
+  "minT": 30,
+  "name": "The Quest for El Dorado",
+  "ranks": {
+   "boardgame": 121,
+   "familygames": 18
+  },
+  "weight": 1.94
+ },
+ "218603": {
+  "best": [
+   "3"
+  ],
+  "cat": [
+   "Abstract Strategy",
+   "Economic"
+  ],
+  "id": 218603,
+  "maxP": 4,
+  "maxT": 60,
+  "mech": [
+   "Action Points",
+   "Area Majority / Influence",
+   "Bias",
+   "End Game Bonuses",
+   "Hexagon Grid",
+   "Income",
+   "Turn Order: Progressive"
+  ],
+  "minAge": 10,
+  "minP": 2,
+  "minT": 30,
+  "name": "Photosynthesis",
+  "ranks": {
+   "boardgame": 829,
+   "familygames": 244
+  },
+  "weight": 2.27
+ },
+ "221194": {
+  "best": [
+   "3",
+   "4"
+  ],
+  "cat": [
+   "Animals",
+   "Economic",
+   "Science Fiction"
+  ],
+  "id": 221194,
+  "maxP": 4,
+  "maxT": 120,
+  "mech": [
+   "Action Points",
+   "Dice Rolling",
+   "Income",
+   "Set Collection",
+   "Tile Placement",
+   "Worker Placement"
+  ],
+  "minAge": 8,
+  "minP": 1,
+  "minT": 90,
+  "name": "Dinosaur Island",
+  "ranks": {
+   "boardgame": 288,
+   "strategygames": 224
+  },
+  "weight": 3.05
+ },
+ "221230": {
+  "best": [
+   "4"
+  ],
+  "cat": [
+   "Bluffing",
+   "Dice",
+   "Science Fiction",
+   "Space Exploration"
+  ],
+  "id": 221230,
+  "maxP": 5,
+  "maxT": 45,
+  "mech": [
+   "Auction / Bidding",
+   "Dice Rolling",
+   "Open Drafting",
+   "Tile Placement",
+   "Worker Placement"
+  ],
+  "minAge": 14,
+  "minP": 2,
+  "minT": 45,
+  "name": "Farlight",
+  "ranks": {
+   "boardgame": 5933,
+   "strategygames": 2146
+  },
+  "weight": 2.48
+ },
+ "222219": {
+  "best": [
+   "2"
+  ],
+  "cat": [
+   "Dice",
+   "Real-time",
+   "Territory Building"
+  ],
+  "id": 222219,
+  "maxP": 2,
+  "maxT": 30,
+  "mech": [
+   "Area Majority / Influence",
+   "Dice Rolling",
+   "End Game Bonuses",
+   "Events",
+   "Move Through Deck",
+   "Push Your Luck",
+   "Re-rolling and Locking",
+   "Real-Time",
+   "Set Collection",
+   "Take That",
+   "Worker Placement"
+  ],
+  "minAge": 9,
+  "minP": 2,
+  "minT": 30,
+  "name": "Kero",
+  "ranks": {
+   "boardgame": 2566,
+   "familygames": 776
+  },
+  "weight": 2.06
+ },
+ "227758": {
+  "best": [
+   "2",
+   "4"
+  ],
+  "cat": [
+   "Transportation"
+  ],
+  "id": 227758,
+  "maxP": 8,
+  "maxT": 15,
+  "mech": [
+   "Bingo",
+   "Connections",
+   "End Game Bonuses",
+   "Line Drawing",
+   "Network and Route Building",
+   "Paper-and-Pencil",
+   "Simultaneous Action Selection"
+  ],
+  "minAge": 14,
+  "minP": 1,
+  "minT": 15,
+  "name": "Kokoro: Avenue of the Kodama",
+  "ranks": {
+   "boardgame": 2924,
+   "familygames": 924
+  },
+  "weight": 1.5
+ },
+ "228133": {
+  "best": [
+   "2"
+  ],
+  "cat": [
+   "Card Game",
+   "Fantasy"
+  ],
+  "id": 228133,
+  "maxP": 2,
+  "maxT": 60,
+  "mech": [
+   "Grid Movement",
+   "Hand Management",
+   "Rock-Paper-Scissors",
+   "Turn Order: Time Track",
+   "Variable Player Powers"
+  ],
+  "minAge": 14,
+  "minP": 2,
+  "minT": 30,
+  "name": "Crystal Clans",
+  "ranks": {
+   "boardgame": 3764,
+   "strategygames": 1653
+  },
+  "weight": 2.48
+ },
+ "230191": {
+  "best": [
+   "4"
+  ],
+  "cat": [
+   "Adventure",
+   "Ancient",
+   "Civilization",
+   "Exploration",
+   "Mythology"
+  ],
+  "id": 230191,
+  "maxP": 4,
+  "maxT": 80,
+  "mech": [
+   "Action Queue",
+   "Area Majority / Influence",
+   "Dice Rolling",
+   "Modular Board",
+   "Roll / Spin and Move",
+   "Tile Placement",
+   "Trading",
+   "Worker Placement"
+  ],
+  "minAge": 10,
+  "minP": 2,
+  "minT": 25,
+  "name": "The Island of El Dorado",
+  "ranks": {
+   "boardgame": 5114,
+   "strategygames": 2127,
+   "thematic": 1066
+  },
+  "weight": 1.81
+ },
+ "232043": {
+  "best": [
+   "2"
+  ],
+  "cat": [
+   "Fantasy",
+   "Medieval",
+   "Puzzle",
+   "Territory Building"
+  ],
+  "id": 232043,
+  "maxP": 4,
+  "maxT": 25,
+  "mech": [
+   "Enclosure",
+   "Market",
+   "Open Drafting",
+   "Pattern Building",
+   "Tile Placement",
+   "Turn Order: Claim Action"
+  ],
+  "minAge": 8,
+  "minP": 2,
+  "minT": 25,
+  "name": "Queendomino",
+  "ranks": {
+   "boardgame": 723,
+   "familygames": 184
+  },
+  "weight": 2.06
+ },
+ "24508": {
+  "best": [
+   "2"
+  ],
+  "cat": [
+   "Abstract Strategy",
+   "Territory Building"
+  ],
+  "id": 24508,
+  "maxP": 4,
+  "maxT": 45,
+  "mech": [
+   "Chaining",
+   "Hexagon Grid",
+   "Layering",
+   "Pattern Building",
+   "Race",
+   "Static Capture",
+   "Sudden Death Ending",
+   "Tile Placement"
+  ],
+  "minAge": 8,
+  "minP": 2,
+  "minT": 45,
+  "name": "Taluva",
+  "ranks": {
+   "abstracts": 39,
+   "boardgame": 804,
+   "strategygames": 522
+  },
+  "weight": 2.25
+ },
+ "24827": {
+  "best": [
+   "2"
+  ],
+  "cat": [
+   "Ancient",
+   "Card Game",
+   "Economic",
+   "Nautical"
+  ],
+  "id": 24827,
+  "maxP": 4,
+  "maxT": 30,
+  "mech": [
+   "Commodity Speculation",
+   "Hand Management",
+   "Open Drafting",
+   "Set Collection",
+   "Track Movement"
+  ],
+  "minAge": 13,
+  "minP": 2,
+  "minT": 30,
+  "name": "Traders of Osaka",
+  "ranks": {
+   "boardgame": 1962,
+   "strategygames": 1057
+  },
+  "weight": 2.04
+ },
+ "250963": {
+  "best": [
+   "4",
+   "5",
+   "6",
+   "7"
+  ],
+  "cat": [
+   "Murder / Mystery"
+  ],
+  "id": 250963,
+  "maxP": 8,
+  "maxT": 40,
+  "mech": [],
+  "minAge": 12,
+  "minP": 2,
+  "minT": 20,
+  "name": "The Island of Doctor Lucky",
+  "ranks": {
+   "boardgame": 14871
+  },
+  "weight": 1.67
+ },
+ "252688": {
+  "best": [
+   "2",
+   "3"
+  ],
+  "cat": [
+   "Adventure",
+   "Fantasy",
+   "Fighting",
+   "Humor"
+  ],
+  "id": 252688,
+  "maxP": 4,
+  "maxT": 60,
+  "mech": [
+   "Open Drafting",
+   "Set Collection",
+   "Take That"
+  ],
+  "minAge": 12,
+  "minP": 2,
+  "minT": 30,
+  "name": "Enchanters: Overlords",
+  "ranks": {
+   "boardgame": 4277,
+   "cgs": 89
+  },
+  "weight": 2.0
+ },
+ "254088": {
+  "best": [
+   "4"
+  ],
+  "cat": [
+   "Abstract Strategy",
+   "Video Game Theme"
+  ],
+  "id": 254088,
+  "maxP": 6,
+  "maxT": 30,
+  "mech": [
+   "Grid Movement",
+   "Hand Management",
+   "Modular Board"
+  ],
+  "minAge": 7,
+  "minP": 2,
+  "minT": 15,
+  "name": "Gravity Superstar",
+  "ranks": {
+   "boardgame": 4771,
+   "familygames": 1482
+  },
+  "weight": 1.5
+ },
+ "254683": {
+  "best": [
+   "4",
+   "6"
+  ],
+  "cat": [
+   "Animals",
+   "Children's Game",
+   "Racing"
+  ],
+  "id": 254683,
+  "maxP": 8,
+  "maxT": 20,
+  "mech": [
+   "Dice Rolling",
+   "Flicking",
+   "Race",
+   "Roll / Spin and Move",
+   "Simultaneous Action Selection",
+   "Take That",
+   "Variable Player Powers"
+  ],
+  "minAge": 8,
+  "minP": 1,
+  "minT": 20,
+  "name": "Dodos Riding Dinos",
+  "ranks": {
+   "boardgame": 2379,
+   "familygames": 734
+  },
+  "weight": 1.63
+ },
+ "256382": {
+  "best": [
+   "3"
+  ],
+  "cat": [
+   "Card Game",
+   "Fantasy",
+   "Medieval",
+   "Movies / TV / Radio theme",
+   "Mythology",
+   "Novel-based",
+   "Pirates"
+  ],
+  "id": 256382,
+  "maxP": 6,
+  "maxT": 120,
+  "mech": [
+   "Hand Management",
+   "Take That",
+   "Variable Player Powers"
+  ],
+  "minAge": 10,
+  "minP": 2,
+  "minT": 45,
+  "name": "Disney Villainous: The Worst Takes it All",
+  "ranks": {
+   "boardgame": 965,
+   "familygames": 320
+  },
+  "weight": 2.48
+ },
+ "265017": {
+  "best": [
+   "3",
+   "4"
+  ],
+  "cat": [
+   "Pirates",
+   "Space Exploration"
+  ],
+  "id": 265017,
+  "maxP": 4,
+  "maxT": 90,
+  "mech": [
+   "Area Majority / Influence",
+   "Card Play Conflict Resolution",
+   "Deck, Bag, and Pool Building",
+   "Grid Movement",
+   "Modular Board"
+  ],
+  "minAge": 14,
+  "minP": 2,
+  "minT": 60,
+  "name": "Tortuga 2199",
+  "ranks": {
+   "boardgame": 3334,
+   "strategygames": 1526
+  },
+  "weight": 2.58
+ },
+ "2651": {
+  "best": [
+   "4",
+   "5"
+  ],
+  "cat": [
+   "Economic",
+   "Industry / Manufacturing"
+  ],
+  "id": 2651,
+  "maxP": 6,
+  "maxT": 120,
+  "mech": [
+   "Auction / Bidding",
+   "Auction: Turn Order Until Pass",
+   "Catch the Leader",
+   "Income",
+   "Market",
+   "Network and Route Building",
+   "Turn Order: Stat-Based",
+   "Variable Set-up"
+  ],
+  "minAge": 12,
+  "minP": 2,
+  "minT": 120,
+  "name": "Power Grid",
+  "ranks": {
+   "boardgame": 76,
+   "strategygames": 73
+  },
+  "weight": 3.25
+ },
+ "267397": {
+  "best": [
+   "4"
+  ],
+  "cat": [
+   "Dice",
+   "Fighting",
+   "Science Fiction",
+   "Sports"
+  ],
+  "id": 267397,
+  "maxP": 5,
+  "maxT": 90,
+  "mech": [
+   "Betting and Bluffing",
+   "Dice Rolling",
+   "Simultaneous Action Selection"
+  ],
+  "minAge": 12,
+  "minP": 2,
+  "minT": 45,
+  "name": "Fired Up",
+  "ranks": {
+   "boardgame": 11315,
+   "strategygames": 2783
+  },
+  "weight": 2.67
+ },
+ "267979": {
+  "best": [],
+  "cat": [
+   "Deduction",
+   "Exploration"
+  ],
+  "id": 267979,
+  "maxP": 4,
+  "maxT": 60,
+  "mech": [
+   "Cooperative Game",
+   "Deduction",
+   "Grid Movement",
+   "Modular Board",
+   "Solo / Solitaire Game"
+  ],
+  "minAge": 14,
+  "minP": 1,
+  "minT": 30,
+  "name": "Tiwanaku",
+  "ranks": {
+   "abstracts": 65,
+   "boardgame": 2346
+  },
+  "weight": 2.19
+ },
+ "272260": {
+  "best": [
+   "2"
+  ],
+  "cat": [
+   "Fantasy",
+   "Industry / Manufacturing"
+  ],
+  "id": 272260,
+  "maxP": 4,
+  "maxT": 45,
+  "mech": [
+   "Commodity Speculation",
+   "Open Drafting"
+  ],
+  "minAge": 10,
+  "minP": 2,
+  "minT": 45,
+  "name": "Welkin",
+  "ranks": {
+   "boardgame": 9876
+  },
+  "weight": 1.88
+ },
+ "274841": {
+  "best": [
+   "3"
+  ],
+  "cat": [
+   "Abstract Strategy",
+   "Puzzle"
+  ],
+  "id": 274841,
+  "maxP": 4,
+  "maxT": 60,
+  "mech": [
+   "Contracts",
+   "Hand Management",
+   "Once-Per-Game Abilities",
+   "Open Drafting",
+   "Pattern Building",
+   "Set Collection"
+  ],
+  "minAge": 10,
+  "minP": 1,
+  "minT": 30,
+  "name": "Cóatl",
+  "ranks": {
+   "boardgame": 2120,
+   "familygames": 669
+  },
+  "weight": 2.03
+ },
+ "275349": {
+  "best": [
+   "3"
+  ],
+  "cat": [
+   "Abstract Strategy"
+  ],
+  "id": 275349,
+  "maxP": 4,
+  "maxT": 15,
+  "mech": [
+   "Pattern Building",
+   "Tile Placement"
+  ],
+  "minAge": 6,
+  "minP": 2,
+  "minT": 15,
+  "name": "Folded Wishes",
+  "ranks": {
+   "abstracts": 1181,
+   "boardgame": 21540
+  },
+  "weight": 1.5
+ },
+ "28023": {
+  "best": [
+   "5",
+   "6"
+  ],
+  "cat": [
+   "Nautical",
+   "Pirates"
+  ],
+  "id": 28023,
+  "maxP": 6,
+  "maxT": 60,
+  "mech": [
+   "Dice Rolling",
+   "Hand Management",
+   "Hidden Victory Points",
+   "Race",
+   "Roll / Spin and Move",
+   "Simultaneous Action Selection",
+   "Take That",
+   "Track Movement",
+   "Turn Order: Progressive",
+   "Victory Points as a Resource"
+  ],
+  "minAge": 8,
+  "minP": 2,
+  "minT": 30,
+  "name": "Jamaica",
+  "ranks": {
+   "boardgame": 652,
+   "familygames": 176
+  },
+  "weight": 1.66
+ },
+ "281020": {
+  "best": [
+   "4"
+  ],
+  "cat": [
+   "Ancient"
+  ],
+  "id": 281020,
+  "maxP": 4,
+  "maxT": 20,
+  "mech": [
+   "Betting and Bluffing",
+   "Commodity Speculation",
+   "Set Collection"
+  ],
+  "minAge": 8,
+  "minP": 2,
+  "minT": 15,
+  "name": "Treasures of Cibola",
+  "ranks": {
+   "boardgame": 11744
+  },
+  "weight": 1.5
+ },
+ "284083": {
+  "best": [
+   "4"
+  ],
+  "cat": [
+   "Card Game",
+   "Science Fiction",
+   "Space Exploration"
+  ],
+  "id": 284083,
+  "maxP": 5,
+  "maxT": 20,
+  "mech": [
+   "Communication Limits",
+   "Cooperative Game",
+   "Hand Management",
+   "Scenario / Mission / Campaign Game",
+   "Trick-taking"
+  ],
+  "minAge": 10,
+  "minP": 2,
+  "minT": 20,
+  "name": "The Crew: The Quest for Planet Nine",
+  "ranks": {
+   "boardgame": 96,
+   "familygames": 12
+  },
+  "weight": 1.97
+ },
+ "285232": {
+  "best": [
+   "3",
+   "4"
+  ],
+  "cat": [
+   "Bluffing",
+   "Card Game",
+   "Deduction"
+  ],
+  "id": 285232,
+  "maxP": 5,
+  "maxT": 30,
+  "mech": [
+   "Betting and Bluffing",
+   "Hand Management",
+   "Variable Player Powers"
+  ],
+  "minAge": 13,
+  "minP": 2,
+  "minT": 20,
+  "name": "Gladius",
+  "ranks": {
+   "boardgame": 6988
+  },
+  "weight": 1.75
+ },
+ "296576": {
+  "best": [
+   "5"
+  ],
+  "cat": [
+   "Card Game",
+   "Deduction",
+   "Murder / Mystery",
+   "Party Game"
+  ],
+  "id": 296576,
+  "maxP": 8,
+  "maxT": 15,
+  "mech": [
+   "Communication Limits",
+   "Cooperative Game",
+   "Hand Management"
+  ],
+  "minAge": 13,
+  "minP": 3,
+  "minT": 5,
+  "name": "There's Been A Murder",
+  "ranks": {
+   "boardgame": 28043
+  },
+  "weight": 1.33
+ },
+ "301002": {
+  "best": [
+   "2",
+   "3",
+   "4"
+  ],
+  "cat": [
+   "Fantasy",
+   "Real-time"
+  ],
+  "id": 301002,
+  "maxP": 4,
+  "maxT": 40,
+  "mech": [
+   "Grid Coverage",
+   "Pattern Building",
+   "Set Collection",
+   "Square Grid",
+   "Tile Placement"
+  ],
+  "minAge": 8,
+  "minP": 2,
+  "minT": 30,
+  "name": "Dream Runners",
+  "ranks": {
+   "boardgame": 7595
+  },
+  "weight": 2.13
+ },
+ "30241": {
+  "best": [
+   "3"
+  ],
+  "cat": [
+   "Medieval"
+  ],
+  "id": 30241,
+  "maxP": 5,
+  "maxT": 50,
+  "mech": [
+   "Area Majority / Influence",
+   "Hand Management",
+   "Set Collection"
+  ],
+  "minAge": 10,
+  "minP": 2,
+  "minT": 50,
+  "name": "Patrician",
+  "ranks": {
+   "boardgame": 3474,
+   "familygames": 1104
+  },
+  "weight": 1.92
+ },
+ "305984": {
+  "best": [],
+  "cat": [
+   "Number",
+   "Space Exploration"
+  ],
+  "id": 305984,
+  "maxP": 5,
+  "maxT": 10,
+  "mech": [
+   "Ordering",
+   "Race"
+  ],
+  "minAge": 6,
+  "minP": 2,
+  "minT": 10,
+  "name": "GPS",
+  "ranks": {
+   "boardgame": 30893
+  },
+  "weight": 1.07
+ },
+ "308028": {
+  "best": [
+   "3",
+   "4",
+   "4+"
+  ],
+  "cat": [
+   "Science Fiction",
+   "Space Exploration"
+  ],
+  "id": 308028,
+  "maxP": 4,
+  "maxT": 60,
+  "mech": [
+   "End Game Bonuses",
+   "Events",
+   "Pattern Movement",
+   "Pick-up and Deliver",
+   "Set Collection",
+   "Variable Set-up"
+  ],
+  "minAge": 8,
+  "minP": 2,
+  "minT": 45,
+  "name": "Drop Drive",
+  "ranks": {
+   "boardgame": 7864
+  },
+  "weight": 2.12
+ },
+ "316407": {
+  "best": [
+   "4",
+   "5",
+   "6"
+  ],
+  "cat": [
+   "Card Game",
+   "Number"
+  ],
+  "id": 316407,
+  "maxP": 6,
+  "maxT": 40,
+  "mech": [
+   "Auction / Bidding",
+   "Deck Construction",
+   "Highest-Lowest Scoring",
+   "Pattern Building",
+   "Semi-Cooperative Game",
+   "Set Collection",
+   "Team-Based Game"
+  ],
+  "minAge": 8,
+  "minP": 2,
+  "minT": 30,
+  "name": "Allegra",
+  "ranks": {
+   "boardgame": 10709
+  },
+  "weight": 1.5
+ },
+ "31730": {
+  "best": [
+   "4"
+  ],
+  "cat": [
+   "Economic",
+   "Post-Napoleonic",
+   "Trains",
+   "Transportation"
+  ],
+  "id": 31730,
+  "maxP": 6,
+  "maxT": 60,
+  "mech": [
+   "Auction / Bidding",
+   "Auction: Turn Order Until Pass",
+   "Hexagon Grid",
+   "Investment",
+   "Network and Route Building",
+   "Ownership",
+   "Stock Holding",
+   "Victory Points as a Resource"
+  ],
+  "minAge": 12,
+  "minP": 2,
+  "minT": 30,
+  "name": "Wabash Cannonball",
+  "ranks": {
+   "boardgame": 655,
+   "strategygames": 421
+  },
+  "weight": 2.77
+ },
+ "328859": {
+  "best": [
+   "3",
+   "4"
+  ],
+  "cat": [
+   "Animals",
+   "Card Game"
+  ],
+  "id": 328859,
+  "maxP": 6,
+  "maxT": 20,
+  "mech": [],
+  "minAge": 8,
+  "minP": 2,
+  "minT": 10,
+  "name": "Hula-Hoo!",
+  "ranks": {
+   "boardgame": 6981
+  },
+  "weight": 1.14
+ },
+ "329484": {
+  "best": [
+   "2"
+  ],
+  "cat": [
+   "Abstract Strategy",
+   "Puzzle"
+  ],
+  "id": 329484,
+  "maxP": 4,
+  "maxT": 45,
+  "mech": [
+   "Layering",
+   "Open Drafting",
+   "Tile Placement",
+   "Variable Phase Order"
+  ],
+  "minAge": 8,
+  "minP": 2,
+  "minT": 45,
+  "name": "Pyramido",
+  "ranks": {
+   "boardgame": 3712,
+   "familygames": 1158
+  },
+  "weight": 1.78
+ },
+ "333981": {
+  "best": [
+   "4",
+   "5"
+  ],
+  "cat": [
+   "Economic"
+  ],
+  "id": 333981,
+  "maxP": 6,
+  "maxT": 60,
+  "mech": [
+   "Commodity Speculation",
+   "Dice Rolling",
+   "Stock Holding",
+   "Victory Points as a Resource"
+  ],
+  "minAge": 12,
+  "minP": 3,
+  "minT": 60,
+  "name": "Bear Raid",
+  "ranks": {
+   "boardgame": 3925
+  },
+  "weight": 2.93
+ },
+ "334644": {
+  "best": [
+   "2"
+  ],
+  "cat": [
+   "Fantasy",
+   "Industry / Manufacturing"
+  ],
+  "id": 334644,
+  "maxP": 2,
+  "maxT": 60,
+  "mech": [
+   "Action / Event",
+   "Action Points",
+   "Contracts",
+   "Hand Management",
+   "Sudden Death Ending"
+  ],
+  "minAge": 14,
+  "minP": 2,
+  "minT": 45,
+  "name": "Nicodemus",
+  "ranks": {
+   "boardgame": 7936
+  },
+  "weight": 2.38
+ },
+ "336597": {
+  "best": [],
+  "cat": [
+   "Card Game"
+  ],
+  "id": 336597,
+  "maxP": 6,
+  "maxT": 20,
+  "mech": [
+   "Open Drafting",
+   "Push Your Luck"
+  ],
+  "minAge": 8,
+  "minP": 2,
+  "minT": 20,
+  "name": "Fairy Lights",
+  "ranks": {
+   "boardgame": 14758
+  },
+  "weight": 1.2
+ },
+ "337098": {
+  "best": [
+   "4"
+  ],
+  "cat": [
+   "Dice",
+   "Fantasy",
+   "Miniatures"
+  ],
+  "id": 337098,
+  "maxP": 4,
+  "maxT": 60,
+  "mech": [
+   "Action / Event",
+   "Action Queue",
+   "Area Majority / Influence",
+   "Command Cards",
+   "Critical Hits and Failures",
+   "Dice Rolling",
+   "Hand Management",
+   "Programmed Movement",
+   "Semi-Cooperative Game",
+   "Variable Player Powers",
+   "Victory Points as a Resource"
+  ],
+  "minAge": 14,
+  "minP": 1,
+  "minT": 60,
+  "name": "Dragonbond: Lords of Vaala",
+  "ranks": {
+   "boardgame": 8439
+  },
+  "weight": 2.58
+ },
+ "341245": {
+  "best": [
+   "3"
+  ],
+  "cat": [
+   "Abstract Strategy",
+   "Territory Building"
+  ],
+  "id": 341245,
+  "maxP": 4,
+  "maxT": 75,
+  "mech": [
+   "Area Majority / Influence",
+   "Contracts",
+   "End Game Bonuses"
+  ],
+  "minAge": 10,
+  "minP": 2,
+  "minT": 60,
+  "name": "Garden Nation",
+  "ranks": {
+   "boardgame": 4401,
+   "strategygames": 1843
+  },
+  "weight": 2.54
+ },
+ "341358": {
+  "best": [
+   "2"
+  ],
+  "cat": [
+   "Abstract Strategy"
+  ],
+  "id": 341358,
+  "maxP": 2,
+  "maxT": 15,
+  "mech": [
+   "Enclosure",
+   "Square Grid",
+   "Tile Placement"
+  ],
+  "minAge": 8,
+  "minP": 2,
+  "minT": 10,
+  "name": "Donuts",
+  "ranks": {
+   "abstracts": 200,
+   "boardgame": 4528
+  },
+  "weight": 1.3
+ },
+ "350755": {
+  "best": [
+   "2",
+   "3"
+  ],
+  "cat": [
+   "Fighting",
+   "Movies / TV / Radio theme",
+   "Science Fiction"
+  ],
+  "id": 350755,
+  "maxP": 5,
+  "maxT": 60,
+  "mech": [
+   "Cooperative Game",
+   "Cube Tower",
+   "Dice Rolling",
+   "Die Icon Resolution",
+   "Open Drafting",
+   "Push Your Luck",
+   "Re-rolling and Locking"
+  ],
+  "minAge": 10,
+  "minP": 1,
+  "minT": 45,
+  "name": "King of Monster Island",
+  "ranks": {
+   "boardgame": 2680,
+   "familygames": 830
+  },
+  "weight": 2.34
+ },
+ "351526": {
+  "best": [
+   "3"
+  ],
+  "cat": [
+   "Animals",
+   "Exploration"
+  ],
+  "id": 351526,
+  "maxP": 4,
+  "maxT": 120,
+  "mech": [
+   "Set Collection",
+   "Solo / Solitaire Game",
+   "Worker Placement with Dice Workers"
+  ],
+  "minAge": 14,
+  "minP": 1,
+  "minT": 60,
+  "name": "Encyclopedia",
+  "ranks": {
+   "boardgame": 1345,
+   "strategygames": 756
+  },
+  "weight": 3.05
+ },
+ "351616": {
+  "best": [
+   "4"
+  ],
+  "cat": [
+   "Mafia",
+   "Negotiation",
+   "Territory Building"
+  ],
+  "id": 351616,
+  "maxP": 4,
+  "maxT": 90,
+  "mech": [
+   "Action Points",
+   "Area Majority / Influence",
+   "Dice Rolling",
+   "Events",
+   "Modular Board",
+   "Trading",
+   "Variable Player Powers",
+   "Variable Set-up",
+   "Worker Placement"
+  ],
+  "minAge": 13,
+  "minP": 3,
+  "minT": 90,
+  "name": "Wise Guys",
+  "ranks": {
+   "boardgame": 9050
+  },
+  "weight": 2.4
+ },
+ "358805": {
+  "best": [
+   "4",
+   "5"
+  ],
+  "cat": [
+   "American West",
+   "Card Game",
+   "Party Game",
+   "Real-time"
+  ],
+  "id": 358805,
+  "maxP": 5,
+  "maxT": 7,
+  "mech": [
+   "Cooperative Game",
+   "Race",
+   "Real-Time",
+   "Speed Matching",
+   "Tile Placement"
+  ],
+  "minAge": 7,
+  "minP": 2,
+  "minT": 0,
+  "name": "Infernal Wagon",
+  "ranks": {
+   "boardgame": 9718
+  },
+  "weight": 1.29
+ },
+ "361840": {
+  "best": [
+   "2"
+  ],
+  "cat": [
+   "Deduction",
+   "Real-time"
+  ],
+  "id": 361840,
+  "maxP": 4,
+  "maxT": 15,
+  "mech": [
+   "Communication Limits",
+   "Cooperative Game",
+   "Deduction",
+   "Pattern Recognition",
+   "Real-Time",
+   "Score-and-Reset Game",
+   "Solo / Solitaire Game",
+   "Square Grid",
+   "Tile Placement"
+  ],
+  "minAge": 10,
+  "minP": 1,
+  "minT": 15,
+  "name": "Gardeners",
+  "ranks": {
+   "boardgame": 10996
+  },
+  "weight": 2.17
+ },
+ "36218": {
+  "best": [
+   "3"
+  ],
+  "cat": [
+   "Card Game",
+   "Medieval"
+  ],
+  "id": 36218,
+  "maxP": 4,
+  "maxT": 30,
+  "mech": [
+   "Deck, Bag, and Pool Building",
+   "Delayed Purchase",
+   "Hand Management",
+   "Open Drafting",
+   "Take That",
+   "Variable Set-up"
+  ],
+  "minAge": 13,
+  "minP": 2,
+  "minT": 30,
+  "name": "Dominion",
+  "ranks": {
+   "boardgame": 146,
+   "strategygames": 142
+  },
+  "weight": 2.34
+ },
+ "363699": {
+  "best": [
+   "2"
+  ],
+  "cat": [
+   "Deduction",
+   "Exploration",
+   "Puzzle"
+  ],
+  "id": 363699,
+  "maxP": 4,
+  "maxT": 100,
+  "mech": [
+   "Action Retrieval",
+   "Deduction",
+   "Hand Management",
+   "Hidden Movement",
+   "Paper-and-Pencil",
+   "Solo / Solitaire Game"
+  ],
+  "minAge": 13,
+  "minP": 1,
+  "minT": 40,
+  "name": "Finding Atlantis",
+  "ranks": {
+   "boardgame": 12010
+  },
+  "weight": 2.12
+ },
+ "366752": {
+  "best": [
+   "4",
+   "5"
+  ],
+  "cat": [
+   "Card Game"
+  ],
+  "id": 366752,
+  "maxP": 7,
+  "maxT": 45,
+  "mech": [
+   "Closed Drafting",
+   "I Cut, You Choose",
+   "Neighbor Scope",
+   "Score-and-Reset Game",
+   "Simultaneous Action Selection",
+   "Tech Trees / Tech Tracks",
+   "Variable Set-up"
+  ],
+  "minAge": 8,
+  "minP": 2,
+  "minT": 45,
+  "name": "The Great Split",
+  "ranks": {
+   "boardgame": 2034,
+   "familygames": 605
+  },
+  "weight": 2.06
+ },
+ "366910": {
+  "best": [
+   "2"
+  ],
+  "cat": [
+   "Fantasy",
+   "Humor",
+   "Mythology",
+   "Racing"
+  ],
+  "id": 366910,
+  "maxP": 2,
+  "maxT": 45,
+  "mech": [
+   "Open Drafting",
+   "Race",
+   "Sudden Death Ending",
+   "Variable Set-up"
+  ],
+  "minAge": 10,
+  "minP": 2,
+  "minT": 30,
+  "name": "Hellton Palace",
+  "ranks": {
+   "boardgame": 14793
+  },
+  "weight": 2.75
+ },
+ "370399": {
+  "best": [],
+  "cat": [
+   "Fantasy",
+   "Territory Building"
+  ],
+  "id": 370399,
+  "maxP": 4,
+  "maxT": 40,
+  "mech": [
+   "Action Points",
+   "Chaining",
+   "Open Drafting",
+   "Solo / Solitaire Game"
+  ],
+  "minAge": 8,
+  "minP": 1,
+  "minT": 30,
+  "name": "Boblin's Rebellion",
+  "ranks": {
+   "boardgame": 13787
+  },
+  "weight": 2.5
+ },
+ "373435": {
+  "best": [
+   "4",
+   "5"
+  ],
+  "cat": [
+   "Card Game"
+  ],
+  "id": 373435,
+  "maxP": 6,
+  "maxT": 40,
+  "mech": [
+   "Predictive Bid",
+   "Trick-taking"
+  ],
+  "minAge": 10,
+  "minP": 2,
+  "minT": 40,
+  "name": "Prophecy",
+  "ranks": {
+   "boardgame": 8472
+  },
+  "weight": 1.7
+ },
+ "375573": {
+  "best": [
+   "3",
+   "4"
+  ],
+  "cat": [
+   "Dice",
+   "Industry / Manufacturing",
+   "World War II"
+  ],
+  "id": 375573,
+  "maxP": 4,
+  "maxT": 60,
+  "mech": [
+   "Dice Rolling",
+   "Die Icon Resolution",
+   "Worker Placement with Dice Workers"
+  ],
+  "minAge": 12,
+  "minP": 1,
+  "minT": 30,
+  "name": "Manhattan Project: War Machine",
+  "ranks": {
+   "boardgame": 10876
+  },
+  "weight": 2.27
+ },
+ "377716": {
+  "best": [
+   "3",
+   "4"
+  ],
+  "cat": [
+   "Card Game"
+  ],
+  "id": 377716,
+  "maxP": 6,
+  "maxT": 20,
+  "mech": [
+   "End Game Bonuses",
+   "Hand Management",
+   "Open Drafting"
+  ],
+  "minAge": 11,
+  "minP": 3,
+  "minT": 20,
+  "name": "Couture",
+  "ranks": {
+   "boardgame": 4088
+  },
+  "weight": 1.84
+ },
+ "391766": {
+  "best": [
+   "2",
+   "4"
+  ],
+  "cat": [
+   "Dice",
+   "Fantasy"
+  ],
+  "id": 391766,
+  "maxP": 4,
+  "maxT": 60,
+  "mech": [
+   "Cooperative Game",
+   "Dice Rolling",
+   "Die Icon Resolution",
+   "Drawing",
+   "Events",
+   "Re-rolling and Locking",
+   "Solo / Solitaire Game"
+  ],
+  "minAge": 8,
+  "minP": 1,
+  "minT": 45,
+  "name": "Runemasters",
+  "ranks": {
+   "boardgame": 14563
+  },
+  "weight": 1.86
+ },
+ "392448": {
+  "best": [
+   "4",
+   "5"
+  ],
+  "cat": [
+   "Card Game",
+   "Medieval"
+  ],
+  "id": 392448,
+  "maxP": 5,
+  "maxT": 45,
+  "mech": [
+   "Area Majority / Influence",
+   "Closed Drafting",
+   "Hand Management",
+   "Hidden Victory Points",
+   "Simultaneous Action Selection",
+   "Solo / Solitaire Game"
+  ],
+  "minAge": 8,
+  "minP": 1,
+  "minT": 30,
+  "name": "Medieval Academy",
+  "ranks": {
+   "boardgame": 9083
+  },
+  "weight": 1.43
+ },
+ "394334": {
+  "best": [
+   "3",
+   "4"
+  ],
+  "cat": [
+   "Card Game",
+   "City Building"
+  ],
+  "id": 394334,
+  "maxP": 4,
+  "maxT": 45,
+  "mech": [
+   "Area Majority / Influence",
+   "Chaining",
+   "End Game Bonuses",
+   "Hand Management"
+  ],
+  "minAge": 8,
+  "minP": 2,
+  "minT": 45,
+  "name": "Sunrise Lane",
+  "ranks": {
+   "boardgame": 2813,
+   "familygames": 840
+  },
+  "weight": 1.49
+ },
+ "396655": {
+  "best": [
+   "2",
+   "4"
+  ],
+  "cat": [
+   "Real-time"
+  ],
+  "id": 396655,
+  "maxP": 7,
+  "maxT": 15,
+  "mech": [
+   "Cooperative Game"
+  ],
+  "minAge": 8,
+  "minP": 1,
+  "minT": 15,
+  "name": "Quicksand",
+  "ranks": {
+   "boardgame": 5576
+  },
+  "weight": 1.12
+ },
+ "401185": {
+  "best": [
+   "2"
+  ],
+  "cat": [
+   "Card Game",
+   "Fantasy"
+  ],
+  "id": 401185,
+  "maxP": 2,
+  "maxT": 45,
+  "mech": [
+   "Hand Management",
+   "Set Collection",
+   "Take That",
+   "Zone of Control"
+  ],
+  "minAge": 12,
+  "minP": 2,
+  "minT": 45,
+  "name": "Clash of Magic Schools",
+  "ranks": {
+   "boardgame": 14271
+  },
+  "weight": 2.67
+ },
+ "40692": {
+  "best": [
+   "4"
+  ],
+  "cat": [
+   "Fantasy",
+   "Fighting",
+   "Territory Building"
+  ],
+  "id": 40692,
+  "maxP": 5,
+  "maxT": 80,
+  "mech": [
+   "Area Majority / Influence",
+   "Area Movement",
+   "Dice Rolling",
+   "Hidden Victory Points",
+   "Increase Value of Unchosen Resources",
+   "Variable Player Powers",
+   "Variable Set-up",
+   "Victory Points as a Resource"
+  ],
+  "minAge": 8,
+  "minP": 2,
+  "minT": 40,
+  "name": "Small World",
+  "ranks": {
+   "boardgame": 412,
+   "familygames": 111,
+   "strategygames": 362
+  },
+  "weight": 2.35
+ },
+ "411003": {
+  "best": [
+   "2"
+  ],
+  "cat": [
+   "Card Game",
+   "Fantasy",
+   "Movies / TV / Radio theme"
+  ],
+  "id": 411003,
+  "maxP": 2,
+  "maxT": 40,
+  "mech": [
+   "Hand Management",
+   "Take That",
+   "Variable Player Powers"
+  ],
+  "minAge": 10,
+  "minP": 2,
+  "minT": 40,
+  "name": "Disney Villainous: Sugar and Spite",
+  "ranks": {
+   "boardgame": 4487
+  },
+  "weight": 2.17
+ },
+ "41114": {
+  "best": [
+   "7"
+  ],
+  "cat": [
+   "Bluffing",
+   "Card Game",
+   "Deduction",
+   "Negotiation",
+   "Party Game",
+   "Print & Play",
+   "Science Fiction",
+   "Spies / Secret Agents"
+  ],
+  "id": 41114,
+  "maxP": 10,
+  "maxT": 30,
+  "mech": [
+   "Hidden Roles",
+   "Memory",
+   "Roles with Asymmetric Information",
+   "Simultaneous Action Selection",
+   "Team-Based Game",
+   "Traitor Game",
+   "Voting"
+  ],
+  "minAge": 13,
+  "minP": 5,
+  "minT": 30,
+  "name": "The Resistance",
+  "ranks": {
+   "boardgame": 470,
+   "partygames": 39
+  },
+  "weight": 1.59
+ },
+ "415079": {
+  "best": [
+   "2",
+   "3"
+  ],
+  "cat": [
+   "Deduction",
+   "Murder / Mystery"
+  ],
+  "id": 415079,
+  "maxP": 99,
+  "maxT": 240,
+  "mech": [
+   "Cooperative Game",
+   "Deduction",
+   "Narrative Choice / Paragraph",
+   "Solo / Solitaire Game"
+  ],
+  "minAge": 12,
+  "minP": 1,
+  "minT": 180,
+  "name": "Guilty: Monaco 1955",
+  "ranks": {
+   "boardgame": 12386
+  },
+  "weight": 2.0
+ },
+ "41916": {
+  "best": [
+   "3",
+   "4"
+  ],
+  "cat": [
+   "Children's Game",
+   "Fantasy",
+   "Maze",
+   "Memory"
+  ],
+  "id": 41916,
+  "maxP": 4,
+  "maxT": 30,
+  "mech": [
+   "Dice Rolling",
+   "Grid Movement",
+   "Memory",
+   "Network and Route Building",
+   "Roll / Spin and Move"
+  ],
+  "minAge": 6,
+  "minP": 2,
+  "minT": 20,
+  "name": "The Magic Labyrinth",
+  "ranks": {
+   "boardgame": 1530,
+   "childrensgames": 24,
+   "familygames": 477
+  },
+  "weight": 1.21
+ },
+ "419793": {
+  "best": [
+   "2"
+  ],
+  "cat": [
+   "Abstract Strategy",
+   "Adventure",
+   "Puzzle"
+  ],
+  "id": 419793,
+  "maxP": 4,
+  "maxT": 45,
+  "mech": [
+   "Connections",
+   "Layering",
+   "Open Drafting",
+   "Tile Placement"
+  ],
+  "minAge": 8,
+  "minP": 1,
+  "minT": 45,
+  "name": "Pyramido: Forgotten Treasures",
+  "ranks": {
+   "boardgame": 9841
+  },
+  "weight": 1.5
+ },
+ "420214": {
+  "best": [
+   "2"
+  ],
+  "cat": [
+   "Animals",
+   "Card Game",
+   "Environmental"
+  ],
+  "id": 420214,
+  "maxP": 4,
+  "maxT": 40,
+  "mech": [
+   "Deck Construction",
+   "Hand Management",
+   "Hidden Roles",
+   "Modular Board",
+   "Open Drafting",
+   "Set Collection",
+   "Tags",
+   "Track Movement",
+   "Tug of War",
+   "Turn Order: Progressive",
+   "Variable Player Powers"
+  ],
+  "minAge": 10,
+  "minP": 2,
+  "minT": 20,
+  "name": "Arctic",
+  "ranks": {
+   "boardgame": 8067
+  },
+  "weight": 1.92
+ },
+ "421852": {
+  "best": [
+   "2"
+  ],
+  "cat": [
+   "Ancient",
+   "Card Game"
+  ],
+  "id": 421852,
+  "maxP": 2,
+  "maxT": 45,
+  "mech": [
+   "Area Majority / Influence",
+   "Hand Management",
+   "Multi-Use Cards"
+  ],
+  "minAge": 10,
+  "minP": 2,
+  "minT": 30,
+  "name": "Thingstead",
+  "ranks": {
+   "boardgame": 13520
+  },
+  "weight": 2.0
+ },
+ "424577": {
+  "best": [
+   "3"
+  ],
+  "cat": [
+   "Animals",
+   "Puzzle"
+  ],
+  "id": 424577,
+  "maxP": 4,
+  "maxT": 40,
+  "mech": [
+   "Grid Coverage",
+   "Increase Value of Unchosen Resources",
+   "Open Drafting",
+   "Tile Placement"
+  ],
+  "minAge": 8,
+  "minP": 1,
+  "minT": 40,
+  "name": "Flower Fields",
+  "ranks": {
+   "boardgame": 4836
+  },
+  "weight": 2.08
+ },
+ "425428": {
+  "best": [
+   "4"
+  ],
+  "cat": [
+   "Adventure",
+   "Fantasy",
+   "Mythology",
+   "Nautical"
+  ],
+  "id": 425428,
+  "maxP": 5,
+  "maxT": 45,
+  "mech": [
+   "Action Points",
+   "Dice Rolling",
+   "Grid Movement",
+   "Hexagon Grid",
+   "Map Reduction",
+   "Memory",
+   "Modular Board",
+   "Secret Unit Deployment",
+   "Take That"
+  ],
+  "minAge": 8,
+  "minP": 2,
+  "minT": 45,
+  "name": "Survive The Island",
+  "ranks": {
+   "boardgame": 1037,
+   "familygames": 258
+  },
+  "weight": 1.48
+ },
+ "4324": {
+  "best": [
+   "4"
+  ],
+  "cat": [
+   "Adventure",
+   "Fantasy",
+   "Movies / TV / Radio theme",
+   "Novel-based",
+   "Territory Building",
+   "Wargame"
+  ],
+  "id": 4324,
+  "maxP": 4,
+  "maxT": 120,
+  "mech": [
+   "Area Majority / Influence",
+   "Area Movement",
+   "Campaign / Battle Card Driven",
+   "Dice Rolling"
+  ],
+  "minAge": 9,
+  "minP": 2,
+  "minT": 120,
+  "name": "Risk: The Lord of the Rings",
+  "ranks": {
+   "boardgame": 5605,
+   "thematic": 1228
+  },
+  "weight": 2.27
+ },
+ "435367": {
+  "best": [
+   "5",
+   "6"
+  ],
+  "cat": [
+   "Bluffing",
+   "Card Game",
+   "Deduction",
+   "Movies / TV / Radio theme",
+   "Party Game"
+  ],
+  "id": 435367,
+  "maxP": 6,
+  "maxT": 60,
+  "mech": [
+   "Alliances",
+   "Deduction",
+   "Finale Ending",
+   "Negotiation",
+   "Player Elimination",
+   "Player Judge",
+   "Voting"
+  ],
+  "minAge": 8,
+  "minP": 3,
+  "minT": 30,
+  "name": "Survivor: The Tribe Has Spoken",
+  "ranks": {
+   "boardgame": 10885
+  },
+  "weight": 1.5
+ },
+ "440024": {
+  "best": [
+   "2",
+   "3",
+   "4"
+  ],
+  "cat": [
+   "Abstract Strategy",
+   "Animals"
+  ],
+  "id": 440024,
+  "maxP": 4,
+  "maxT": 40,
+  "mech": [
+   "Auction: Dutch",
+   "Chaining",
+   "Connections",
+   "Enclosure",
+   "Turn Order: Auction",
+   "Variable Set-up"
+  ],
+  "minAge": 12,
+  "minP": 2,
+  "minT": 20,
+  "name": "Gingham",
+  "ranks": {
+   "boardgame": 6734
+  },
+  "weight": 2.33
+ },
+ "447298": {
+  "best": [
+   "2"
+  ],
+  "cat": [
+   "Card Game",
+   "Fantasy",
+   "Movies / TV / Radio theme",
+   "Pirates"
+  ],
+  "id": 447298,
+  "maxP": 2,
+  "maxT": 40,
+  "mech": [
+   "Hand Management",
+   "Take That",
+   "Variable Player Powers"
+  ],
+  "minAge": 10,
+  "minP": 2,
+  "minT": 40,
+  "name": "Disney Villainous: Treacherous Tides",
+  "ranks": {
+   "boardgame": 7076
+  },
+  "weight": 2.5
+ },
+ "6249": {
+  "best": [
+   "3"
+  ],
+  "cat": [
+   "City Building",
+   "Medieval"
+  ],
+  "id": 6249,
+  "maxP": 6,
+  "maxT": 60,
+  "mech": [
+   "Area Majority / Influence",
+   "Hand Management",
+   "Open Drafting",
+   "Set Collection",
+   "Tile Placement"
+  ],
+  "minAge": 8,
+  "minP": 2,
+  "minT": 45,
+  "name": "Alhambra",
+  "ranks": {
+   "boardgame": 617,
+   "familygames": 171,
+   "strategygames": 475
+  },
+  "weight": 2.1
+ },
+ "68425": {
+  "best": [
+   "3"
+  ],
+  "cat": [
+   "Card Game",
+   "Civilization",
+   "Science Fiction",
+   "Space Exploration"
+  ],
+  "id": 68425,
+  "maxP": 4,
+  "maxT": 45,
+  "mech": [
+   "Deck, Bag, and Pool Building",
+   "Delayed Purchase",
+   "Follow",
+   "Hand Management",
+   "Income",
+   "Layering",
+   "Market",
+   "Open Drafting",
+   "Tags",
+   "Variable Phase Order"
+  ],
+  "minAge": 10,
+  "minP": 2,
+  "minT": 45,
+  "name": "Eminent Domain",
+  "ranks": {
+   "boardgame": 950,
+   "strategygames": 629
+  },
+  "weight": 2.51
+ },
+ "9408": {
+  "best": [
+   "2"
+  ],
+  "cat": [
+   "Economic",
+   "Farming",
+   "Territory Building"
+  ],
+  "id": 9408,
+  "maxP": 4,
+  "maxT": 70,
+  "mech": [
+   "Action Points",
+   "Modular Board"
+  ],
+  "minAge": 12,
+  "minP": 2,
+  "minT": 70,
+  "name": "Dos Rios",
+  "ranks": {
+   "boardgame": 4501,
+   "strategygames": 1864
+  },
+  "weight": 2.52
+ },
+ "9616": {
+  "best": [
+   "2"
+  ],
+  "cat": [
+   "Ancient",
+   "Territory Building"
+  ],
+  "id": 9616,
+  "maxP": 4,
+  "maxT": 60,
+  "mech": [
+   "Area Majority / Influence",
+   "Enclosure",
+   "Hand Management",
+   "Tile Placement"
+  ],
+  "minAge": 10,
+  "minP": 2,
+  "minT": 60,
+  "name": "Horus",
+  "ranks": {
+   "abstracts": 682,
+   "boardgame": 12565,
+   "strategygames": 2875
+  },
+  "weight": 2.19
+ },
+ "98778": {
+  "best": [
+   "4"
+  ],
+  "cat": [
+   "Card Game",
+   "Deduction",
+   "Memory"
+  ],
+  "id": 98778,
+  "maxP": 5,
+  "maxT": 25,
+  "mech": [
+   "Communication Limits",
+   "Cooperative Game",
+   "Hand Management",
+   "Memory",
+   "Ordering",
+   "Set Collection"
+  ],
+  "minAge": 8,
+  "minP": 2,
+  "minT": 25,
+  "name": "Hanabi",
+  "ranks": {
+   "boardgame": 608,
+   "familygames": 175
+  },
+  "weight": 1.69
+ }
+}
