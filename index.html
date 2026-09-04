@@ -616,6 +616,64 @@ function sorted(list){
   return [...list].sort(c);
 }
 
+/* ---------- filter state in the URL ----------
+   A set of filters is the interesting thing to share: "here's what fits
+   tonight" should be a link, and a reload should not lose the evening's work.
+   Only non-defaults are written, so an ordinary visit keeps a clean URL.
+   The hash is user input: an unrecognised option is dropped rather than
+   trusted, so a bad link narrows nothing instead of wedging the list. Axis
+   values are the exception -- they clamp into 0-100, because a hand-written
+   cozy=120 clearly means "as cosy as it goes" and losing the axis would be
+   the ruder reading. Axes use their own names to keep a shared link legible. */
+let lastHash="", hashT=0;
+
+function writeHash(){
+  const p=new URLSearchParams();
+  if(S.q) p.set("q",S.q);
+  if(S.players) p.set("p",S.players);
+  if(S.twoOnly) p.set("two","1");
+  if(S.time) p.set("t",S.time);
+  if(S.weight) p.set("w",S.weight);
+  if(S.mech) p.set("m",S.mech);
+  if(S.sort!=="rating") p.set("s",S.sort);
+  if(S.vid) p.set("vid","1");
+  if(S.award) p.set("award","1");
+  if(S.vplayers) p.set("vp",S.vplayers);
+  if(S.vtime) p.set("vt",S.vtime);
+  AXES.forEach(a=>{if(S.vibe[a]!==null) p.set(a,S.vibe[a]);});
+  lastHash=p.toString();
+  /* replaceState, not push: Back belongs to the detail sheet, and nobody wants
+     to reverse thirty filter taps one at a time. Keep whatever state the sheet
+     put there. Throws on an opaque origin (a file:// or data: preview), which
+     is not worth breaking the page over. */
+  try{ history.replaceState(history.state,"",lastHash?"#"+lastHash:location.pathname+location.search); }
+  catch(e){}
+}
+/* The sliders fire continuously; browsers rate-limit replaceState. */
+const queueHash=()=>{clearTimeout(hashT); hashT=setTimeout(writeHash,250);};
+
+function readHash(){
+  const p=new URLSearchParams(location.hash.replace(/^#/,""));
+  const inOpts=(k,opts)=>opts.some(o=>String(o.v)===p.get(k));
+  const whole=(k,lo,hi)=>{const v=Number(p.get(k));
+    return p.has(k)&&Number.isInteger(v)&&v>=lo&&v<=hi ? v : 0;};
+  S.q=p.get("q")||"";
+  S.players=whole("p",1,8);
+  S.twoOnly=p.get("two")==="1";
+  S.time=inOpts("t",TIME_OPTS)?+p.get("t"):0;
+  S.weight=W_OPTS.some(o=>o.v===p.get("w"))?p.get("w"):"";
+  S.mech=allMech.includes(p.get("m"))?p.get("m"):"";
+  S.sort=SORTS.some(o=>o.v===p.get("s"))?p.get("s"):"rating";
+  S.vid=p.get("vid")==="1";
+  S.award=p.get("award")==="1";
+  S.vplayers=whole("vp",1,8);
+  S.vtime=inOpts("vt",TIME_OPTS)?+p.get("vt"):0;
+  AXES.forEach(a=>{const v=Number(p.get(a));
+    S.vibe[a]=p.has(a)&&Number.isFinite(v)?Math.min(100,Math.max(0,Math.round(v))):null;});
+  $("#q").value=S.q;
+  lastHash=location.hash.replace(/^#/,"");
+}
+
 /* Buttons that stay pressed need aria-pressed. Mirroring .on after a render
    beats threading the attribute through every template. */
 function syncPressed(){
@@ -826,6 +884,7 @@ function render(){ renderQuick(); renderVibe(); renderList(); syncPressed(); }
 function renderList(){
   const list=rankByFit(sorted(GAMES.filter(matches).filter(vibeEligible)));
   renderTonight(list);
+  queueHash();
   $("#count").textContent = list.length===GAMES.length ? GAMES.length+" games" : list.length+" of "+GAMES.length;
   $("#empty").style.display = list.length ? "none" : "block";
   $("#grid").innerHTML = list.map(g=>{
@@ -1016,6 +1075,21 @@ document.addEventListener("keydown",e=>{
 /* A reload with the sheet open leaves its history entry behind, which makes the
    first Back look broken. Drop it. */
 if(history.state&&history.state.sheet) history.replaceState(null,"");
+
+/* Show the reader why the list is filtered, rather than leaving an incoming
+   link looking like the collection has mysteriously shrunk. Needed on both
+   entry paths: a fresh load, and a link pasted while the app is already open
+   (which is a hashchange, not a load). */
+function revealActivePanels(){
+  if(vibeActive()){ $("#vibe").classList.add("open"); $("#vtoggle").classList.add("on"); }
+  if(S.weight||S.mech||S.sort!=="rating"){ $("#drawer").classList.add("open"); $("#ftoggle").classList.add("on"); }
+}
+addEventListener("hashchange",()=>{
+  if(location.hash.replace(/^#/,"")===lastHash) return;   // ignore the ones we wrote
+  readHash(); revealActivePanels(); renderDrawer(); render();
+});
+
+readHash(); revealActivePanels();
 
 if("serviceWorker" in navigator)
   addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));
