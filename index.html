@@ -655,7 +655,7 @@ function renderVibe(){
 function radar(g,size){
   const v=vibeOf(g); if(!v||!v.pct) return "";
   const short=size<160;                       // small radar truncates labels, big one spells them
-  const R=size/2-(short?13:30), cx=size/2, cy=size/2;
+  const R=size/2-(short?13:56), cx=size/2, cy=size/2;
   const pt=(i,r)=>{const th=-Math.PI/2+i*2*Math.PI/AXES.length;
     return [cx+Math.cos(th)*r, cy+Math.sin(th)*r];};
   const ring=r=>AXES.map((_,i)=>pt(i,r).map(n=>n.toFixed(1)).join(",")).join(" ");
@@ -663,7 +663,33 @@ function radar(g,size){
   const labels=AXES.map((a,i)=>{const[x,y]=pt(i,R+(short?9:13));
     return `<text x="${x.toFixed(1)}" y="${(y+3).toFixed(1)}" text-anchor="middle"
       font-size="${short?8.5:9.5}" fill="${v.src&&v.src[a]==='manual'?'var(--acc2)':'var(--dim)'}">${short?a.slice(0,4):a}</text>`;}).join("");
+  /* Outer ring naming the two halves. The axis order puts the axes that fall with
+     complexity first and those that rise with it second, and the lean between the
+     halves tracks BGG weight at r=+0.87 -- so the ring describes something real
+     rather than decorating the chart.
+     Caveat: swingy is the one axis with no relationship to weight (r=-0.01). It
+     sits last in the light half, i.e. right on the seam, which is the least wrong
+     place for it -- but a very swingy game will tug the shape "lighter" without
+     actually being lighter. Large radar only; at 132px the ring is just noise. */
+  let meta="";
+  if(!short){
+    const n=AXES.length, step=360/n, half=step/2;
+    const polar=(deg,r)=>{const t=deg*Math.PI/180;return [cx+Math.cos(t)*r, cy+Math.sin(t)*r];};
+    const arc=(a0,a1,r)=>{const[x0,y0]=polar(a0,r),[x1,y1]=polar(a1,r);
+      return `M${x0.toFixed(1)},${y0.toFixed(1)} A${r},${r} 0 0 1 ${x1.toFixed(1)},${y1.toFixed(1)}`;};
+    const rr=R+27, start=-90-half;                       // ring sits outside the axis labels
+    const segs=[[start, start+step*(n/2), "lighter"],
+                [start+step*(n/2), start+360, "heavier"]];
+    const gap=5;                                         // break at each seam, so it reads as two halves not one ring
+    meta=segs.map(([a0,a1,txt])=>{
+      const[lx,ly]=polar((a0+a1)/2, rr+10);
+      return `<path d="${arc(a0+gap,a1-gap,rr)}" fill="none" stroke="var(--dimmer)" stroke-width="1.5" opacity=".45"/>
+        <text x="${lx.toFixed(1)}" y="${(ly+3).toFixed(1)}" text-anchor="middle"
+          font-size="8.5" letter-spacing=".08em" fill="var(--dimmer)">${txt}</text>`;
+    }).join("");
+  }
   return `<svg width="${size}" height="${size}" viewBox="0 0 ${size} ${size}" aria-label="vibe radar">
+    ${meta}
     <polygon points="${ring(R)}" fill="none" stroke="var(--line)"/>
     <polygon points="${ring(R*0.5)}" fill="none" stroke="var(--line)" opacity=".55"/>
     <polygon points="${poly}" fill="var(--accfill)" stroke="var(--acc2)" stroke-width="1.6"/>
@@ -690,7 +716,7 @@ function vibeSection(g){
   const hand=AXES.filter(a=>v.src&&v.src[a]==="manual").length;
   return `<div class="sect">Vibe</div>
     <div class="vibebox">
-      <div class="vradar">${radar(g,208)}</div>
+      <div class="vradar">${radar(g,236)}</div>
       <div class="vbars">${rows}</div>
     </div>
     <div class="vfoot">Each axis is this game's percentile across your 143 games — 80 means cosier
