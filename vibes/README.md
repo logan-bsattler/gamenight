@@ -55,35 +55,42 @@ defined in `ALIASES["DirectConflict"]` as BGG's explicitly conflict-oriented
 tags. That is the one place the model encodes a judgement call rather than the
 spec — adjust the list rather than the weights.
 
-## The thing to look at before trusting any of this
+## Base terms on social and compete (deviation from the spec)
 
-Social and compete are the only two axes with **no base term** — they are pure
-additive bonus lists, and most games carry none of the listed tags. The result:
+As specified, social and compete were the only axes with **no base term** —
+pure additive bonus lists over tags most games do not carry. 60 games (42%)
+scored exactly 0 on social and 54 (38%) on compete, across only 11 distinct
+values each. Percentiles cannot separate ties, so section 3's spread-the-radar
+trick failed on exactly those two axes and the match score treated 60 games as
+identical on social.
 
-| axis | scored 0 | distinct values across 143 games |
-|---|---|---|
-| social | 60 (42%) | 11 |
-| compete | 54 (38%) | 11 |
-| cozy | 0 | 56 |
-| playful | 0 | 56 |
-| thinky | 10 | 56 |
-| intense | 7 | 42 |
+Both now get a base, keeping every other signal untouched:
 
-Section 3 uses percentiles so the collection spreads across the radar instead
-of clustering. That works for the four axes with a weight-derived base. It
-cannot work for social and compete: percentiles cannot separate tied values, so
-~40% of the collection collapses onto one point on each of those two axes, and
-the match score treats those 60 games as identical on social.
+```python
+social:  50 - wn * 30      # lighter games talk more
+compete: 25 + wn * 20      # heavier games give more ways to act against people
+```
 
-This is a model-shape problem, not a tuning problem, so it is deliberately left
-alone — section 5 is explicit that weights must not be tuned before validation.
-Two ways out, both a spec decision rather than a code one:
+`wn` is normalised weight, `(averageweight - 1) / 4`, the same input the other
+four bases use. The choice of *weight* is the load-bearing part: a base only
+breaks ties if it comes from a continuous variable. Player count is the more
+intuitive signal for social, but it takes about five distinct values across the
+collection, so it relocates the pile-up instead of removing it.
 
-1. Give social and compete a base term the way the other four axes have, so
-   the score varies continuously with something (player count and weight are
-   the obvious candidates).
-2. Accept it, and mark both axes low-confidence in the UI — push them into
-   `LOW_CONF` in `index.html` and the match panel captions them automatically.
+| axis | tied at 0 before | after | distinct before | after |
+|---|---|---|---|---|
+| social | 60 (42%) | 0 | 11 | 55 |
+| compete | 54 (38%) | 0 | 11 | 45 |
+
+The one tie left is 16 games sharing `compete = 10`. Those are exactly the 16
+co-ops, pinned by the spec's own hard rule that a co-op scores ≤ 10 whatever
+else it carries. That is the rule working, not a defect.
+
+These constants were chosen to make the axes spread, and were never fitted to
+hand scores — there are none yet. Section 5 still applies: once
+`vibes-manual.json` is populated, an axis that comes out biased in one
+direction should be corrected **by moving its base constant**, which is exactly
+what these two now have.
 
 ## Validation is not done
 

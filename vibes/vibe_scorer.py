@@ -116,7 +116,14 @@ def score(g, fallback, seen=None):
     s["cozy"] = v
 
     # ---- Social ----
-    v = 0
+    # Base (not in the spec, added afterwards). Social and compete were the only
+    # axes without one, so they were pure additive bonus lists: 42% and 38% of the
+    # collection scored exactly 0 and percentiles could not separate the ties.
+    # A base has to come from a CONTINUOUS variable to break them -- player count
+    # takes about five distinct values across the collection and just moves the
+    # pile-up, so both bases key off averageweight, like the other four axes.
+    # Lighter games talk more; the table is louder over Sushi Go than Brass.
+    v = 50 - wn * 30
     sd, hr = has(g, "Social Deduction", seen), has(g, "Hidden Roles", seen)  # no short-circuit, keeps --report honest
     v += 30 if (sd or hr) else 0
     v += 25 if has(g, "Negotiation", seen) else 0
@@ -149,7 +156,9 @@ def score(g, fallback, seen=None):
     if has(g, "Cooperative Game", seen):
         s["compete"] = 10
     else:
-        v = 0
+        # Base, same reasoning as social. Heavier games give players more ways to
+        # act against each other, so competitive pressure rises with weight.
+        v = 25 + wn * 20
         v += 30 if has(g, "Player Elimination", seen) else 0
         v += 25 if has(g, "Take That", seen) else 0
         v += capped(g, ["Area Majority / Influence", "Auction/Bidding",
