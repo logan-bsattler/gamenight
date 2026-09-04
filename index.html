@@ -196,12 +196,24 @@ header{
 .vradar{flex:0 0 auto;margin:-6px 0}
 .vbars{flex:1 1 210px;min-width:0;display:flex;flex-direction:column;gap:6px}
 .vbrow{display:grid;grid-template-columns:74px 1fr 30px;gap:9px;align-items:center}
+.vbrow.cmp{grid-template-columns:74px 1fr 30px 30px}
 .vbname{font-size:12.5px;color:var(--dim);text-transform:capitalize;
   display:flex;align-items:center;gap:4px;min-width:0}
 .vbname i{font-style:normal;color:var(--acc2);font-size:10px}
 .vbname.low{color:var(--warm)}
-.vbbar{height:6px;border-radius:3px;background:var(--barbg);overflow:hidden}
+.vbbar{height:6px;border-radius:3px;background:var(--barbg);position:relative}
 .vbbar i{display:block;height:100%;border-radius:3px;background:var(--acc2)}
+/* The compared game is a marker on the same bar, not a second bar: the point
+   is the gap between the two, which reads better on one track. */
+.vbbar u{position:absolute;top:-3px;bottom:-3px;width:2px;margin-left:-1px;
+  border-radius:1px;background:var(--cool)}
+.vbcmp{color:var(--cool)}
+.cmprow{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:-2px 0 11px}
+#cmp{font:inherit;font-size:12.5px;color:var(--txt);background:var(--card);
+  border:1px solid var(--line);border-radius:9px;padding:6px 9px;max-width:100%}
+.cmpkey{display:flex;align-items:center;gap:6px;font-size:11.5px;color:var(--dim);min-width:0}
+.cmpkey i{width:13px;height:0;border-top:2px solid var(--acc2);flex:none}
+.cmpkey i.s2{border-top-style:dashed;border-top-color:var(--cool)}
 .vbval{font-size:12px;text-align:right;color:var(--dim);font-variant-numeric:tabular-nums}
 .vfoot{font-size:11.5px;color:var(--dim);margin-top:9px;line-height:1.5}
 .playbox{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
@@ -837,14 +849,16 @@ function renderVibe(){
 }
 
 /* Radar of the percentile scores, one spoke per axis. */
-function radar(g,size){
+function radar(g,size,other){
   const v=vibeOf(g); if(!v||!v.pct) return "";
+  const ov=other&&vibeOf(other);
   const short=size<200;                       // small radar truncates labels, big one spells them
   const R=size/2-(short?40:56), cx=size/2, cy=size/2;
   const pt=(i,r)=>{const th=-Math.PI/2+i*2*Math.PI/AXES.length;
     return [cx+Math.cos(th)*r, cy+Math.sin(th)*r];};
   const ring=r=>AXES.map((_,i)=>pt(i,r).map(n=>n.toFixed(1)).join(",")).join(" ");
-  const poly=AXES.map((a,i)=>pt(i,R*(v.pct[a]??0)/100).map(n=>n.toFixed(1)).join(",")).join(" ");
+  const shape=w=>AXES.map((a,i)=>pt(i,R*(w.pct[a]??0)/100).map(n=>n.toFixed(1)).join(",")).join(" ");
+  const poly=shape(v);
   const labels=AXES.map((a,i)=>{const[x,y]=pt(i,R+(short?9:13));
     return `<text x="${x.toFixed(1)}" y="${(y+3).toFixed(1)}" text-anchor="middle"
       font-size="${short?8.5:9.5}" fill="${v.src&&v.src[a]==='manual'?'var(--acc2)':'var(--dim)'}">${short?a.slice(0,4):a}</text>`;}).join("");
@@ -876,6 +890,8 @@ function radar(g,size){
     <polygon points="${ring(R)}" fill="none" stroke="var(--line)"/>
     <polygon points="${ring(R*0.5)}" fill="none" stroke="var(--line)" opacity=".55"/>
     <polygon points="${poly}" fill="var(--accfill)" stroke="var(--acc2)" stroke-width="1.6"/>
+    ${ov&&ov.pct?`<polygon points="${shape(ov)}" fill="none" stroke="var(--cool)" stroke-width="1.6"
+      stroke-dasharray="4 3"/>`:""}
     ${labels}</svg>`;
 }
 
@@ -895,22 +911,37 @@ function playSection(g){
 function vibeSection(g){
   const v=vibeOf(g);
   if(!v||!v.pct) return "";
+  const o=cmpId?GAMES.find(x=>x.id==cmpId):null, ov=o&&vibeOf(o);
+  const cmp=ov&&ov.pct?o:null;
   const rows=AXES.map(a=>{
     if(!(a in v)) return "";
     const man=v.src&&v.src[a]==="manual", low=LOW_CONF.includes(a);
     // Bar and number are both the percentile, so they agree with each other and
     // with the radar. Raw score sits in the tooltip -- it is the stored value,
     // but "higher than 78% of the shelf" is what actually means something here.
-    return `<div class="vbrow">
+    return `<div class="vbrow${cmp?' cmp':''}">
       <span class="vbname${low?' low':''}" title="${man?'hand-scored':'from BGG tags'}${low?' · low-confidence axis':''}">${a}${man?'<i>✎</i>':''}</span>
-      <span class="vbbar" title="raw score ${v[a]}"><i style="width:${v.pct[a]}%"></i></span>
+      <span class="vbbar" title="raw score ${v[a]}"><i style="width:${v.pct[a]}%"></i>${
+        cmp?`<u style="left:${vibeOf(cmp).pct[a]}%"></u>`:""}</span>
       <span class="vbval">${v.pct[a]}</span>
+      ${cmp?`<span class="vbval vbcmp">${vibeOf(cmp).pct[a]}</span>`:""}
     </div>`;
   }).join("");
   const hand=AXES.filter(a=>v.src&&v.src[a]==="manual").length;
+  /* Only games with scores are offerable, or the picker would promise a
+     comparison it cannot draw. */
+  const opts=GAMES.filter(x=>x.id!==g.id&&vibeOf(x)&&vibeOf(x).pct)
+    .sort((a,b)=>sortName(a.name).localeCompare(sortName(b.name)))
+    .map(x=>`<option value="${x.id}"${cmp&&cmp.id===x.id?" selected":""}>${esc(x.name)}</option>`).join("");
   return `<div class="sect">Vibe</div>
+    <div class="cmprow">
+      <select id="cmp" aria-label="Compare with another game">
+        <option value="">Compare with…</option>${opts}
+      </select>
+      ${cmp?`<span class="cmpkey"><i class="s1"></i>${esc(g.name)}<i class="s2"></i>${esc(cmp.name)}</span>`:""}
+    </div>
     <div class="vibebox">
-      <div class="vradar">${radar(g,236)}</div>
+      <div class="vradar">${radar(g,236,cmp)}</div>
       <div class="vbars">${rows}</div>
     </div>
     <div class="vfoot">Each axis is this game's percentile across your ${GAMES.length} games — 80 means cosier
@@ -986,10 +1017,12 @@ function renderList(){
 }
 
 /* ---------- detail sheet ---------- */
+let cmpId=null, sheetId=null;                  // the open sheet, and its comparison
 let sheetOpener=null;                          // where focus goes when the sheet closes
 function openGame(id){
   const g=GAMES.find(x=>x.id==id); if(!g) return;
   sheetOpener=document.activeElement;
+  cmpId=null; sheetId=g.id;                    // a fresh sheet starts uncompared
   const bp=(vibeOf(g)||{}).bestP||[];          // the player-count poll lives in VIBES
   $("#sheetTitle").textContent=g.name;
   const ytSearch="https://www.youtube.com/results?search_query="+encodeURIComponent("how to play "+g.name+" board game");
@@ -1017,7 +1050,7 @@ function openGame(id){
     <div class="playbox" id="playbox">${playSection(g)}</div>
     <div class="vfoot">Kept in this browser — not sent to BGG.</div>
 
-    ${vibeSection(g)}
+    <div id="vibewrap">${vibeSection(g)}</div>
 
     <div class="sect">How to play</div>
     ${g.video?`
@@ -1164,6 +1197,12 @@ $("#close").addEventListener("click",()=>history.back());
 $("#sheetBody").addEventListener("click",e=>{
   const v=e.target.closest("#vid"); if(!v) return;
   v.innerHTML=`<iframe src="https://www.youtube.com/embed/${v.dataset.yt}?autoplay=1&rel=0&playsinline=1" allow="accelerometer;autoplay;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>`;
+});
+$("#sheetBody").addEventListener("change",e=>{
+  if(e.target.id!=="cmp") return;
+  cmpId=e.target.value||null;
+  const g=GAMES.find(x=>x.id==sheetId); if(!g) return;
+  $("#vibewrap").innerHTML=vibeSection(g);     // redraw the block, keep the scroll
 });
 $("#sheetBody").addEventListener("click",e=>{
   const b=e.target.closest("[data-play],[data-unplay]"); if(!b) return;
