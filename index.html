@@ -95,6 +95,20 @@ header{
 .bestbar span.best{background:rgba(94,234,212,.16);color:var(--acc2);border-color:rgba(94,234,212,.35);font-weight:700}
 .mscore{position:absolute;left:8px;bottom:8px;font-size:11px;font-weight:700;padding:2px 6px;
   border-radius:6px;background:rgba(2,6,23,.82);color:var(--acc2);border:1px solid rgba(94,234,212,.3)}
+
+/* ---- vibe panel inside the game sheet ---- */
+.vibebox{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.vradar{flex:0 0 auto;margin:-6px 0}
+.vbars{flex:1 1 210px;min-width:0;display:flex;flex-direction:column;gap:6px}
+.vbrow{display:grid;grid-template-columns:74px 1fr 30px;gap:9px;align-items:center}
+.vbname{font-size:12.5px;color:var(--dim);text-transform:capitalize;
+  display:flex;align-items:center;gap:4px;min-width:0}
+.vbname i{font-style:normal;color:var(--acc2);font-size:10px}
+.vbname.low{color:var(--warm,#fbbf24)}
+.vbbar{height:6px;border-radius:3px;background:rgba(148,163,184,.16);overflow:hidden}
+.vbbar i{display:block;height:100%;border-radius:3px;background:var(--acc2)}
+.vbval{font-size:12px;text-align:right;color:var(--dim);font-variant-numeric:tabular-nums}
+.vfoot{font-size:11.5px;color:var(--dim);margin-top:9px;line-height:1.5}
 .sortsel{display:flex;gap:6px;flex-wrap:wrap}
 
 /* ---------- grid ---------- */
@@ -569,19 +583,49 @@ function renderVibe(){
 /* Radar of the percentile scores, one spoke per axis. */
 function radar(g,size){
   const v=vibeOf(g); if(!v||!v.pct) return "";
-  const R=size/2-13, cx=size/2, cy=size/2;
+  const short=size<160;                       // small radar truncates labels, big one spells them
+  const R=size/2-(short?13:30), cx=size/2, cy=size/2;
   const pt=(i,r)=>{const th=-Math.PI/2+i*2*Math.PI/AXES.length;
     return [cx+Math.cos(th)*r, cy+Math.sin(th)*r];};
   const ring=r=>AXES.map((_,i)=>pt(i,r).map(n=>n.toFixed(1)).join(",")).join(" ");
   const poly=AXES.map((a,i)=>pt(i,R*(v.pct[a]??0)/100).map(n=>n.toFixed(1)).join(",")).join(" ");
-  const labels=AXES.map((a,i)=>{const[x,y]=pt(i,R+9);
+  const labels=AXES.map((a,i)=>{const[x,y]=pt(i,R+(short?9:13));
     return `<text x="${x.toFixed(1)}" y="${(y+3).toFixed(1)}" text-anchor="middle"
-      font-size="8.5" fill="${v.src&&v.src[a]==='manual'?'var(--acc2)':'var(--dim)'}">${a.slice(0,4)}</text>`;}).join("");
+      font-size="${short?8.5:9.5}" fill="${v.src&&v.src[a]==='manual'?'var(--acc2)':'var(--dim)'}">${short?a.slice(0,4):a}</text>`;}).join("");
   return `<svg width="${size}" height="${size}" viewBox="0 0 ${size} ${size}" aria-label="vibe radar">
     <polygon points="${ring(R)}" fill="none" stroke="var(--line)"/>
     <polygon points="${ring(R*0.5)}" fill="none" stroke="var(--line)" opacity=".55"/>
     <polygon points="${poly}" fill="rgba(94,234,212,.22)" stroke="var(--acc2)" stroke-width="1.6"/>
     ${labels}</svg>`;
+}
+
+/* Vibe block for the game sheet: radar plus a per-axis readout, because the
+   radar shows the shape and the bars give you the actual numbers. */
+function vibeSection(g){
+  const v=vibeOf(g);
+  if(!v||!v.pct) return "";
+  const rows=AXES.map(a=>{
+    if(!(a in v)) return "";
+    const man=v.src&&v.src[a]==="manual", low=LOW_CONF.includes(a);
+    // Bar and number are both the percentile, so they agree with each other and
+    // with the radar. Raw score sits in the tooltip -- it is the stored value,
+    // but "higher than 78% of the shelf" is what actually means something here.
+    return `<div class="vbrow">
+      <span class="vbname${low?' low':''}" title="${man?'hand-scored':'from BGG tags'}${low?' · low-confidence axis':''}">${a}${man?'<i>✎</i>':''}</span>
+      <span class="vbbar" title="raw score ${v[a]}"><i style="width:${v.pct[a]}%"></i></span>
+      <span class="vbval">${v.pct[a]}</span>
+    </div>`;
+  }).join("");
+  const hand=AXES.filter(a=>v.src&&v.src[a]==="manual").length;
+  return `<div class="sect">Vibe</div>
+    <div class="vibebox">
+      <div class="vradar">${radar(g,208)}</div>
+      <div class="vbars">${rows}</div>
+    </div>
+    <div class="vfoot">Each axis is this game's percentile across your 143 games — 80 means cosier
+      than 80% of the shelf. Hover a bar for the raw score.
+      ${hand?`${hand} axis${hand>1?"es":""} hand-scored (✎).`:"All axes scored from BGG tags."}
+      ${v.note?`<br>${v.note}`:""}</div>`;
 }
 
 function renderTonight(list){
@@ -661,6 +705,8 @@ function openGame(id){
       <div class="stat"><div class="k">Complexity</div><div class="v" style="color:${wColor(g.weight)}">${g.weight?g.weight.toFixed(2):"–"}</div><div class="s">${wLabel(g.weight)} · of 5</div></div>
       <div class="stat"><div class="k">Rating</div><div class="v">${g.rating?g.rating.toFixed(1):"–"}</div><div class="s">${g.myRating?"you rated "+g.myRating:"BGG average"}${g.plays?" · "+g.plays+" play"+(g.plays>1?"s":""):""}</div></div>
     </div>
+
+    ${vibeSection(g)}
 
     <div class="sect">How to play</div>
     ${g.video?`
