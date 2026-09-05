@@ -598,6 +598,14 @@ const awardShort = g => {
   return one.length > 18 ? "award winner" : one;
 };
 
+/* BGG resolves a game by id alone and redirects to add the slug, but the phone
+   app's link handler wants the full /boardgame/<id>/<slug> shape and balks at
+   the bare one. The slug is cosmetic -- the id is what resolves -- so an
+   imperfect guess still lands on the right page. */
+const bggUrl=g=>"https://boardgamegeek.com/boardgame/"+g.id+"/"+
+  g.name.normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase()
+    .replace(/[^a-z0-9]+/g,"-").replace(/^-+|-+$/g,"");
+
 const timeStr=m=> !m ? "–" : m>=60 ? (m%60? (m/60).toFixed(1).replace(/\.0$/,"")+" hr" : (m/60)+" hr") : m+" min";
 const timeRange=g=> (g.minT&&g.minT!==g.time) ? timeStr(g.minT)+"–"+timeStr(g.time) : timeStr(g.time);
 const plStr=g=> g.minP===g.maxP ? g.minP+"p" : g.minP+"–"+g.maxP+"p";
@@ -1051,7 +1059,7 @@ function openGame(id){
     <div class="sect">Plays</div>
     <div class="playbox" id="playbox">${playSection(g)}</div>
     <div class="vfoot">Kept in this browser — not sent to BGG.
-      <a href="https://boardgamegeek.com/boardgame/${g.id}" target="_blank" rel="noopener">Open on BGG to log it ↗</a></div>
+      <a href="${bggUrl(g)}" target="_blank" rel="noopener">Open on BGG to log it ↗</a></div>
 
     <div id="vibewrap">${vibeSection(g)}</div>
 
@@ -1074,7 +1082,7 @@ function openGame(id){
     ${(g.cat&&g.cat.length)?`<div class="sect">Themes</div><div class="tags">${g.cat.map(m=>`<span class="tag">${esc(m)}</span>`).join("")}</div>`:""}
 
     <div class="links">
-      <a href="https://boardgamegeek.com/boardgame/${g.id}" target="_blank" rel="noopener">BGG page</a>
+      <a href="${bggUrl(g)}" target="_blank" rel="noopener">BGG page</a>
       <a href="${ytSearch}" target="_blank" rel="noopener">More videos</a>
     </div>`;
   $("#sheet").classList.add("open");
