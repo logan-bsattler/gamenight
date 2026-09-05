@@ -107,8 +107,15 @@ In `localStorage`, per browser, never sent anywhere:
 
 Plays do not sync to BGG and do not follow you between devices. BGG's API is
 read-only for plays, so posting one would mean holding your credentials; the
-sheet says where the count lives and links to BGG's own log-play form
-(`/plays/edit/gameid/<id>`) for the permanent record.
+sheet says where the count lives and links out to the game's BGG page, which
+carries BGG's own Log Play button.
+
+No deep link straight to the log-play form: `/plays/edit/gameid/<id>` answers
+"Invalid Item" and `geekplay.php?gameid=<id>&action=edit` answers "Play not
+found" (it wants an existing play id). Both of those *look* fine logged out,
+which is how the wrong one shipped once. BGG renders those routes client-side,
+so curl returns the same shell for every candidate and cannot tell them apart
+-- check any replacement while signed in, on the real site.
 
 ## Shareable links
 
