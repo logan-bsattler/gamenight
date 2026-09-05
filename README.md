@@ -110,12 +110,15 @@ read-only for plays, so posting one would mean holding your credentials; the
 sheet says where the count lives and links out to the game's BGG page, which
 carries BGG's own Log Play button.
 
-No deep link straight to the log-play form: `/plays/edit/gameid/<id>` answers
-"Invalid Item" and `geekplay.php?gameid=<id>&action=edit` answers "Play not
-found" (it wants an existing play id). Both of those *look* fine logged out,
-which is how the wrong one shipped once. BGG renders those routes client-side,
-so curl returns the same shell for every candidate and cannot tell them apart
--- check any replacement while signed in, on the real site.
+**There is no deep link to the log-play form, so don't go looking.** BGG's Log
+Play is a client-side modal opened from the game page; the URL does not change
+when it opens. The plausible-looking routes are all dead ends: signed in,
+`/plays/edit/gameid/<id>` answers "Invalid Item", and
+`geekplay.php?gameid=<id>&action=edit` answers "Play not found" because it
+wants an existing play id. Both look fine when signed *out* — they show BGG's
+sign-in prompt, which says nothing about whether the route is valid — which is
+how a broken one shipped once. Verify anything here signed in, on a real
+device.
 
 ## Shareable links
 
