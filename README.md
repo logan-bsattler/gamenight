@@ -105,8 +105,10 @@ In `localStorage`, per browser, never sent anywhere:
 | `gn-plays` | `{gameId: ["2026-09-04", ...]}` from the sheet's play log |
 | `gn-presets` | `[{n: "Tuesday crowd", h: "vp=4&cozy=70"}]` |
 
-Plays do not sync to BGG and do not follow you between devices. The sheet says
-so.
+Plays do not sync to BGG and do not follow you between devices. BGG's API is
+read-only for plays, so posting one would mean holding your credentials; the
+sheet says where the count lives and links to BGG's own log-play form
+(`/plays/edit/gameid/<id>`) for the permanent record.
 
 ## Shareable links
 
